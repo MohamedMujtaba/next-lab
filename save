@@ -1,0 +1,233 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Patient {
+  id          String   @id @default(cuid())
+  name        String
+  phoneNumber String
+  gender      Gender
+  bills       Bill[]   @relation("PatientToBills")
+  results     Result[] @relation("PatientToResults")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum Gender {
+  MALE
+  FEMALE
+}
+
+model Doctor {
+  id   String @id @default(cuid())
+  name String
+}
+
+model Test {
+  id       String     @id @default(cuid())
+  name     String
+  subTests SubTest[]
+  billTest BillTest[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  // testsWithDescription TestWithDescription[]
+  // testsWithOptions     TestWithOptions[]
+  // testsWithOneRes      TestWithOneRes[]
+}
+
+model SubTest {
+  id             String          @id @default(cuid())
+  name           String
+  price          Int
+  type           SubTestType
+  maleNormal     String?         @default("")
+  femaleNormal   String?         @default("")
+  result         String?
+  description    String?
+  options        SubTestOption[]
+  selectedOption String?
+  selected       Boolean         @default(false)
+  testId         String?
+  order          Int
+  billSubTest    BillSubTest[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  test       Test?   @relation(fields: [testId], references: [id])
+  billTestId String?
+
+  @@index([testId])
+}
+
+enum SubTestType {
+  ONERESULT
+  DESCRIPTION
+  OPTIONS
+}
+
+model SubTestOption {
+  id        String  @id @default(cuid())
+  value     String
+  order     Int
+  subTestId String?
+
+  subTest       SubTest?     @relation(fields: [subTestId], references: [id])
+  BillSubTest   BillSubTest? @relation(fields: [billSubTestId], references: [id])
+  billSubTestId String?
+
+  @@index([subTestId])
+}
+
+model Bill {
+  id                 String     @id @default(cuid())
+  patientId          String?
+  subTotal           Int?
+  total              Int?
+  insuranceCompanyId String?
+  result             Result?
+  status             BillStatus @default(PENDING)
+  tests              BillTest[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  patient   Patient?          @relation("PatientToBills", fields: [patientId], references: [id])
+  insurance InsuranceCompany? @relation("BillToInsurance", fields: [insuranceCompanyId], references: [id])
+
+  @@index([patientId])
+}
+
+enum BillStatus {
+  PENDING
+  CANCELLED
+  READY
+}
+
+model BillTest {
+  id       String        @id @default(cuid())
+  name     String
+  subTests BillSubTest[]
+
+  testId String?
+
+  Test Test? @relation(fields: [testId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  Bill      Bill?    @relation(fields: [billId], references: [id])
+  billId    String?
+}
+
+model BillSubTest {
+  id             String          @id @default(cuid())
+  name           String
+  price          Int
+  type           SubTestType
+  maleNormal     String?         @default("")
+  femaleNormal   String?         @default("")
+  result         String?
+  description    String?
+  options        SubTestOption[]
+  selectedOption String?
+  order          Int
+  billTestId     String?
+
+  BillTest BillTest? @relation(fields: [billTestId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  SubTest   SubTest? @relation(fields: [subTestId], references: [id])
+  subTestId String?
+}
+
+model Result {
+  id        String  @id @default(cuid())
+  patientId String?
+  billId    String  @unique
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  patient Patient? @relation("PatientToResults", fields: [patientId], references: [id])
+  bill    Bill     @relation(fields: [billId], references: [id])
+}
+
+model InsuranceCompany {
+  id    String          @id @default(cuid())
+  name  String
+  types InsuranceType[] @relation("InsuranceToInsuranceType")
+  Bill  Bill[]          @relation("BillToInsurance")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model InsuranceType {
+  id                 String  @id @default(cuid())
+  name               String
+  prcentage          Float
+  insuranceCompanyId String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  insuranceCompany InsuranceCompany? @relation("InsuranceToInsuranceType", fields: [insuranceCompanyId], references: [id])
+}
+
+// model TestWithDescription {
+//   id           String  @id @default(cuid())
+//   name         String
+//   price        Int
+//   normal       String?
+//   defaultValue String?
+//   testId       String?
+
+//   createdAt DateTime @default(now())
+//   updatedAt DateTime @updatedAt
+
+//   test Test? @relation(fields: [testId], references: [id])
+
+//   @@index([testId])
+// }
+
+// model TestWithOptions {
+//   id      String   @id @default(cuid())
+//   name    String
+//   price   Int
+//   normal  String?
+//   options String[]
+//   testId  String?
+
+//   createdAt DateTime @default(now())
+//   updatedAt DateTime @updatedAt
+
+//   test Test? @relation(fields: [testId], references: [id])
+
+//   @@index([testId])
+// }
+
+// model TestWithOneRes {
+//   id     String  @id @default(cuid())
+//   name   String
+//   price  Int
+//   normal String
+//   testId String?
+
+//   createdAt DateTime @default(now())
+//   updatedAt DateTime @updatedAt
+
+//   test Test? @relation(fields: [testId], references: [id])
+
+//   @@index([testId])
+// }
