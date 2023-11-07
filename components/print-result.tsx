@@ -12,6 +12,9 @@ import { Table, TableRow, TableCell } from "./ui/table";
 import { Preview } from "./editor/preview";
 import { Separator } from "./ui/separator";
 
+import "react-quill/dist/quill.bubble.css";
+import { PrintHeader } from "./print-header";
+
 interface PrintResultProps {
   // ref: React.Ref<HTMLDivElement> | null;
   bill: BillType;
@@ -44,19 +47,31 @@ export const ComponentToPrint = forwardRef<
   ComponentToPrintProps
 >(({ bill }, ref: Ref<HTMLDivElement>) => {
   return (
-    <div ref={ref} className="mt-16 w-full ">
-      <div className="">
-        {bill.tests.map((test) => (
-          <div key={test.id}>
-            {test.subTests.map((subTest) => (
-              <div key={subTest.id}>
-                {renderSubTest(subTest, bill.patient.gender)}
-              </div>
-            ))}
-          </div>
-        ))}
+    <>
+      <div ref={ref} className="w-full ">
+        <PrintHeader bill={bill} />
+        <div className="mx-[20mm]">
+          {bill.tests.map((test) => (
+            <div key={test.id}>
+              {test.subTests.map((subTest) => (
+                <>
+                  <div className="page-break" />
+                  <div key={subTest.id}>
+                    {renderSubTest(subTest, bill.patient.gender)}
+                    {renderSubTest(subTest, bill.patient.gender)}
+                    {renderSubTest(subTest, bill.patient.gender)}
+                    {renderSubTest(subTest, bill.patient.gender)}
+                    {renderSubTest(subTest, bill.patient.gender)}
+                    {renderSubTest(subTest, bill.patient.gender)}
+                    {renderSubTest(subTest, bill.patient.gender)}
+                  </div>
+                </>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 });
 
@@ -66,6 +81,8 @@ const renderSubTest = (subTest: BillSubTest, gender: Gender) => {
   if (subTest.type === "ONERESULT") {
     return (
       <>
+        <div className="page-break" />
+
         <Table className="w-full text-xl table-fixed">
           <TableRow>
             <TableCell className="">
@@ -76,7 +93,9 @@ const renderSubTest = (subTest: BillSubTest, gender: Gender) => {
                 ? parse(subTest.femaleNormal || "")
                 : parse(subTest.maleNormal || "")}
             </TableCell>
-            <TableCell className="text-center">{subTest.result}</TableCell>
+            <TableCell className="text-center">
+              {parse(subTest.result || "")}
+            </TableCell>
           </TableRow>
         </Table>
       </>
@@ -85,6 +104,8 @@ const renderSubTest = (subTest: BillSubTest, gender: Gender) => {
   if (subTest.type === "OPTIONS") {
     return (
       <>
+        <div className="page-break" />
+
         <Table className="w-full text-xl table-fixed">
           <TableRow>
             <TableCell className="">
@@ -105,11 +126,13 @@ const renderSubTest = (subTest: BillSubTest, gender: Gender) => {
   }
   if (subTest.type === "DESCRIPTION") {
     return (
-      <div className="w-full text-xl">
-        <div>{subTest.name}</div>
-        <Preview value={subTest.description || ""} />
-        <Separator />
-      </div>
+      <>
+        <div className="w-full text-xl break-inside-avoid">
+          <div>{subTest.name}</div>
+          <Preview value={subTest.description || ""} />
+          <Separator />
+        </div>
+      </>
     );
   }
 };

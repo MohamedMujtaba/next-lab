@@ -2,6 +2,7 @@
 
 import prismadb from "@/lib/prisma";
 import { SubTestType } from "@prisma/client";
+import { revalidatePath } from "next/cache";
 
 export const saveResult = async (
   id: string,
@@ -39,6 +40,7 @@ export const saveResult = async (
         },
       });
     }
+    revalidatePath("bills/[id]/result");
     return {};
   } catch (error) {
     console.log(error);

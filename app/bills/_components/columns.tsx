@@ -149,7 +149,13 @@ const B = ({ bill }: { bill: BillType }) => {
           Result
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>Edit patient</DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={async () => {
+            router.push(`/bills/${bill.id}`);
+          }}
+        >
+          Edit Bill
+        </DropdownMenuItem>
         <DropdownMenuItem>Delete patient</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

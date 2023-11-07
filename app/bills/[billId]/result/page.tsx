@@ -1,9 +1,7 @@
 import { getBill } from "@/actions/bills/get-bill";
 import Container from "@/components/container";
-import Test from "./_components/test";
-import { Separator } from "@/components/ui/separator";
 import { PrintResult } from "@/components/print-result";
-import { BillType } from "../../_components/columns";
+import { Separator } from "@/components/ui/separator";
 import {
   Bill,
   BillSubTest,
@@ -11,10 +9,8 @@ import {
   Patient,
   SubTestOption,
 } from "@prisma/client";
-import { Button } from "@/components/ui/button";
-import { markAsReady } from "@/actions/bills/mark-as-ready";
-import { toast } from "react-hot-toast";
 import ReadyButton from "./_components/ready-button";
+import Test from "./_components/test";
 
 type SubTest = BillSubTest & { options: SubTestOption[] };
 type TTest = BillTest & { subTests: SubTest[] };

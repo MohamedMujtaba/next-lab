@@ -40,7 +40,7 @@ export const addBillSubTest = async (props: AddBillSubTestProps) => {
   if (isBillSubTestAlreadyAdded) {
     return {
       ok: false,
-      message: "Sub test already hve been added",
+      message: "Sub test already has been added",
     };
   }
   const bst = await prismadb.billSubTest.create({

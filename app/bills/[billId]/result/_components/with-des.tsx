@@ -47,46 +47,49 @@ export const WithDes: React.FC<OneResPops> = ({ subTest }) => {
   }
 
   return (
-    <div className="flex flex-col items-start  justify-between w-full px-14  mb-2 gap-4">
-      <div className="flex-1 flex  justify-center ">
-        <p>{subTest.name}</p>
+    <>
+      <div className="page-break" />
+      <div className="flex flex-col items-start  justify-between w-full px-14  mb-2 gap-4">
+        <div className="flex-1 flex  justify-center ">
+          <p>{subTest.name}</p>
+        </div>
+        <div className="w-full">
+          <Form {...form}>
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="space-x-4 flex-1 flex justify-between  items-start"
+            >
+              <FormField
+                control={form.control}
+                name="description"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      {/* <Tiptap
+                        content={subTest.description || ""}
+                        placeholder="Result"
+                        onChange={() => {
+                          field.onChange();
+                          form.handleSubmit(onSubmit);
+                        }}
+                      /> */}
+                      <Editor
+                        value={subTest.description || ""}
+                        onChange={field.onChange}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <Button size="icon" className="m-0 mt-0 shrink-0 " type="submit">
+                <Check className="w-4 h-4" />
+              </Button>
+            </form>
+          </Form>
+        </div>
+        <Separator />
       </div>
-      <div className="w-full">
-        <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="space-x-4 flex-1 flex justify-between  items-start"
-          >
-            <FormField
-              control={form.control}
-              name="description"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    {/* <Tiptap
-                      content={subTest.description || ""}
-                      placeholder="Result"
-                      onChange={() => {
-                        field.onChange();
-                        form.handleSubmit(onSubmit);
-                      }}
-                    /> */}
-                    <Editor
-                      value={subTest.description || ""}
-                      onChange={field.onChange}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <Button size="icon" className="m-0 mt-0 shrink-0 " type="submit">
-              <Check className="w-4 h-4" />
-            </Button>
-          </form>
-        </Form>
-      </div>
-      <Separator />
-    </div>
+    </>
   );
 };
