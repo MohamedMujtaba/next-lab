@@ -15,6 +15,7 @@ model Patient {
   name        String
   phoneNumber String
   gender      Gender
+  age         String
   bills       Bill[]   @relation("PatientToBills")
   results     Result[] @relation("PatientToResults")
 
@@ -90,20 +91,22 @@ model SubTestOption {
 }
 
 model Bill {
-  id                 String     @id @default(cuid())
+  id                 String         @id @default(cuid())
   patientId          String?
   subTotal           Int?
   total              Int?
   insuranceCompanyId String?
   result             Result?
-  status             BillStatus @default(PENDING)
+  status             BillStatus     @default(PENDING)
   tests              BillTest[]
+  insuranceType      InsuranceType? @relation(fields: [insuranceTypeId], references: [id])
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  patient   Patient?          @relation("PatientToBills", fields: [patientId], references: [id])
-  insurance InsuranceCompany? @relation("BillToInsurance", fields: [insuranceCompanyId], references: [id])
+  patient         Patient?          @relation("PatientToBills", fields: [patientId], references: [id])
+  insurance       InsuranceCompany? @relation("BillToInsurance", fields: [insuranceCompanyId], references: [id])
+  insuranceTypeId String?
 
   @@index([patientId])
 }
@@ -176,13 +179,14 @@ model InsuranceCompany {
 model InsuranceType {
   id                 String  @id @default(cuid())
   name               String
-  prcentage          Float
+  percentage         Float
   insuranceCompanyId String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   insuranceCompany InsuranceCompany? @relation("InsuranceToInsuranceType", fields: [insuranceCompanyId], references: [id])
+  Bill             Bill[]
 }
 
 // model TestWithDescription {

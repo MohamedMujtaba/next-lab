@@ -48,7 +48,7 @@ export const ComponentToPrint = forwardRef<
 >(({ bill }, ref: Ref<HTMLDivElement>) => {
   return (
     <>
-      <div ref={ref} className="w-full ">
+      <div ref={ref} className="w-full text-black border-black ">
         <PrintHeader bill={bill} />
         <div className="mx-[20mm]">
           {bill.tests.map((test) => (
@@ -83,8 +83,8 @@ const renderSubTest = (subTest: BillSubTest, gender: Gender) => {
       <>
         <div className="page-break" />
 
-        <Table className="w-full text-xl table-fixed">
-          <TableRow>
+        <Table className="w-full text-xl table-fixed border-black">
+          <TableRow className="border-b-black text-black">
             <TableCell className="">
               <p>{subTest.name}</p>
             </TableCell>
@@ -107,7 +107,7 @@ const renderSubTest = (subTest: BillSubTest, gender: Gender) => {
         <div className="page-break" />
 
         <Table className="w-full text-xl table-fixed">
-          <TableRow>
+          <TableRow className="border-b-black text-black">
             <TableCell className="">
               <p>{subTest.name}</p>
             </TableCell>
@@ -127,10 +127,10 @@ const renderSubTest = (subTest: BillSubTest, gender: Gender) => {
   if (subTest.type === "DESCRIPTION") {
     return (
       <>
-        <div className="w-full text-xl break-inside-avoid">
+        <div className="w-full text-xl break-inside-avoid text-black">
           <div>{subTest.name}</div>
           <Preview value={subTest.description || ""} />
-          <Separator />
+          <Separator className="bg-black" />
         </div>
       </>
     );

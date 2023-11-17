@@ -8,6 +8,16 @@ export const getResults = async () => {
       where: {
         status: "READY",
       },
+      include: {
+        patient: true,
+        tests: {
+          include: {
+            subTests: {
+              orderBy: { order: "asc" },
+            },
+          },
+        },
+      },
     });
     return results;
   } catch (error) {

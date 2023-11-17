@@ -17,7 +17,7 @@ interface PrintHeaderProps {
 
 export const PrintHeader: React.FC<PrintHeaderProps> = ({ bill }) => {
   return (
-    <div className="w-full px-[10mm] mb-4">
+    <div className="w-full px-[10mm] mb-4 text-black border-black">
       <div
         className={cn(
           "w-full h-44 flex items-center justify-between  ",

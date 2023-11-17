@@ -33,6 +33,9 @@ export const patientFormSchema = z.object({
   name: z.string().min(2, {
     message: "name must be at least 2 characters.",
   }),
+  age: z.string().min(1, {
+    message: "age must be at least 1 characters.",
+  }),
   phoneNumber: z
     .string()
     .min(10, {
@@ -56,6 +59,7 @@ const PatientForm: React.FC<PatientFormProps> = ({ onClose }) => {
     resolver: zodResolver(patientFormSchema),
     defaultValues: {
       name: patient ? patient.name : "",
+      age: patient ? patient?.age : "",
       phoneNumber: patient ? patient.phoneNumber : "",
       gender: patient ? patient.gender : "MALE",
     },
@@ -88,6 +92,24 @@ const PatientForm: React.FC<PatientFormProps> = ({ onClose }) => {
                 />
               </FormControl>
               <FormDescription>This is your patient name.</FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="age"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Patient Age</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder="69"
+                  {...field}
+                  disabled={form.formState.isSubmitting}
+                />
+              </FormControl>
+              <FormDescription>This is your patient age.</FormDescription>
               <FormMessage />
             </FormItem>
           )}

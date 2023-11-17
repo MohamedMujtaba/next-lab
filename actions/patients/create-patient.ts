@@ -11,11 +11,13 @@ interface CreatePatientProps {
   name: string;
   phoneNumber: string;
   gender: Gender;
+  age: string;
 }
 export const createPatient = async ({
   gender,
   name,
   phoneNumber,
+  age,
 }: CreatePatientProps) => {
   // FIXME(validation):
   // validateSchema(patientFormSchema, { gender, name, phoneNumber });
@@ -30,12 +32,12 @@ export const createPatient = async ({
 
       throw new Error("Patient phone number must be unique");
     }
-    console.log("out");
 
     const patient = await prismadb.patient.create({
       data: {
         gender,
         name,
+        age,
         phoneNumber,
       },
     });
