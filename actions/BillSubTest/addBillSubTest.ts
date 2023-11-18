@@ -1,7 +1,7 @@
 "use server";
 
 import prismadb from "@/lib/prisma";
-import { SubTest, SubTestOption } from "@prisma/client";
+import { Bill, SubTest, SubTestOption } from "@prisma/client";
 import { revalidatePath } from "next/cache";
 
 interface AddBillSubTestProps {
@@ -60,6 +60,18 @@ export const addBillSubTest = async (props: AddBillSubTestProps) => {
             id: o.id,
           })) || [],
       },
+    },
+  });
+  const bill = (await prismadb.bill.findFirst({
+    where: { id: billId },
+  })) as Bill;
+  let tValue = (bill.total as number) + subTest.price;
+  await prismadb.bill.update({
+    where: {
+      id: billId,
+    },
+    data: {
+      total: tValue,
     },
   });
   revalidatePath("/bill/[billId]", "page");

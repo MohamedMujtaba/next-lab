@@ -15,6 +15,9 @@ import { getBill } from "@/actions/bills/get-bill";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 type SubTest = BillSubTest & { options: SubTestOption[] };
 type TTest = BillTest & { subTests: SubTest[] };
 
@@ -56,6 +59,7 @@ const BillPage = async ({ params }: { params: { billId: string } }) => {
         </div>
         <div className="col-span-5 h-[30vh] ">
           <SelectedTests bill={bill} />
+          <div>{bill.total}</div>
         </div>
       </div>
     </Container>

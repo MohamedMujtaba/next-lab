@@ -12,6 +12,9 @@ import {
 import ReadyButton from "./_components/ready-button";
 import Test from "./_components/test";
 
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 type SubTest = BillSubTest & { options: SubTestOption[] };
 type TTest = BillTest & { subTests: SubTest[] };
 

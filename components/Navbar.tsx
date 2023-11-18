@@ -4,6 +4,8 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { cn } from "@/lib/utils";
 import { Doctor } from "@prisma/client";
 import {
+  Building,
+  Building2,
   FileCheck,
   FileText,
   LineChart,
@@ -14,6 +16,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import TeamSwitcher from "./team-switcher";
+import { SideNav } from "./side-nav";
 
 const links = [
   {
@@ -47,6 +50,12 @@ const links = [
     icon: <FileCheck className="w-6 h-6" />,
   },
   {
+    title: "Insurance",
+    description: "lormem epsom loral",
+    href: "/results",
+    icon: <Building2 className="w-6 h-6" />,
+  },
+  {
     title: "Settings",
     description: "lormem epsom loral",
     href: "/settings",
@@ -62,9 +71,7 @@ const Navbar: React.FC<NavbarProps> = ({ doctors }) => {
   const pathname = usePathname();
   return (
     <div className="h-16 w-full border-b flex items-center justify-between px-4">
-      <div className="flex space-x-8">
-        {/* <h2 className="text-xl font-bold">Logo</h2> */}
-        {/* <SelectDoctorComponent doctors={doctors} /> */}
+      <div className="space-x-8 hidden lg:flex">
         <TeamSwitcher doctors={doctors} />
         <div className="flex items-center space-x-6">
           {links.map((link) => {
@@ -88,7 +95,9 @@ const Navbar: React.FC<NavbarProps> = ({ doctors }) => {
           })}
         </div>
       </div>
-
+      <div className="flex lg:hidden">
+        <SideNav />
+      </div>
       <ModeToggle />
     </div>
   );

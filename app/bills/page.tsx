@@ -6,6 +6,8 @@ import { DataTable } from "./_components/table";
 import { BillType, columns } from "./_components/columns";
 import { getBills } from "@/actions/bills/get-bills";
 
+export const dynamic = "force-dynamic";
+
 const Bills = async () => {
   const bills = (await getBills()) as BillType[];
   return (

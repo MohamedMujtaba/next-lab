@@ -5,6 +5,9 @@ import { PatientType, columns } from "./_components/columns";
 import { getPatients } from "@/actions/patients/get-patients";
 import { AddPatientButton } from "./_components/add-patient-button";
 
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 interface PatientsProps {}
 
 const Patients: React.FC<PatientsProps> = async () => {

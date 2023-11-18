@@ -5,6 +5,9 @@ import React from "react";
 import { ResultType, columns } from "./_components/columns";
 import { DataTable } from "./_components/table";
 
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 const Results = async () => {
   const results = (await getResults()) as ResultType[];
   return (
