@@ -50,6 +50,8 @@ export function DataTable<TData, TValue>({
   // useEffect(() => {
   //   router.refresh();
   // }, [router]);
+  console.log(rowSelection);
+
   return (
     <div>
       <div className="flex items-center py-4">

@@ -27,7 +27,7 @@ const SelectedTests: React.FC<SelectedTestsProps> = ({ bill }) => {
                     <div className="flex items-center py-1">
                       <Trash
                         onClick={async () => {
-                          removeBillSubTest(t.id, test.id);
+                          removeBillSubTest(t.id, test.id, bill?.id);
                         }}
                         className="w-4 h-4 mr-4 text-destructive cursor-pointer"
                       />

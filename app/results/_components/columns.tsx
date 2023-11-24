@@ -33,6 +33,7 @@ import { QuestionMarkCircledIcon } from "@radix-ui/react-icons";
 import { createBill } from "@/actions/bills/createBill";
 import toast from "react-hot-toast";
 import { Separator } from "@/components/ui/separator";
+import { format } from "date-fns";
 
 export type ResultType = Bill & {
   tests: (BillTest & { subTests: BillSubTest[] })[];
@@ -67,6 +68,9 @@ export const columns: ColumnDef<ResultType>[] = [
     },
   },
   {
+    id: "phoneNumber",
+    accessorKey: "phoneNumber",
+    accessorFn: (row) => row.patient.phoneNumber,
     header: "Patient Phone",
     cell: ({ row }) => {
       const bill: ResultType = row.original;
@@ -114,8 +118,11 @@ export const columns: ColumnDef<ResultType>[] = [
     },
   },
   {
-    id: "createdAt",
     header: "Created At",
+    cell: ({ row }) => {
+      const result: ResultType = row.original;
+      return <p>{format(result.createdAt, "dd/MM/yyyy")}</p>;
+    },
   },
   {
     id: "actions",
@@ -141,7 +148,7 @@ const B = ({ bill }: { bill: ResultType }) => {
         <DropdownMenuItem
           onClick={() => navigator.clipboard.writeText(bill.id)}
         >
-          Copy test ID
+          Copy result ID
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem
@@ -152,8 +159,7 @@ const B = ({ bill }: { bill: ResultType }) => {
           Result
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>Edit patient</DropdownMenuItem>
-        <DropdownMenuItem>Delete patient</DropdownMenuItem>
+        <DropdownMenuItem>Delete Result</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

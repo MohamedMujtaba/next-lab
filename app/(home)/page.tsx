@@ -1,14 +1,33 @@
-import Image from "next/image";
-import HomeItem from "./_components/home-item";
-import { ModeToggle } from "@/components/mode-toggle";
-import { LineChart, Printer, Settings, TestTube2, Users } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
-import { DatePickerWithRange } from "@/components/ui/date-range-picker";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+"use client";
 
-export default function Home() {
+import { getStatus } from "@/actions/status/status";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { DatePickerWithRange } from "@/components/ui/date-range-picker";
+import { Separator } from "@/components/ui/separator";
+import { useEffect, useState } from "react";
+import { DateRange } from "react-day-picker";
+
+const Home = () => {
+  const [date, setDate] = useState<DateRange | undefined>({
+    from: new Date(),
+    to: undefined,
+  });
+  const [data, setData] = useState<
+    | { bills: number; billsTotal: number; patients: number; results: number }
+    | undefined
+  >(undefined);
+  useEffect(() => {
+    const r = async () => {
+      const test = await getStatus({
+        from: date?.from || new Date(),
+        to: date?.to || undefined,
+      });
+      setData(test);
+    };
+    r();
+  }, [date]);
+
+  // const status = await getStatus()
   return (
     <div className="w-screen flex items-center flex-col space-y-4 p-4">
       <div className="w-full">
@@ -19,7 +38,7 @@ export default function Home() {
               See all progress of you&apos;r work
             </p>
           </div>
-          <DatePickerWithRange />
+          <DatePickerWithRange date={date} setDate={setDate} />
         </div>
         <Separator />
       </div>
@@ -41,7 +60,7 @@ export default function Home() {
             </svg>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">$45,231.89</div>
+            <div className="text-2xl font-bold">${data?.billsTotal || 0}</div>
             <p className="text-xs text-muted-foreground">
               +20.1% from last month
             </p>
@@ -49,7 +68,7 @@ export default function Home() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Subscriptions</CardTitle>
+            <CardTitle className="text-sm font-medium">New Patients</CardTitle>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -66,7 +85,7 @@ export default function Home() {
             </svg>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">+2350</div>
+            <div className="text-2xl font-bold">+{data?.patients || 0}</div>
             <p className="text-xs text-muted-foreground">
               +180.1% from last month
             </p>
@@ -74,7 +93,7 @@ export default function Home() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Sales</CardTitle>
+            <CardTitle className="text-sm font-medium">Bills</CardTitle>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -90,7 +109,7 @@ export default function Home() {
             </svg>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">+12,234</div>
+            <div className="text-2xl font-bold">+{data?.bills || 0}</div>
             <p className="text-xs text-muted-foreground">
               +19% from last month
             </p>
@@ -98,7 +117,7 @@ export default function Home() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Active Now</CardTitle>
+            <CardTitle className="text-sm font-medium">Results</CardTitle>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -113,7 +132,7 @@ export default function Home() {
             </svg>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">+573</div>
+            <div className="text-2xl font-bold">+{data?.results || 0}</div>
             <p className="text-xs text-muted-foreground">
               +201 since last hour
             </p>
@@ -122,7 +141,7 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
 
 {
   /* <div className="w-screen h-screen  flex items-center justify-center">
@@ -140,3 +159,5 @@ export default function Home() {
       </div>
     </div> */
 }
+
+export default Home;

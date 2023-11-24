@@ -50,19 +50,16 @@ export const ComponentToPrint = forwardRef<
     <>
       <div ref={ref} className="w-full text-black border-black ">
         <PrintHeader bill={bill} />
-        <div className="mx-[20mm]">
+        <div className="mx-[10mm]">
           {bill.tests.map((test) => (
             <div key={test.id}>
+              <div className="w-full bg-gray-100/50 text-2xl font-semibold px-4">
+                {test.name}
+              </div>
               {test.subTests.map((subTest) => (
                 <>
                   <div className="page-break" />
                   <div key={subTest.id}>
-                    {renderSubTest(subTest, bill.patient.gender)}
-                    {renderSubTest(subTest, bill.patient.gender)}
-                    {renderSubTest(subTest, bill.patient.gender)}
-                    {renderSubTest(subTest, bill.patient.gender)}
-                    {renderSubTest(subTest, bill.patient.gender)}
-                    {renderSubTest(subTest, bill.patient.gender)}
                     {renderSubTest(subTest, bill.patient.gender)}
                   </div>
                 </>

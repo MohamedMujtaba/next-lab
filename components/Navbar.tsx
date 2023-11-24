@@ -18,7 +18,7 @@ import { usePathname } from "next/navigation";
 import TeamSwitcher from "./team-switcher";
 import { SideNav } from "./side-nav";
 
-const links = [
+export const links = [
   {
     title: "Overview",
     description: "lormem epsom loral",
@@ -49,12 +49,12 @@ const links = [
     href: "/results",
     icon: <FileCheck className="w-6 h-6" />,
   },
-  {
-    title: "Insurance",
-    description: "lormem epsom loral",
-    href: "/results",
-    icon: <Building2 className="w-6 h-6" />,
-  },
+  // {
+  //   title: "Insurance",
+  //   description: "lormem epsom loral",
+  //   href: "/results",
+  //   icon: <Building2 className="w-6 h-6" />,
+  // },
   {
     title: "Settings",
     description: "lormem epsom loral",

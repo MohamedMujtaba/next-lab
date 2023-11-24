@@ -28,6 +28,7 @@ import { useRouter } from "next/navigation";
 import { createPatient } from "@/actions/patients/create-patient";
 import { Loader2 } from "lucide-react";
 import { usePatient } from "@/hooks/use-patient";
+import { updatePatient } from "@/actions/patients/update-patient";
 
 export const patientFormSchema = z.object({
   name: z.string().min(2, {
@@ -66,9 +67,22 @@ const PatientForm: React.FC<PatientFormProps> = ({ onClose }) => {
   });
   async function onSubmit(values: z.infer<typeof patientFormSchema>) {
     try {
-      const response = await createPatient({ ...values });
+      if (patient) {
+        const response = await updatePatient(patient.id, values);
+        toast.success("Patient has been updated");
+      }
+      if (!patient) {
+        const response = (await createPatient({ ...values })) as {
+          susses: boolean;
+        };
+        if (response.susses) {
+          toast.success("Patient has been created");
+        }
+        if (!response.susses) {
+          toast.error("Patient already exist ");
+        }
+      }
       onClose();
-      toast.success("Patient has been created");
       form.reset();
       // router.push(`tests/${response.data.id}`);
     } catch (error: any) {

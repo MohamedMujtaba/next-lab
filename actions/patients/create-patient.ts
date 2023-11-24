@@ -28,9 +28,7 @@ export const createPatient = async ({
       },
     });
     if (allReadyExist) {
-      console.log("in");
-
-      throw new Error("Patient phone number must be unique");
+      return { susses: false };
     }
 
     const patient = await prismadb.patient.create({
@@ -42,7 +40,7 @@ export const createPatient = async ({
       },
     });
     revalidatePath("/patients");
-    return patient;
+    return { susses: true };
   } catch (error) {
     console.log(error);
     return error;

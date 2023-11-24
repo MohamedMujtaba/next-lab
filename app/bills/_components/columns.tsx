@@ -33,6 +33,7 @@ import { QuestionMarkCircledIcon } from "@radix-ui/react-icons";
 import { createBill } from "@/actions/bills/createBill";
 import toast from "react-hot-toast";
 import { Separator } from "@/components/ui/separator";
+import { format } from "date-fns";
 
 export type BillType = Bill & {
   tests: (BillTest & { subTests: BillSubTest[] })[];
@@ -68,6 +69,8 @@ export const columns: ColumnDef<BillType>[] = [
   },
   {
     header: "Patient Phone",
+    accessorKey: "phoneNumber",
+    accessorFn: (row) => row.patient.phoneNumber,
     cell: ({ row }) => {
       const bill: BillType = row.original;
       return <p>{bill.patient.phoneNumber}</p>;
@@ -83,7 +86,7 @@ export const columns: ColumnDef<BillType>[] = [
           <HoverCardTrigger>
             <p className="flex gap-1 items-center">
               <QuestionMarkCircledIcon />
-              <p>subTests: {bill.tests.length}</p>{" "}
+              <p>Tests: {bill.tests.length}</p>{" "}
             </p>
           </HoverCardTrigger>
           <HoverCardContent>
@@ -115,6 +118,17 @@ export const columns: ColumnDef<BillType>[] = [
     },
   },
   {
+    accessorKey: "total",
+    header: "Total",
+  },
+  {
+    header: "Created At",
+    cell: ({ row }) => {
+      const bill: BillType = row.original;
+      return <p>{format(bill.createdAt, "dd/MM/yyyy")}</p>;
+    },
+  },
+  {
     id: "actions",
     cell: ({ row }) => {
       const bill = row.original;
@@ -138,7 +152,7 @@ const B = ({ bill }: { bill: BillType }) => {
         <DropdownMenuItem
           onClick={() => navigator.clipboard.writeText(bill.id)}
         >
-          Copy test ID
+          Copy bill ID
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem
@@ -156,7 +170,7 @@ const B = ({ bill }: { bill: BillType }) => {
         >
           Edit Bill
         </DropdownMenuItem>
-        <DropdownMenuItem>Delete patient</DropdownMenuItem>
+        <DropdownMenuItem>Delete bill</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

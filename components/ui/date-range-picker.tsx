@@ -14,10 +14,18 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-export function DatePickerWithRange({
+interface DatePickerWithRangeProps {
+  className?: React.HTMLAttributes<HTMLDivElement>;
+  date: DateRange | undefined;
+  setDate: React.Dispatch<React.SetStateAction<DateRange | undefined>>;
+}
+
+export const DatePickerWithRange: React.FC<DatePickerWithRangeProps> = ({
   className,
-}: React.HTMLAttributes<HTMLDivElement>) {
-  const [date, setDate] = React.useState<DateRange | undefined>(undefined);
+  date,
+  setDate,
+}) => {
+  // const [date, setDate] = React.useState<DateRange | undefined>(undefined);
   console.log(date);
   // 2023-11-17T20:20:12.359Z
   // from: new Date(2022, 0, 20),
@@ -62,4 +70,4 @@ export function DatePickerWithRange({
       </Popover>
     </div>
   );
-}
+};
