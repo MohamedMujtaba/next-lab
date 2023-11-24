@@ -7,6 +7,7 @@ import { BillType, columns } from "./_components/columns";
 import { getBills } from "@/actions/bills/get-bills";
 
 export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
 
 const Bills = async () => {
   const bills = (await getBills()) as BillType[];
