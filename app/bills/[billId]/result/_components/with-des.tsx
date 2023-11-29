@@ -18,6 +18,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Separator } from "@/components/ui/separator";
+import { TipTapEditor } from "@/components/tipTap-editor/editor";
 
 const formSchema = z.object({
   description: z.string().min(10, {
@@ -57,13 +58,13 @@ export const WithDes: React.FC<OneResPops> = ({ subTest }) => {
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="space-x-4 flex-1 flex justify-between  items-start"
+              className="space-y-4 flex-1 flex flex-col justify-between items-end w-full "
             >
               <FormField
                 control={form.control}
                 name="description"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="w-full">
                     <FormControl>
                       {/* <Tiptap
                         content={subTest.description || ""}
@@ -73,10 +74,11 @@ export const WithDes: React.FC<OneResPops> = ({ subTest }) => {
                           form.handleSubmit(onSubmit);
                         }}
                       /> */}
-                      <Editor
+                      {/* <Editor
                         value={subTest.description || ""}
                         onChange={field.onChange}
-                      />
+                      /> */}
+                      <TipTapEditor />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
