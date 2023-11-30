@@ -110,12 +110,24 @@ dependencies:
   '@tanstack/react-table':
     specifier: ^8.10.6
     version: 8.10.7(react-dom@18.2.0)(react@18.2.0)
+  '@tiptap/extension-bold':
+    specifier: ^2.1.12
+    version: 2.1.12(@tiptap/core@2.1.12)
+  '@tiptap/extension-bullet-list':
+    specifier: ^2.1.12
+    version: 2.1.12(@tiptap/core@2.1.12)
   '@tiptap/extension-document':
     specifier: ^2.1.12
     version: 2.1.12(@tiptap/core@2.1.12)
   '@tiptap/extension-gapcursor':
     specifier: ^2.1.12
     version: 2.1.12(@tiptap/core@2.1.12)(@tiptap/pm@2.1.12)
+  '@tiptap/extension-heading':
+    specifier: ^2.1.12
+    version: 2.1.12(@tiptap/core@2.1.12)
+  '@tiptap/extension-list-item':
+    specifier: ^2.1.12
+    version: 2.1.12(@tiptap/core@2.1.12)
   '@tiptap/extension-paragraph':
     specifier: ^2.1.12
     version: 2.1.12(@tiptap/core@2.1.12)
@@ -144,6 +156,9 @@ dependencies:
     specifier: ^2.1.12
     version: 2.1.12(@tiptap/core@2.1.12)
   '@tiptap/extension-typography':
+    specifier: ^2.1.12
+    version: 2.1.12(@tiptap/core@2.1.12)
+  '@tiptap/extension-underline':
     specifier: ^2.1.12
     version: 2.1.12(@tiptap/core@2.1.12)
   '@tiptap/pm':
@@ -2434,6 +2449,14 @@ packages:
 
   /@tiptap/extension-typography@2.1.12(@tiptap/core@2.1.12):
     resolution: {integrity: sha512-OFkQHmUbKQwVO0b/NP2MLuuqQIWxw/gHaWQF/atgZf3mG0YDV2x3P/u+RBpKnsIujPZFvoEBRJGnstvEAB7zfQ==}
+    peerDependencies:
+      '@tiptap/core': ^2.0.0
+    dependencies:
+      '@tiptap/core': 2.1.12(@tiptap/pm@2.1.12)
+    dev: false
+
+  /@tiptap/extension-underline@2.1.12(@tiptap/core@2.1.12):
+    resolution: {integrity: sha512-NwwdhFT8gDD0VUNLQx85yFBhP9a8qg8GPuxlGzAP/lPTV8Ubh3vSeQ5N9k2ZF/vHlEvnugzeVCbmYn7wf8vn1g==}
     peerDependencies:
       '@tiptap/core': ^2.0.0
     dependencies:
