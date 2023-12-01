@@ -20,15 +20,20 @@ import {
   AlignRight,
   Bold,
   Columns,
+  Combine,
   Heading1,
+  Heading2,
+  Heading3,
   Italic,
   List,
   PlusCircle,
   Quote,
   Rows,
   Sheet,
+  SplitSquareVertical,
   Subscript,
   Superscript,
+  Trash,
   Underline,
 } from "lucide-react";
 import { buttonVariants } from "../ui/button";
@@ -51,6 +56,22 @@ export const Toolbar: React.FC<ToolbarProps> = ({ editor }) => {
         pressed={editor.isActive("heading", { level: 1 })}
       >
         <Heading1 className="w-4 h-4" />
+      </Toggle>
+      <Toggle
+        onPressedChange={() =>
+          editor.chain().focus().toggleHeading({ level: 2 }).run()
+        }
+        pressed={editor.isActive("heading", { level: 2 })}
+      >
+        <Heading2 className="w-4 h-4" />
+      </Toggle>
+      <Toggle
+        onPressedChange={() =>
+          editor.chain().focus().toggleHeading({ level: 3 }).run()
+        }
+        pressed={editor.isActive("heading", { level: 3 })}
+      >
+        <Heading3 className="w-4 h-4" />
       </Toggle>
       <Toggle
         onPressedChange={() => editor.chain().focus().toggleBold().run()}
@@ -131,8 +152,8 @@ const TableMenu = ({ editor }: { editor: Editor }) => {
       >
         <Sheet className="w-4 h-4" />
       </DropdownMenuTrigger>
-      <DropdownMenuContent side="right">
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+      <DropdownMenuContent side="right" align="start">
+        <DropdownMenuLabel>Table configurations</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem
           onClick={() =>
@@ -156,17 +177,17 @@ const TableMenu = ({ editor }: { editor: Editor }) => {
               <DropdownMenuItem
                 onClick={() => editor.chain().focus().addColumnBefore().run()}
               >
-                addColumnBefore
+                Add Column Before
               </DropdownMenuItem>
               <DropdownMenuItem
                 onClick={() => editor.chain().focus().addColumnAfter().run()}
               >
-                addColumnAfter
+                Add Column After
               </DropdownMenuItem>
               <DropdownMenuItem
                 onClick={() => editor.chain().focus().deleteColumn().run()}
               >
-                deleteColumn
+                Delete Column
               </DropdownMenuItem>
             </DropdownMenuSubContent>
           </DropdownMenuPortal>
@@ -174,24 +195,24 @@ const TableMenu = ({ editor }: { editor: Editor }) => {
         <DropdownMenuSub>
           <DropdownMenuSubTrigger>
             <Rows className="mr-2 h-4 w-4" />
-            row
+            Row
           </DropdownMenuSubTrigger>
           <DropdownMenuPortal>
             <DropdownMenuSubContent>
               <DropdownMenuItem
                 onClick={() => editor.chain().focus().addRowBefore().run()}
               >
-                addRowBefore
+                Add Row Before
               </DropdownMenuItem>
               <DropdownMenuItem
                 onClick={() => editor.chain().focus().addRowAfter().run()}
               >
-                addRowAfter
+                Add Row After
               </DropdownMenuItem>
               <DropdownMenuItem
                 onClick={() => editor.chain().focus().deleteRow().run()}
               >
-                deleteRow
+                Delete Row
               </DropdownMenuItem>
             </DropdownMenuSubContent>
           </DropdownMenuPortal>
@@ -200,35 +221,38 @@ const TableMenu = ({ editor }: { editor: Editor }) => {
         <DropdownMenuItem
           onClick={() => editor.chain().focus().deleteTable().run()}
         >
-          deleteTable
+          <Trash className="w-4 h-4 mr-2" />
+          Delete Table
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => editor.chain().focus().mergeCells().run()}
         >
-          mergeCells
+          <Combine className="w-4 h-4 mr-2" />
+          Merge Cells
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => editor.chain().focus().splitCell().run()}
         >
-          splitCell
+          <SplitSquareVertical className="w-4 h-4 mr-2" />
+          Split Cell
         </DropdownMenuItem>
-        <DropdownMenuItem
+        {/* <DropdownMenuItem
           onClick={() => editor.chain().focus().mergeOrSplit().run()}
         >
           mergeOrSplit
-        </DropdownMenuItem>
-        <DropdownMenuItem
+        </DropdownMenuItem> */}
+        {/* <DropdownMenuItem
           onClick={() =>
             editor.chain().focus().setCellAttribute("colspan", 2).run()
           }
         >
           setCellAttribute
-        </DropdownMenuItem>
-        <DropdownMenuItem
+        </DropdownMenuItem> */}
+        {/* <DropdownMenuItem
           onClick={() => editor.chain().focus().fixTables().run()}
         >
           fixTables
-        </DropdownMenuItem>
+        </DropdownMenuItem> */}
       </DropdownMenuContent>
     </DropdownMenu>
   );

@@ -13,6 +13,8 @@ export const DeletePatient = async (ids: string[]) => {
       },
     });
     revalidatePath("/patients");
+    revalidatePath("/bills");
+    revalidatePath("/results");
   } catch (error) {
     console.log(error);
   }

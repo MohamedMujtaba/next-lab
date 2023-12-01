@@ -21,7 +21,7 @@ import Typography from "@tiptap/extension-typography";
 import Underline from "@tiptap/extension-underline";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Toolbar } from "./toolbar";
 
 interface TiptapProps {
@@ -83,6 +83,9 @@ export const TipTapMainPreview: React.FC<TiptapProps> = ({ content }) => {
     },
     content: content,
   });
+  useEffect(() => {
+    editor?.commands.setContent(content);
+  }, [content, editor]);
 
   return (
     <div className="w-full overflow-x-auto  ">

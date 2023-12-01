@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 import * as z from "zod";
 
 import { saveResult } from "@/actions/results/save-result";
-import { Editor } from "@/components/editor/editor";
+import { TipTapEditor } from "@/components/tipTap-editor/editor";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -18,7 +18,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Separator } from "@/components/ui/separator";
-import { TipTapEditor } from "@/components/tipTap-editor/editor";
 
 const formSchema = z.object({
   description: z.string().min(10, {

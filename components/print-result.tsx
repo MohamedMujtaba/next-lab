@@ -58,12 +58,12 @@ export const ComponentToPrint = forwardRef<
                 {test.name}
               </div>
               {test.subTests.map((subTest) => (
-                <>
+                <div className="w-full" key={subTest.id}>
                   <div className="page-break" />
                   <div key={subTest.id}>
                     {renderSubTest(subTest, bill.patient.gender)}
                   </div>
-                </>
+                </div>
               ))}
             </div>
           ))}
@@ -83,15 +83,15 @@ const renderSubTest = (subTest: BillSubTest, gender: Gender) => {
 
         <Table className="w-full not-prose table-fixed border-black">
           <TableRow className="border-b-black text-black prose">
-            <TableCell className="p-2">
+            <TableCell className="p-1">
               <p>{subTest.name}</p>
             </TableCell>
-            <TableCell className="text-center p-2">
+            <TableCell className="text-center p-1">
               {gender === "FEMALE"
                 ? parse(subTest.femaleNormal || "")
                 : parse(subTest.maleNormal || "")}
             </TableCell>
-            <TableCell className="text-center p-2">
+            <TableCell className="text-center p-1">
               {parse(subTest.result || "")}
             </TableCell>
           </TableRow>
@@ -106,15 +106,15 @@ const renderSubTest = (subTest: BillSubTest, gender: Gender) => {
 
         <Table className="w-full text-xl table-fixed not-prose">
           <TableRow className="border-b-black text-black">
-            <TableCell className="p-2">
+            <TableCell className="p-1">
               <p>{subTest.name}</p>
             </TableCell>
-            <TableCell className="text-center p-2">
+            <TableCell className="text-center p-1">
               {gender === "FEMALE"
                 ? parse(subTest.femaleNormal || "")
                 : parse(subTest.maleNormal || "")}
             </TableCell>
-            <TableCell className="text-center p-2">
+            <TableCell className="text-center p-1">
               {subTest.selectedOption}
             </TableCell>
           </TableRow>

@@ -19,6 +19,7 @@ export const saveResult = async (
           result: value,
         },
       });
+      revalidatePath("/bills/[billId]/result", "page");
     }
     if (type === "DESCRIPTION") {
       const result = await prismadb.billSubTest.update({
@@ -29,6 +30,7 @@ export const saveResult = async (
           description: value,
         },
       });
+      revalidatePath("/bills/[billId]/result", "page");
     }
     if (type === "OPTIONS") {
       const result = await prismadb.billSubTest.update({
@@ -39,8 +41,8 @@ export const saveResult = async (
           selectedOption: value,
         },
       });
+      revalidatePath("/bills/[billId]/result", "page");
     }
-    revalidatePath("bills/[id]/result");
     return {};
   } catch (error) {
     console.log(error);

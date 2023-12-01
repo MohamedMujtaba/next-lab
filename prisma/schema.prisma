@@ -65,7 +65,7 @@ model SubTest {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  test       Test?   @relation(fields: [testId], references: [id])
+  test       Test?   @relation(fields: [testId], references: [id], onDelete: Cascade)
   billTestId String?
 
   @@index([testId])
@@ -84,7 +84,7 @@ model SubTestOption {
   subTestId String?
 
   subTest       SubTest?     @relation(fields: [subTestId], references: [id])
-  BillSubTest   BillSubTest? @relation(fields: [billSubTestId], references: [id])
+  BillSubTest   BillSubTest? @relation(fields: [billSubTestId], references: [id], onDelete: Cascade)
   billSubTestId String?
 
   @@index([subTestId])
@@ -104,7 +104,7 @@ model Bill {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  patient         Patient?          @relation("PatientToBills", fields: [patientId], references: [id])
+  patient         Patient?          @relation("PatientToBills", fields: [patientId], references: [id], onDelete: Cascade)
   insurance       InsuranceCompany? @relation("BillToInsurance", fields: [insuranceCompanyId], references: [id])
   insuranceTypeId String?
 
@@ -124,7 +124,7 @@ model BillTest {
 
   testId String?
 
-  Test Test? @relation(fields: [testId], references: [id])
+  Test Test? @relation(fields: [testId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -162,7 +162,7 @@ model Result {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  patient Patient? @relation("PatientToResults", fields: [patientId], references: [id])
+  patient Patient? @relation("PatientToResults", fields: [patientId], references: [id], onDelete: Cascade)
   bill    Bill     @relation(fields: [billId], references: [id])
 }
 
