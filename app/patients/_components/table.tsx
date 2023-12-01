@@ -50,7 +50,6 @@ export function DataTable<TData, TValue>({
   // useEffect(() => {
   //   router.refresh();
   // }, [router]);
-  console.log(rowSelection);
 
   return (
     <div>

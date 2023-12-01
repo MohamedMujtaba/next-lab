@@ -26,18 +26,11 @@ import { Toolbar } from "./toolbar";
 
 interface TiptapProps {
   content: string;
-  onChange: (richText: string) => void;
-  disabled?: boolean;
-  placeholder?: string;
 }
 
-export const TipTapEditor: React.FC<TiptapProps> = ({
-  content,
-  onChange,
-  disabled = false,
-  placeholder = "",
-}) => {
+export const TipTapMainPreview: React.FC<TiptapProps> = ({ content }) => {
   const editor = useEditor({
+    editable: false,
     extensions: [
       StarterKit,
       Underline,
@@ -52,7 +45,7 @@ export const TipTapEditor: React.FC<TiptapProps> = ({
       Text,
       Gapcursor,
       Table.configure({
-        // resizable: true,
+        resizable: true,
         HTMLAttributes: {
           class: "not-prose",
         },
@@ -85,19 +78,14 @@ export const TipTapEditor: React.FC<TiptapProps> = ({
     ],
     editorProps: {
       attributes: {
-        class:
-          "max-w-none  prose dark:prose-invert prose-sm  min-h-[150px] rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+        class: "max-w-none  prose dark:prose-invert prose-sm  ",
       },
     },
     content: content,
-    onUpdate({ editor }) {
-      onChange(editor.getHTML());
-    },
   });
 
   return (
-    <div className="w-full overflow-x-auto p-1  ">
-      <Toolbar editor={editor} />
+    <div className="w-full overflow-x-auto  ">
       <EditorContent editor={editor} />
     </div>
   );

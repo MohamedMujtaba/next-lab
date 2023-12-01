@@ -26,7 +26,7 @@ export default async function RootLayout({
   const doctors = await prismadb.doctor.findMany();
   return (
     <html lang="en">
-      <ThemeWrapper defaultTheme="green" className="wax-w-screen">
+      <ThemeWrapper defaultTheme="green" className="">
         <ThemeSwitcher />
         <ThemeProvider
           attribute="class"

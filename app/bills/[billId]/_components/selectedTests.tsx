@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
+import { addComma } from "@/lib/addComma";
 import { Bill, BillSubTest, BillTest } from "@prisma/client";
 import { Trash, X } from "lucide-react";
 import React from "react";
@@ -33,7 +34,7 @@ const SelectedTests: React.FC<SelectedTestsProps> = ({ bill }) => {
                       />
                       {t.name}
                     </div>
-                    <Badge>{t.price}</Badge>
+                    <Badge>{addComma(t.price || 0)}</Badge>
                   </div>
                   <Separator />
                 </i>

@@ -72,7 +72,7 @@ const Navbar: React.FC<NavbarProps> = ({ doctors }) => {
   return (
     <div className="h-16 w-full border-b flex items-center justify-between px-4">
       <div className="space-x-8 hidden lg:flex">
-        <TeamSwitcher doctors={doctors} />
+        {/* <TeamSwitcher doctors={doctors} /> */}
         <div className="flex items-center space-x-6">
           {links.map((link) => {
             const activeLink = pathname === link.href;

@@ -22,7 +22,7 @@ import { TipTapEditor } from "@/components/tipTap-editor/editor";
 
 const formSchema = z.object({
   description: z.string().min(10, {
-    message: "Name must be at least 2 characters.",
+    message: "Result must be at least 2 characters.",
   }),
 });
 
@@ -78,7 +78,11 @@ export const WithDes: React.FC<OneResPops> = ({ subTest }) => {
                         value={subTest.description || ""}
                         onChange={field.onChange}
                       /> */}
-                      <TipTapEditor />
+                      <TipTapEditor
+                        content={subTest.description || ""}
+                        placeholder="Result"
+                        onChange={field.onChange}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

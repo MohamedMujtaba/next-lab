@@ -15,6 +15,7 @@ import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useBill } from "@/hooks/use-bill";
+import { addComma } from "@/lib/addComma";
 import { SubTest, SubTestOption, Test } from "@prisma/client";
 import { Plus } from "lucide-react";
 import { useParams } from "next/navigation";
@@ -27,7 +28,6 @@ interface TestsListProps {
 const TestsList: React.FC<TestsListProps> = ({ tests }) => {
   const { billId }: { billId: string } = useParams();
   const { addTest, tests: bTests, switchSubTest } = useBill();
-  console.log(bTests);
   return (
     <Card className="p-4">
       <ScrollArea className="h-[70vh] pr-8">
@@ -68,7 +68,7 @@ const TestsList: React.FC<TestsListProps> = ({ tests }) => {
                         </Button>
                         <p>{subTest.name}</p>
                       </div>
-                      <Badge>{subTest.price}</Badge>
+                      <Badge>{addComma(subTest.price || 0)}</Badge>
                     </div>
                   ))}
                 </AccordionContent>

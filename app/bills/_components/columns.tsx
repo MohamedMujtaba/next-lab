@@ -34,6 +34,7 @@ import { createBill } from "@/actions/bills/createBill";
 import toast from "react-hot-toast";
 import { Separator } from "@/components/ui/separator";
 import { format } from "date-fns";
+import { addComma } from "@/lib/addComma";
 
 export type BillType = Bill & {
   tests: (BillTest & { subTests: BillSubTest[] })[];
@@ -120,6 +121,10 @@ export const columns: ColumnDef<BillType>[] = [
   {
     accessorKey: "total",
     header: "Total",
+    cell: ({ row }) => {
+      const bill: BillType = row.original;
+      return <p>{addComma(bill.total || 0)}</p>;
+    },
   },
   {
     header: "Created At",
@@ -155,13 +160,17 @@ const B = ({ bill }: { bill: BillType }) => {
           Copy bill ID
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem
-          onClick={async () => {
-            router.push(`/bills/${bill.id}/result`);
-          }}
-        >
-          Result
-        </DropdownMenuItem>
+        {bill.tests.length > 0 ? (
+          <DropdownMenuItem
+            onClick={async () => {
+              router.push(`/bills/${bill.id}/result`);
+            }}
+          >
+            Result
+          </DropdownMenuItem>
+        ) : (
+          <DropdownMenuItem disabled>Result</DropdownMenuItem>
+        )}
         <DropdownMenuSeparator />
         <DropdownMenuItem
           onClick={async () => {

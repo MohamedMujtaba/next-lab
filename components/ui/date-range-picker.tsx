@@ -26,7 +26,6 @@ export const DatePickerWithRange: React.FC<DatePickerWithRangeProps> = ({
   setDate,
 }) => {
   // const [date, setDate] = React.useState<DateRange | undefined>(undefined);
-  console.log(date);
   // 2023-11-17T20:20:12.359Z
   // from: new Date(2022, 0, 20),
   // to: addDays(new Date(2022, 0, 20), 20),

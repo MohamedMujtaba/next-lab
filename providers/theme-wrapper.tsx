@@ -21,7 +21,7 @@ export function ThemeWrapper({
     <body
       className={cn(
         `theme-${configTheme || defaultTheme}`,
-        "w-full",
+        // "w-full",
         className
       )}
       style={

@@ -14,6 +14,7 @@ import { Separator } from "./ui/separator";
 
 import "react-quill/dist/quill.bubble.css";
 import { PrintHeader } from "./print-header";
+import { TipTapMainPreview } from "./tipTap-editor/preview";
 
 interface PrintResultProps {
   // ref: React.Ref<HTMLDivElement> | null;
@@ -80,17 +81,17 @@ const renderSubTest = (subTest: BillSubTest, gender: Gender) => {
       <>
         <div className="page-break" />
 
-        <Table className="w-full text-xl table-fixed border-black">
-          <TableRow className="border-b-black text-black">
-            <TableCell className="">
+        <Table className="w-full not-prose table-fixed border-black">
+          <TableRow className="border-b-black text-black prose">
+            <TableCell className="p-2">
               <p>{subTest.name}</p>
             </TableCell>
-            <TableCell className="text-center">
+            <TableCell className="text-center p-2">
               {gender === "FEMALE"
                 ? parse(subTest.femaleNormal || "")
                 : parse(subTest.maleNormal || "")}
             </TableCell>
-            <TableCell className="text-center">
+            <TableCell className="text-center p-2">
               {parse(subTest.result || "")}
             </TableCell>
           </TableRow>
@@ -103,17 +104,17 @@ const renderSubTest = (subTest: BillSubTest, gender: Gender) => {
       <>
         <div className="page-break" />
 
-        <Table className="w-full text-xl table-fixed">
+        <Table className="w-full text-xl table-fixed not-prose">
           <TableRow className="border-b-black text-black">
-            <TableCell className="">
+            <TableCell className="p-2">
               <p>{subTest.name}</p>
             </TableCell>
-            <TableCell className="text-center">
+            <TableCell className="text-center p-2">
               {gender === "FEMALE"
                 ? parse(subTest.femaleNormal || "")
                 : parse(subTest.maleNormal || "")}
             </TableCell>
-            <TableCell className="text-center">
+            <TableCell className="text-center p-2">
               {subTest.selectedOption}
             </TableCell>
           </TableRow>
@@ -126,7 +127,7 @@ const renderSubTest = (subTest: BillSubTest, gender: Gender) => {
       <>
         <div className="w-full text-xl break-inside-avoid text-black">
           <div>{subTest.name}</div>
-          <Preview value={subTest.description || ""} />
+          <TipTapMainPreview content={subTest.description || ""} />
           <Separator className="bg-black" />
         </div>
       </>

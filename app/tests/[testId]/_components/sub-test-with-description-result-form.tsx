@@ -24,6 +24,7 @@ import { Loader2 } from "lucide-react";
 import { SubTest } from "@prisma/client";
 import { Editor } from "@/components/editor/editor";
 import { Preview } from "@/components/editor/preview";
+import { TipTapEditor } from "@/components/tipTap-editor/editor";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -104,7 +105,11 @@ const SubTestWithDescriptionResult: React.FC<
             <FormItem>
               <FormLabel>Test Default Result</FormLabel>
               <FormControl>
-                <Editor onChange={field.onChange} value={field.value || ""} />
+                <TipTapEditor
+                  content={field.value || ""}
+                  placeholder="Result"
+                  onChange={field.onChange}
+                />
               </FormControl>
               <FormDescription>
                 {`This is your test Default Result 

@@ -1,6 +1,5 @@
 "use client";
 
-import { Editor } from "@tiptap/react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,6 +12,8 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils";
+import { Editor } from "@tiptap/react";
 import {
   AlignCenter,
   AlignLeft,
@@ -26,13 +27,10 @@ import {
   Quote,
   Rows,
   Sheet,
-  StretchVertical,
   Subscript,
   Superscript,
-  Table,
   Underline,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { buttonVariants } from "../ui/button";
 import { Toggle } from "../ui/toggle";
 
@@ -45,7 +43,7 @@ export const Toolbar: React.FC<ToolbarProps> = ({ editor }) => {
     return null;
   }
   return (
-    <div className="flex items-center gap-2 border border-border p-1 rounded mb-4">
+    <div className="flex w-full min-w-full  items-center gap-2 border border-border p-1 rounded mb-4">
       <Toggle
         onPressedChange={() =>
           editor.chain().focus().toggleHeading({ level: 1 }).run()
@@ -100,18 +98,24 @@ export const Toolbar: React.FC<ToolbarProps> = ({ editor }) => {
         onPressedChange={() => editor.chain().focus().toggleBulletList().run()}
         pressed={editor.isActive("bulletList")}
       >
-        <List className="w-4 h-4 text-red-500" />
+        <List className="w-4 h-4" />
       </Toggle>
       <Toggle
         onPressedChange={() => editor.chain().focus().toggleBlockquote().run()}
         pressed={editor.isActive("blockquote")}
       >
-        <Quote className="w-4 h-4 text-red-500" />
+        <Quote className="w-4 h-4" />
       </Toggle>
-      <Toggle>
+      <Toggle
+        onPressedChange={() => editor.chain().focus().toggleSuperscript().run()}
+        pressed={editor.isActive("superscript")}
+      >
         <Superscript className="w-4 h-4" />
       </Toggle>
-      <Toggle>
+      <Toggle
+        onPressedChange={() => editor.chain().focus().toggleSubscript().run()}
+        pressed={editor.isActive("subscript")}
+      >
         <Subscript className="w-4 h-4" />
       </Toggle>
       <TableMenu editor={editor} />

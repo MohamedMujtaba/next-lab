@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
   overflow-x: hidden;
-}
+} */
 
 *,
 :after,
@@ -13,25 +13,25 @@ body {
 }
 
 /* width */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 7px;
-}
+} */
 
 /* Track */
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   background: #f1f1f1;
-}
+} */
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 5px;
-}
+} */
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
+} */
 
 @layer base {
   :root {

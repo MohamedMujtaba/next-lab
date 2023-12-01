@@ -19,7 +19,6 @@ export const getStatus = async ({
     dateQ.lte = new Date(format(to, "yyyy/MM/dd"));
     dateQ.gte = new Date(format(from, "yyyy/MM/dd"));
   }
-  console.log(dateQ);
 
   try {
     const bills = await prismadb.bill.count({

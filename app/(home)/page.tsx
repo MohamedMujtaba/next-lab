@@ -29,7 +29,7 @@ const Home = () => {
 
   // const status = await getStatus()
   return (
-    <div className="w-screen flex items-center flex-col space-y-4 p-4">
+    <div className="max-w-screen flex items-center flex-col space-y-4 p-4">
       <div className="w-full">
         <div className="pb-4 w-full flex items-center justify-between">
           <div>
@@ -144,7 +144,7 @@ const Home = () => {
 };
 
 {
-  /* <div className="w-screen h-screen  flex items-center justify-center">
+  /* <div className="max-w-screen h-screen  flex items-center justify-center">
       <div className="w-full fixed flex self-start justify-end p-4 "></div>
       <div className="grid grid-cols-2 gap-2">
         {links.map((item: ItemType) => (

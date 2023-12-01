@@ -31,7 +31,7 @@ const TestPage: React.FC<TestPageProps> = async ({ params }) => {
   if (!test) return <div>404</div>;
 
   return (
-    <div className="w-screen gap-4 p-4 grid grid-cols-1  md:grid-cols-9">
+    <div className="max-w-screen gap-4 p-4 grid grid-cols-1  md:grid-cols-9">
       {/* <TestForm test={test} /> */}
       <div className="col-span-1 md:col-span-4">
         <TestNameForm test={test} />

@@ -12,8 +12,11 @@ import {
   SubTestOption,
 } from "@prisma/client";
 import { getBill } from "@/actions/bills/get-bill";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { addComma } from "@/lib/addComma";
 
 export const dynamic = "force-dynamic";
 export const fetchCache = "force-no-store";
@@ -31,8 +34,6 @@ const BillPage = async ({ params }: { params: { billId: string } }) => {
   const bill = (await getBill(billId)) as Bill & {
     tests: TTest[];
   } & { patient: Patient };
-  console.log(bill);
-
   return (
     <Container>
       <div className="w-full">
@@ -47,7 +48,24 @@ const BillPage = async ({ params }: { params: { billId: string } }) => {
             </p>
           </div>
           <div className="flex items-center gap-4">
-            <Button>TODO:</Button>
+            {bill.tests.length > 0 ? (
+              <Link
+                href={`/bills/${billId}/result`}
+                className={cn(
+                  "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+                  "border border-input bg-background hover:bg-accent hover:text-accent-foreground px-4 py-2"
+                )}
+              >
+                Result
+              </Link>
+            ) : null}
+            {/* <Button
+              variant="outline"
+              className={cn(buttonVariants({ size: "icon" }))}
+              onClick={() => router.push(`bills/${billId}/result`)}
+            >
+              Result
+            </Button> */}
           </div>
         </div>
         <Separator />
@@ -55,11 +73,19 @@ const BillPage = async ({ params }: { params: { billId: string } }) => {
       <div className="w-full grid grid-cols-10 gap-4  ">
         <div className="col-span-5  space-y-4">
           <TestsList tests={tests} />
-          <Insurance />
+          {/* <Insurance /> */}
         </div>
         <div className="col-span-5 h-[30vh] ">
           <SelectedTests bill={bill} />
-          <div>{bill.total}</div>
+          <div className=" mt-4 flex flex-col">
+            <Separator />
+            <div className="flex items-center justify-between text-xl p-2">
+              <p>Total:</p>
+              <p>{addComma(bill.total || 0)}</p>
+            </div>
+            <Separator className="mb-1" />
+            <Separator />
+          </div>
         </div>
       </div>
     </Container>
