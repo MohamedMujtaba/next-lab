@@ -20,20 +20,8 @@ export const markAsReady = async (id: string) => {
 
     bill?.tests.map((test) => {
       test.subTests.map((subTest) => {
-        if (subTest.type === "ONERESULT") {
-          if (!subTest.result) {
-            isEmpty.push(subTest);
-          }
-        }
-        if (subTest.type === "DESCRIPTION") {
-          if (!subTest.description) {
-            isEmpty.push(subTest);
-          }
-        }
-        if (subTest.type === "OPTIONS") {
-          if (!subTest.selectedOption) {
-            isEmpty.push(subTest);
-          }
+        if (!subTest.result && !subTest.description) {
+          isEmpty.push(subTest);
         }
       });
     });

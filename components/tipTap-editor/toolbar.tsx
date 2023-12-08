@@ -21,6 +21,7 @@ import {
   Bold,
   Columns,
   Combine,
+  Eraser,
   Heading1,
   Heading2,
   Heading3,
@@ -36,9 +37,8 @@ import {
   Trash,
   Underline,
 } from "lucide-react";
-import { buttonVariants } from "../ui/button";
+import { Button, buttonVariants } from "../ui/button";
 import { Toggle } from "../ui/toggle";
-
 interface ToolbarProps {
   editor: Editor | null;
 }
@@ -140,6 +140,14 @@ export const Toolbar: React.FC<ToolbarProps> = ({ editor }) => {
         <Subscript className="w-4 h-4" />
       </Toggle>
       <TableMenu editor={editor} />
+      <Button
+        size="icon"
+        variant="ghost"
+        onClick={() => editor.commands.clearContent(true)}
+        type="button"
+      >
+        <Eraser className="w-4 h-4 " />
+      </Button>
     </div>
   );
 };

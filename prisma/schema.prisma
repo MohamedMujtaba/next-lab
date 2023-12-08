@@ -50,7 +50,7 @@ model SubTest {
   id             String          @id @default(cuid())
   name           String
   price          Int
-  type           SubTestType
+  type           SubTestType?
   maleNormal     String?         @default("")
   femaleNormal   String?         @default("")
   result         String?
@@ -136,7 +136,7 @@ model BillSubTest {
   id             String          @id @default(cuid())
   name           String
   price          Int
-  type           SubTestType
+  type           SubTestType?
   maleNormal     String?         @default("")
   femaleNormal   String?         @default("")
   result         String?

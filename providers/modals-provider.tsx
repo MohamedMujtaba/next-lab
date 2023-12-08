@@ -7,6 +7,7 @@ import EditTestModal from "@/components/modals/edit-test-modal";
 import EditUserModal from "@/components/modals/edit-user-modal";
 import { useEffect, useState } from "react";
 import PatientModal from "@/components/modals/patient-modal";
+import { SubTestSheet } from "@/components/subTest-sheet/subTest-sheet";
 const ModalsProvider = () => {
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
@@ -19,6 +20,7 @@ const ModalsProvider = () => {
       <CreateTestModal />
       <EditTestModal />
       <PatientModal />
+      <SubTestSheet />
     </>
   );
 };

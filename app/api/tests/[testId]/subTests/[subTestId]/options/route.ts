@@ -1,5 +1,6 @@
 import prismadb from "@/lib/prisma";
 import { SubTestOption } from "@prisma/client";
+import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 
 interface POSTProps {
@@ -25,6 +26,8 @@ export async function POST(req: Request, params: POSTProps) {
         order: count,
       },
     });
+    revalidatePath("/tests");
+    revalidatePath("/tests/[testId]", "page");
     return NextResponse.json({ option });
   } catch (error) {
     console.log(error);

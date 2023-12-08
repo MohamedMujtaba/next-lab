@@ -8,6 +8,7 @@ import { SubTest, SubTestOption } from "@prisma/client";
 import SubTestModal from "./sub-test-modal";
 import { useSubTest } from "@/hooks/use-sub-test";
 import { useParams } from "next/navigation";
+import { SubTestSheetButton } from "@/components/sub-test-sheet-button";
 
 interface SubTestsComponentProps {
   subTests: (SubTest & { options: SubTestOption[] })[];
@@ -30,10 +31,10 @@ const SubTestsComponent: React.FC<SubTestsComponentProps> = ({ subTests }) => {
             </div>
             <p className="text-2xl font-bold">Tests: </p>
           </div>
-          <AddSubTestButton />
+          <SubTestSheetButton />
         </div>
         <SubTestsList subTests={subTests} />
-        <SubTestModal />
+        {/* <SubTestModal /> */}
       </div>
       {isLoading && (
         <div className="absolute inset-0 top-0 z-50 bg-sky-500/30 m-0 flex items-center justify-center rounded-md cursor-not-allowed">

@@ -50,7 +50,7 @@ export const addBillSubTest = async (props: AddBillSubTestProps) => {
       name: subTest.name,
       order: subTest.order,
       price: subTest.price,
-      type: subTest.type,
+      // type: subTest.type,
       description: subTest.description,
       femaleNormal: subTest.femaleNormal,
       maleNormal: subTest.maleNormal,

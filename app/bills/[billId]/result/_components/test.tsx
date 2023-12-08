@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/collapsible";
 import { useState } from "react";
 import { WithOptions } from "./with-options";
+import { InputWithOptions } from "@/components/input-with-options";
 
 type SubTest = BillSubTest & { options: SubTestOption[] };
 type Test = BillTest & { subTests: SubTest[] };
@@ -45,12 +46,12 @@ const Test: React.FC<TestProps> = ({ test }) => {
       </CollapsibleTrigger>
       <CollapsibleContent className="space-y-4">
         {test.subTests.map((subTest) => {
-          if (subTest.type === "ONERESULT")
-            return <OneResult subTest={subTest} />;
-          if (subTest.type === "DESCRIPTION")
-            return <WithDes subTest={subTest} />;
-          if (subTest.type === "OPTIONS")
-            return <WithOptions subTest={subTest} />;
+          return <OneResult subTest={subTest} key={subTest.id} />;
+          // if (subTest.type === "DESCRIPTION")
+          //   return <WithDes subTest={subTest} />;
+          // if (subTest.type === "OPTIONS")
+          //   return <WithOptions subTest={subTest} />;
+          // return <InputWithOptions key={subTest.id} />;
         })}
       </CollapsibleContent>
       <Separator />
