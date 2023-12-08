@@ -11,6 +11,7 @@ export const getBills = async () => {
         tests: {
           include: {
             subTests: {
+              include: { normals: true },
               orderBy: { order: "asc" },
             },
           },

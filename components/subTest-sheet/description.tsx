@@ -33,7 +33,7 @@ const formSchema = z.object({
 interface DescriptionProps {}
 
 const Description: React.FC<DescriptionProps> = ({}) => {
-  const { testId, onClose, type, subTest } = useSubTest((state) => state);
+  const { testId, onClose, subTest } = useSubTest((state) => state);
   const router = useRouter();
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -56,7 +56,6 @@ const Description: React.FC<DescriptionProps> = ({}) => {
       if (!subTest) {
         const response = await axios.post(`/api/tests/${testId}/subTests`, {
           ...values,
-          type,
         });
         toast.success("Sub test has been created");
       }

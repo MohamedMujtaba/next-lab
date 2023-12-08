@@ -13,6 +13,7 @@ export const getResults = async () => {
         tests: {
           include: {
             subTests: {
+              include: { normals: true },
               orderBy: { order: "asc" },
             },
           },

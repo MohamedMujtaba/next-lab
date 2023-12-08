@@ -45,16 +45,10 @@ const formSchema = z.object({
   name: z.string().min(2, {
     message: "Name must be at least 2 characters.",
   }),
-  maleNormal: z.string().min(1, {
-    message: "Normal must be at least 1 characters.",
-  }),
-  femaleNormal: z.string().min(1, {
-    message: "Normal must be at least 1 characters.",
-  }),
   testId: z.string().min(1, {
     message: "Normal must be at least 1 characters.",
   }),
-  result: z.string().optional(),
+  unit: z.string().default(""),
   price: z.number({
     required_error: "You must provide a price",
   }),
@@ -69,8 +63,7 @@ export const NameNormalPrice: React.FC<NameNormalPriceProps> = ({}) => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: subTest?.name ? subTest.name : "",
-      maleNormal: subTest?.maleNormal ? subTest.maleNormal : "",
-      femaleNormal: subTest?.femaleNormal ? subTest.femaleNormal : "",
+      unit: subTest?.unit ? subTest.unit : "",
       testId: subTest?.testId ? subTest.testId : "",
       price: subTest?.price ? subTest.price : 0,
     },
@@ -203,36 +196,18 @@ export const NameNormalPrice: React.FC<NameNormalPriceProps> = ({}) => {
         />
         <FormField
           control={form.control}
-          name="maleNormal"
+          name="unit"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Test maleNormal</FormLabel>
+              <FormLabel>Test unit</FormLabel>
               <FormControl>
                 <Input
-                  placeholder="Normal"
+                  placeholder="unit"
                   {...field}
                   disabled={form.formState.isSubmitting}
                 />
               </FormControl>
-              <FormDescription>This is your test maleNormal.</FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="femaleNormal"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Test femaleNormal</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Normal"
-                  {...field}
-                  disabled={form.formState.isSubmitting}
-                />
-              </FormControl>
-              <FormDescription>This is your test femaleNormal.</FormDescription>
+              <FormDescription>This is your test unit.</FormDescription>
               <FormMessage />
             </FormItem>
           )}

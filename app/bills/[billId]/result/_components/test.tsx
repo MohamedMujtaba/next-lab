@@ -6,14 +6,12 @@ import { Separator } from "@/components/ui/separator";
 import { ChevronDown, Grip, GripHorizontal } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { WithDes } from "./with-des";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { useState } from "react";
-import { WithOptions } from "./with-options";
 import { InputWithOptions } from "@/components/input-with-options";
 
 type SubTest = BillSubTest & { options: SubTestOption[] };

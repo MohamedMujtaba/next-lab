@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { Prisma, SubTest, SubTestOption, SubTestType } from "@prisma/client";
+import { Prisma, SubTest, SubTestNormal, SubTestOption } from "@prisma/client";
 
 interface SubTestState {
   testId: string;
@@ -7,21 +7,23 @@ interface SubTestState {
   isOpen: boolean;
   onOpen: () => void;
   onClose: () => void;
-  type: SubTestType | "";
-  setType: (type: SubTestType) => void;
   isLoading: boolean;
   setIsLoading: (isLoading: boolean) => void;
   subTests: (SubTest & { options: SubTestOption[] })[];
   setSubTests: (subTests: (SubTest & { options: SubTestOption[] })[]) => void;
-  subTest: (SubTest & { options: SubTestOption[] }) | undefined;
-  setSubTest: (subTest: SubTest & { options: SubTestOption[] }) => void;
+  subTest:
+    | (SubTest & { options: SubTestOption[]; normals: SubTestNormal[] })
+    | undefined;
+  setSubTest: (
+    subTest: SubTest & { options: SubTestOption[]; normals: SubTestNormal[] }
+  ) => void;
   resetSubTest: () => void;
 }
 
 export const useSubTest = create<SubTestState>()((set) => ({
   testId: "",
   isOpen: false,
-  type: "",
+
   isLoading: false,
   subTests: [],
   subTest: undefined,
@@ -30,7 +32,6 @@ export const useSubTest = create<SubTestState>()((set) => ({
   setTestId: (testId) => set({ testId }),
   onOpen: () => set({ isOpen: true }),
   onClose: () => set({ isOpen: false, subTest: undefined }),
-  setType: (type) => set({ type }),
   setSubTest: (subTest) => set({ subTest }),
   resetSubTest: () => set({ subTest: undefined }),
 }));

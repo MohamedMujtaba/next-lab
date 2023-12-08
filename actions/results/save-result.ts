@@ -1,14 +1,15 @@
 "use server";
 
 import prismadb from "@/lib/prisma";
-import { SubTestType } from "@prisma/client";
 import { revalidatePath } from "next/cache";
 
 export const saveResult = async (
   id: string,
-  //  type: SubTestType,
-  // value: string
-  values: { result?: string | undefined; description?: string | undefined }
+  values: {
+    result?: string | undefined;
+    description?: string | undefined;
+    selectedNormal: string;
+  }
 ) => {
   console.log(values);
 
@@ -28,6 +29,7 @@ export const saveResult = async (
       data: {
         result: values.result,
         description: values.description,
+        selectedNormal: values.selectedNormal,
       },
     });
     revalidatePath("/bills/[billId]/result", "page");
@@ -46,7 +48,7 @@ export const saveResult = async (
 
 // export const saveResult = async (
 //   id: string,
-//   // type: SubTestType,
+
 //   value: string
 // ) => {
 //   try {

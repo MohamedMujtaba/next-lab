@@ -1,22 +1,20 @@
 "use server";
 
 import prismadb from "@/lib/prisma";
-import { Prisma } from "@prisma/client";
+import { Prisma, SubTest, SubTestNormal, SubTestOption } from "@prisma/client";
 
 interface CreateSubTestProps {
   name: string;
   price: number;
   testId: string;
-  femaleNormal: string | undefined;
-  maleNormal: string | undefined;
+  unit: string | undefined;
 }
 
 export const createSubTest = async ({
   name,
   price,
   testId,
-  femaleNormal,
-  maleNormal,
+  unit,
 }: CreateSubTestProps) => {
   try {
     if (!testId) return { success: false, msg: "You should provide a test !" };
@@ -29,16 +27,18 @@ export const createSubTest = async ({
 
     const count = subTestsCount + 1;
 
-    const subTest = await prismadb.subTest.create({
+    const subTest: SubTest & {
+      options: SubTestOption[];
+      normals: SubTestNormal[];
+    } = await prismadb.subTest.create({
       data: {
         name,
+        unit,
         price: price | 0,
         testId,
-        femaleNormal,
-        maleNormal,
         order: count,
       },
-      include: { options: true },
+      include: { options: true, normals: true },
     });
     return { success: true, data: subTest };
   } catch (error) {

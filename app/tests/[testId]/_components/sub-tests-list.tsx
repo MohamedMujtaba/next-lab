@@ -8,7 +8,7 @@ import {
   PlusCircle,
   Trash,
 } from "lucide-react";
-import { SubTest, SubTestOption, Test } from "@prisma/client";
+import { SubTest, SubTestNormal, SubTestOption, Test } from "@prisma/client";
 import { CSS } from "@dnd-kit/utilities";
 import {
   DndContext,
@@ -49,7 +49,10 @@ import toast from "react-hot-toast";
 import axios from "axios";
 
 interface SubTestsListProps {
-  subTests: (SubTest & { options: SubTestOption[] })[];
+  subTests: (SubTest & {
+    options: SubTestOption[];
+    normals: SubTestNormal[];
+  })[];
 }
 
 const SubTestsList: React.FC<SubTestsListProps> = ({ subTests }) => {
@@ -58,7 +61,9 @@ const SubTestsList: React.FC<SubTestsListProps> = ({ subTests }) => {
   );
   const [isDragging, setIsDragging] = useState(false);
   const [st, setSt] =
-    useState<(SubTest & { options: SubTestOption[] })[]>(subTests);
+    useState<
+      (SubTest & { options: SubTestOption[]; normals: SubTestNormal[] })[]
+    >(subTests);
   useEffect(() => {
     setSt(subTests);
   }, [subTests]);
@@ -128,7 +133,7 @@ const SubTestsList: React.FC<SubTestsListProps> = ({ subTests }) => {
 export default SubTestsList;
 
 interface SupTestProps {
-  subTest: SubTest & { options: SubTestOption[] };
+  subTest: SubTest & { options: SubTestOption[]; normals: SubTestNormal[] };
   isDragging: boolean;
 }
 
@@ -170,7 +175,7 @@ const SubTest: React.FC<SupTestProps> = ({ subTest, isDragging }) => {
 };
 
 interface SubTestActionButtonProps {
-  subTest: SubTest & { options: SubTestOption[] };
+  subTest: SubTest & { options: SubTestOption[]; normals: SubTestNormal[] };
 }
 
 const SubTestActionButton: React.FC<SubTestActionButtonProps> = ({

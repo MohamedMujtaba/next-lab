@@ -27,6 +27,7 @@ import { useSubTest } from "@/hooks/use-sub-test";
 import { OptionsTab } from "./options";
 import { NameNormalPrice } from "./name-normal-price";
 import Description from "./description";
+import { LabelTab } from "./normals";
 
 export const SubTestSheet = () => {
   const { subTest, isOpen, onClose, onOpen } = useSubTest((state) => state);
@@ -49,6 +50,7 @@ export const SubTestSheet = () => {
           <Tabs defaultValue="Details" className="mt-4 w-full px-4">
             <TabsList>
               <TabsTrigger value="Details">Details</TabsTrigger>
+              <TabsTrigger value="Normals">Normals</TabsTrigger>
               <TabsTrigger value="Options" disabled={!subTest}>
                 Options
               </TabsTrigger>
@@ -58,6 +60,9 @@ export const SubTestSheet = () => {
             </TabsList>
             <TabsContent value="Details" className="">
               <NameNormalPrice />
+            </TabsContent>
+            <TabsContent value="Normals" className="">
+              <LabelTab />
             </TabsContent>
             <TabsContent value="Options" className="flex gap-2">
               <OptionsTab />

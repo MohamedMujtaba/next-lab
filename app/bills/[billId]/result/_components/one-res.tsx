@@ -1,11 +1,18 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { BillSubTest, SubTestOption } from "@prisma/client";
+import { BillSubTest, SubTestNormal, SubTestOption } from "@prisma/client";
 import { Check, ChevronsUpDown } from "lucide-react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import * as z from "zod";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 import {
   Command,
@@ -36,10 +43,11 @@ import { TipTapEditor } from "@/components/tipTap-editor/editor";
 const formSchema = z.object({
   result: z.string().optional(),
   description: z.string().optional(),
+  selectedNormal: z.string().min(1),
 });
 
 interface OneResPops {
-  subTest: BillSubTest & { options: SubTestOption[] };
+  subTest: BillSubTest & { options: SubTestOption[]; normals: SubTestNormal[] };
 }
 
 export const OneResult: React.FC<OneResPops> = ({ subTest }) => {
@@ -49,6 +57,7 @@ export const OneResult: React.FC<OneResPops> = ({ subTest }) => {
     defaultValues: {
       result: subTest.result?.trim() || undefined,
       description: subTest.description?.trim() || undefined,
+      selectedNormal: subTest.selectedNormal?.trim() || undefined,
     },
   });
   async function onSubmit(values: z.infer<typeof formSchema>) {
@@ -71,12 +80,39 @@ export const OneResult: React.FC<OneResPops> = ({ subTest }) => {
       <div className="page-break" />
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="w-full">
-          <div className="w-full flex items-center justify-between mb-2">
+          <div className="w-full flex items-center justify-between mb-2 gap-4">
             <div className="flex-1">
               <p>{subTest.name}</p>
             </div>
             <div className="flex-1 flex ">
-              <TiptapPreview content={subTest.maleNormal || ""} />
+              {/* FIXME: Add normal select */}
+              <FormField
+                control={form.control}
+                name="selectedNormal"
+                render={({ field }) => (
+                  <FormItem className="flex-1">
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Normal" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        {subTest.normals.map((normal) => (
+                          <SelectItem key={normal.id} value={normal.value}>
+                            {normal.label} : {normal.value}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
             </div>
             <div className="flex-1">
               <FormField

@@ -78,7 +78,7 @@ export const TipTapMainPreview: React.FC<TiptapProps> = ({ content }) => {
     ],
     editorProps: {
       attributes: {
-        class: "max-w-none  prose dark:prose-invert prose-sm  ",
+        class: "max-w-none  dark:prose-invert prose ",
       },
     },
     content: content,

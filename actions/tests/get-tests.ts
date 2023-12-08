@@ -9,6 +9,7 @@ interface getTestsType {
 export const getTests: getTestsType = async () => {
   try {
     const tests = await prismadb.test.findMany({
+      orderBy: { name: "asc" },
       include: { subTests: { orderBy: { order: "asc" } } },
     });
     return tests;

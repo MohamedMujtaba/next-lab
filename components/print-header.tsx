@@ -38,7 +38,7 @@ export const PrintHeader: React.FC<PrintHeaderProps> = ({ bill }) => {
           <h2 className="text-2xl font-semibold"> مختبر الرهام الطبي الحديث</h2>
           <h4> خلف مجمع طارق الطبي وجوار</h4>
           <h4> مركز الصدى للسمع </h4>
-          <h4> 0912345678</h4>
+          <h4> 0915599405</h4>
         </div>
         <div className="w-44 h-44 flex items-center justify-end">
           <QRCode
@@ -61,7 +61,7 @@ export const PrintHeader: React.FC<PrintHeaderProps> = ({ bill }) => {
           <b>Gender:</b> {bill.patient.gender}
         </p>
         <p>
-          <b>age</b>: {69}
+          <b>age</b>: {bill.patient.age}
         </p>
       </Card>
     </div>

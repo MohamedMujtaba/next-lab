@@ -5,9 +5,9 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import { Loader2, X } from "lucide-react";
+import { Loader2, Trash, X } from "lucide-react";
 import { useEffect } from "react";
-import { SubTest, SubTestOption } from "@prisma/client";
+import { SubTest, SubTestNormal, SubTestOption } from "@prisma/client";
 import toast from "react-hot-toast";
 
 import { Button } from "@/components/ui/button";
@@ -26,36 +26,40 @@ import { Badge } from "@/components/ui/badge";
 import { useSubTest } from "@/hooks/use-sub-test";
 
 import { GetSubTest } from "@/actions/subTests/get-subTest";
+import { ScrollArea } from "@radix-ui/react-scroll-area";
+import { cn } from "@/lib/utils";
+import { deleteOption } from "@/actions/subTests/options/delete-option";
+import { createNormal } from "@/actions/subTests/normals/create-normal";
 
-interface OptionsTabProps {}
+interface LabelTabProps {}
 
-const optionsFormSchema = z.object({
+const normalFormSchema = z.object({
   value: z.string().min(1, {
     message: "Value is required",
   }),
+  label: z.string().min(1, {
+    message: "Label is required",
+  }),
 });
 
-export const OptionsTab: React.FC<OptionsTabProps> = () => {
+export const LabelTab: React.FC<LabelTabProps> = () => {
   const { testId, subTest, setSubTest } = useSubTest((state) => state);
   const router = useRouter();
-  const form = useForm<z.infer<typeof optionsFormSchema>>({
-    resolver: zodResolver(optionsFormSchema),
+  const form = useForm<z.infer<typeof normalFormSchema>>({
+    resolver: zodResolver(normalFormSchema),
     defaultValues: {
       value: "",
     },
   });
 
-  async function onSubmit(values: z.infer<typeof optionsFormSchema>) {
+  async function onSubmit(values: z.infer<typeof normalFormSchema>) {
     try {
       if (!subTest?.id) {
         toast.error("Something went wrong ...");
         return;
       }
 
-      const option = await axios.post(
-        `/api/tests/${testId}/subTests/${subTest.id}/options`,
-        { ...values, subTestId: subTest.id }
-      );
+      createNormal(subTest.id, values);
       form.reset();
       gt();
       router.refresh();
@@ -69,6 +73,7 @@ export const OptionsTab: React.FC<OptionsTabProps> = () => {
   const gt = async () => {
     let st = (await GetSubTest(subTest?.id || "")) as SubTest & {
       options: SubTestOption[];
+      normals: SubTestNormal[];
     };
     setSubTest(st);
   };
@@ -76,20 +81,30 @@ export const OptionsTab: React.FC<OptionsTabProps> = () => {
     gt();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  console.log(subTest);
 
   return (
-    <div className="w-full">
-      <div className="flex gap-3 flex-wrap w-full py-4">
-        {subTest?.options.map((option) => (
-          <Badge key={option.id}>
-            <X className="mr-1 w-4 h-4" />
-            {option.value}
-          </Badge>
-        ))}
-      </div>
-
+    <div className="w-full flex gap-4">
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="flex-1">
+          <FormField
+            control={form.control}
+            name="label"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Label</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="Yellow"
+                    {...field}
+                    disabled={form.formState.isSubmitting}
+                  />
+                </FormControl>
+                <FormDescription> Label</FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
           <FormField
             control={form.control}
             name="value"
@@ -113,12 +128,34 @@ export const OptionsTab: React.FC<OptionsTabProps> = () => {
               {form.formState.isSubmitting ? (
                 <Loader2 className="animate-spin" />
               ) : (
-                "Submit"
+                "Add"
               )}
             </Button>
           </div>
         </form>
       </Form>
+      <ScrollArea className="flex-1 h-[250px] py-4 overflow-y-auto">
+        {subTest?.normals?.map((normal, index) => (
+          <div
+            key={normal.id}
+            className={cn(
+              "flex items-center justify-between w-full px-4 py-1 gap-2",
+              index % 2 === 0 ? "bg-gray-200" : "bg-gray-400"
+            )}
+          >
+            <p className="text-xs">
+              {normal.label} : {normal.label}
+            </p>
+            <Trash
+              onClick={async () => {
+                deleteOption(normal.id);
+                gt();
+              }}
+              className="mr-1 w-4 h-4 shrink-0 text-destructive cursor-pointer"
+            />
+          </div>
+        ))}
+      </ScrollArea>
     </div>
   );
 };

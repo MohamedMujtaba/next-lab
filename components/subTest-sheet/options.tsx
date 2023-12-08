@@ -7,7 +7,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { Loader2, Trash, X } from "lucide-react";
 import { useEffect } from "react";
-import { SubTest, SubTestOption } from "@prisma/client";
+import { SubTest, SubTestNormal, SubTestOption } from "@prisma/client";
 import toast from "react-hot-toast";
 
 import { Button } from "@/components/ui/button";
@@ -72,6 +72,7 @@ export const OptionsTab: React.FC<OptionsTabProps> = () => {
   const gt = async () => {
     let st = (await GetSubTest(subTest?.id || "")) as SubTest & {
       options: SubTestOption[];
+      normals: SubTestNormal[];
     };
     setSubTest(st);
   };

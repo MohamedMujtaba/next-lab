@@ -28,7 +28,10 @@ const BillPage = async ({ params }: { params: { billId: string } }) => {
   const { billId } = params;
   const tests = await prismadb.test.findMany({
     include: {
-      subTests: { orderBy: { order: "asc" }, include: { options: true } },
+      subTests: {
+        orderBy: { order: "asc" },
+        include: { options: true, normals: true },
+      },
     },
   });
   const bill = (await getBill(billId)) as Bill & {

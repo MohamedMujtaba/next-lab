@@ -35,7 +35,7 @@ const Home = () => {
           <div>
             <h1 className="text-3xl font-bold">Overview</h1>
             <p className="test-sm font-bold text-muted-foreground">
-              See all progress of you&apos;r work
+              See progress of you&apos;r work
             </p>
           </div>
           <DatePickerWithRange date={date} setDate={setDate} />

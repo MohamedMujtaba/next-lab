@@ -10,7 +10,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useSubTest } from "@/hooks/use-sub-test";
-import { SubTestType } from "@prisma/client";
 import {
   AlignLeft,
   Circle,
@@ -24,7 +23,7 @@ import {
 interface AddSubTestButtonProps {}
 
 const AddSubTestButton: React.FC<AddSubTestButtonProps> = ({}) => {
-  const { onOpen, setType } = useSubTest((state) => state);
+  const { onOpen } = useSubTest((state) => state);
 
   return (
     <DropdownMenu>
@@ -39,7 +38,6 @@ const AddSubTestButton: React.FC<AddSubTestButtonProps> = ({}) => {
         <DropdownMenuSeparator />
         <DropdownMenuItem
           onClick={() => {
-            setType("ONERESULT");
             onOpen();
           }}
         >
@@ -48,7 +46,6 @@ const AddSubTestButton: React.FC<AddSubTestButtonProps> = ({}) => {
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => {
-            setType("DESCRIPTION");
             onOpen();
           }}
         >
@@ -58,7 +55,6 @@ const AddSubTestButton: React.FC<AddSubTestButtonProps> = ({}) => {
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => {
-            setType("OPTIONS");
             onOpen();
           }}
         >

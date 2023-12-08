@@ -15,6 +15,7 @@ const TestPage: React.FC<TestPageProps> = async ({ params }) => {
     include: {
       subTests: {
         include: {
+          normals: true,
           options: {
             orderBy: {
               order: "asc",

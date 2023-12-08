@@ -20,7 +20,7 @@ export const TiptapPreview: React.FC<TiptapProps> = ({ content }) => {
     editorProps: {
       attributes: {
         class:
-          "flex h-10 w-full rounded-md pointer-events-none bg-background px-3 py-2 text-sm",
+          "flex h-10 bg-red-400 text-center rounded-md pointer-events-none bg-background px-3 py-2 text-sm",
       },
     },
     content: content,

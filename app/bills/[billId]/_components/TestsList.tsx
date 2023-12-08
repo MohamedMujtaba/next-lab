@@ -14,20 +14,23 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { useBill } from "@/hooks/use-bill";
 import { addComma } from "@/lib/addComma";
-import { SubTest, SubTestOption, Test } from "@prisma/client";
+import { SubTest, SubTestNormal, SubTestOption, Test } from "@prisma/client";
 import { Plus } from "lucide-react";
 import { useParams } from "next/navigation";
 import toast from "react-hot-toast";
 
 interface TestsListProps {
-  tests: (Test & { subTests: (SubTest & { options: SubTestOption[] })[] })[];
+  tests: (Test & {
+    subTests: (SubTest & {
+      options: SubTestOption[];
+      normals: SubTestNormal[];
+    })[];
+  })[];
 }
 
 const TestsList: React.FC<TestsListProps> = ({ tests }) => {
   const { billId }: { billId: string } = useParams();
-  const { addTest, tests: bTests, switchSubTest } = useBill();
   return (
     <Card className="p-4">
       <ScrollArea className="h-[70vh] pr-8">

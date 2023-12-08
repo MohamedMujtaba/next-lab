@@ -98,7 +98,7 @@ const Navbar: React.FC<NavbarProps> = ({ doctors }) => {
       <div className="flex lg:hidden">
         <SideNav />
       </div>
-      <ModeToggle />
+      {/* <ModeToggle /> */}
     </div>
   );
 };

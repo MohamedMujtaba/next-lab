@@ -15,8 +15,7 @@ export async function PUT(
     let a: Prisma.SubTestUncheckedUpdateInput = {};
 
     if (body.name) a.name = body.name;
-    if (body.maleNormal) a.maleNormal = body.maleNormal;
-    if (body.femaleNormal) a.femaleNormal = body.femaleNormal;
+    if (body.unit) a.unit = body.unit;
     if (body.result) a.result = body.result;
     if (body.price) a.price = body.price;
     if (body.description) a.description = body.description;

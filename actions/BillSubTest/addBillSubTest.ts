@@ -1,13 +1,13 @@
 "use server";
 
 import prismadb from "@/lib/prisma";
-import { Bill, SubTest, SubTestOption } from "@prisma/client";
+import { Bill, SubTest, SubTestNormal, SubTestOption } from "@prisma/client";
 import { revalidatePath } from "next/cache";
 
 interface AddBillSubTestProps {
   billId: string;
   testId: string;
-  subTest: SubTest & { options: SubTestOption[] };
+  subTest: SubTest & { options: SubTestOption[]; normals: SubTestNormal[] };
 }
 
 export const addBillSubTest = async (props: AddBillSubTestProps) => {
@@ -50,13 +50,17 @@ export const addBillSubTest = async (props: AddBillSubTestProps) => {
       name: subTest.name,
       order: subTest.order,
       price: subTest.price,
-      // type: subTest.type,
       description: subTest.description,
-      femaleNormal: subTest.femaleNormal,
-      maleNormal: subTest.maleNormal,
+      unit: subTest.unit,
       options: {
         connect:
           subTest.options.map((o) => ({
+            id: o.id,
+          })) || [],
+      },
+      normals: {
+        connect:
+          subTest.normals.map((o) => ({
             id: o.id,
           })) || [],
       },

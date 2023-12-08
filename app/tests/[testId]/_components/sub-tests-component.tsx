@@ -4,14 +4,16 @@ import { Loader2, TestTubes } from "lucide-react";
 import AddSubTestButton from "./add-sub-test-button";
 import SubTestsList from "./sub-tests-list";
 import { useEffect } from "react";
-import { SubTest, SubTestOption } from "@prisma/client";
-import SubTestModal from "./sub-test-modal";
+import { SubTest, SubTestNormal, SubTestOption } from "@prisma/client";
 import { useSubTest } from "@/hooks/use-sub-test";
 import { useParams } from "next/navigation";
 import { SubTestSheetButton } from "@/components/sub-test-sheet-button";
 
 interface SubTestsComponentProps {
-  subTests: (SubTest & { options: SubTestOption[] })[];
+  subTests: (SubTest & {
+    options: SubTestOption[];
+    normals: SubTestNormal[];
+  })[];
 }
 
 const SubTestsComponent: React.FC<SubTestsComponentProps> = ({ subTests }) => {
@@ -34,7 +36,6 @@ const SubTestsComponent: React.FC<SubTestsComponentProps> = ({ subTests }) => {
           <SubTestSheetButton />
         </div>
         <SubTestsList subTests={subTests} />
-        {/* <SubTestModal /> */}
       </div>
       {isLoading && (
         <div className="absolute inset-0 top-0 z-50 bg-sky-500/30 m-0 flex items-center justify-center rounded-md cursor-not-allowed">

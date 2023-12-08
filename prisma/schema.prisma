@@ -41,26 +41,20 @@ model Test {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  // testsWithDescription TestWithDescription[]
-  // testsWithOptions     TestWithOptions[]
-  // testsWithOneRes      TestWithOneRes[]
 }
 
 model SubTest {
-  id             String          @id @default(cuid())
-  name           String
-  price          Int
-  type           SubTestType?
-  maleNormal     String?         @default("")
-  femaleNormal   String?         @default("")
-  result         String?
-  description    String?
-  options        SubTestOption[]
-  selectedOption String?
-  selected       Boolean         @default(false)
-  testId         String?
-  order          Int
-  billSubTest    BillSubTest[]
+  id          String          @id @default(cuid())
+  name        String
+  price       Int             @default(0)
+  result      String?
+  description String?
+  options     SubTestOption[]
+  testId      String?
+  order       Int
+  billSubTest BillSubTest[]
+  normals     SubTestNormal[]
+  unit        String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -71,10 +65,14 @@ model SubTest {
   @@index([testId])
 }
 
-enum SubTestType {
-  ONERESULT
-  DESCRIPTION
-  OPTIONS
+model SubTestNormal {
+  id            String       @id @default(cuid())
+  label         String
+  value         String
+  subTest       SubTest?     @relation(fields: [subTestId], references: [id], onDelete: Cascade)
+  subTestId     String?
+  BillSubTest   BillSubTest? @relation(fields: [billSubTestId], references: [id])
+  billSubTestId String?
 }
 
 model SubTestOption {
@@ -136,15 +134,14 @@ model BillSubTest {
   id             String          @id @default(cuid())
   name           String
   price          Int
-  type           SubTestType?
-  maleNormal     String?         @default("")
-  femaleNormal   String?         @default("")
   result         String?
   description    String?
   options        SubTestOption[]
-  selectedOption String?
   order          Int
   billTestId     String?
+  normals        SubTestNormal[]
+  unit           String?
+  selectedNormal String?
 
   BillTest BillTest? @relation(fields: [billTestId], references: [id])
 
@@ -188,50 +185,3 @@ model InsuranceType {
   insuranceCompany InsuranceCompany? @relation("InsuranceToInsuranceType", fields: [insuranceCompanyId], references: [id])
   Bill             Bill[]
 }
-
-// model TestWithDescription {
-//   id           String  @id @default(cuid())
-//   name         String
-//   price        Int
-//   normal       String?
-//   defaultValue String?
-//   testId       String?
-
-//   createdAt DateTime @default(now())
-//   updatedAt DateTime @updatedAt
-
-//   test Test? @relation(fields: [testId], references: [id])
-
-//   @@index([testId])
-// }
-
-// model TestWithOptions {
-//   id      String   @id @default(cuid())
-//   name    String
-//   price   Int
-//   normal  String?
-//   options String[]
-//   testId  String?
-
-//   createdAt DateTime @default(now())
-//   updatedAt DateTime @updatedAt
-
-//   test Test? @relation(fields: [testId], references: [id])
-
-//   @@index([testId])
-// }
-
-// model TestWithOneRes {
-//   id     String  @id @default(cuid())
-//   name   String
-//   price  Int
-//   normal String
-//   testId String?
-
-//   createdAt DateTime @default(now())
-//   updatedAt DateTime @updatedAt
-
-//   test Test? @relation(fields: [testId], references: [id])
-
-//   @@index([testId])
-// }
