@@ -33,7 +33,16 @@ export const markAsReady = async (id: string) => {
           status: "READY",
         },
       });
-      revalidatePath("bills/[id]/result", "page");
+
+      if (isEmpty.length !== 0) {
+        return {
+          success: false,
+          data: isEmpty,
+          message: "Bill has been marked as ready",
+        };
+      }
+
+      revalidatePath("bills/[billId]/result", "page");
       return {
         success: true,
         message: "Bill has been marked as ready",
@@ -41,6 +50,7 @@ export const markAsReady = async (id: string) => {
     }
     return {
       success: false,
+      data: isEmpty.map((t) => ({ name: t.name, id: t.id })),
       message: "All tests should have result to mark a bill as ready",
     };
   } catch (error) {

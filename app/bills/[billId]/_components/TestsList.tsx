@@ -1,5 +1,6 @@
 "use client";
 
+import { addAllSubTests } from "@/actions/BillSubTest/addAllSubTests";
 import { addBillSubTest } from "@/actions/BillSubTest/addBillSubTest";
 import { addBillTest } from "@/actions/BillTest/addBillTest";
 import { TestType } from "@/app/tests/_components/columns";
@@ -34,12 +35,29 @@ const TestsList: React.FC<TestsListProps> = ({ tests }) => {
   return (
     <Card className="p-4">
       <ScrollArea className="h-[70vh] pr-8">
-        <Accordion type="single">
+        <Accordion type="multiple">
           {tests.map((test) => {
             return (
               <AccordionItem key={test.id} value={test.id}>
                 <AccordionTrigger className="relative">
-                  <p>{test.name}</p>
+                  <div className="flex items-center gap-4">
+                    <Button
+                      className="p-0"
+                      size="icon"
+                      onClick={async () => {
+                        const res = await addAllSubTests({
+                          billId,
+                          testId: test.id,
+                          subTests: test.subTests,
+                        });
+                        if (res?.ok) toast.success(res.message);
+                        if (!res?.ok) toast.error(res?.message || "");
+                      }}
+                    >
+                      <Plus className="w-4 h-4" />
+                    </Button>
+                    <p>{test.name}</p>
+                  </div>
                 </AccordionTrigger>
                 <AccordionContent>
                   {test.subTests.map((subTest) => (

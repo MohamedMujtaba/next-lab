@@ -8,11 +8,9 @@ export const saveResult = async (
   values: {
     result?: string | undefined;
     description?: string | undefined;
-    selectedNormal: string;
+    selectedNormal?: string | undefined;
   }
 ) => {
-  console.log(values);
-
   try {
     const subTest = await prismadb.billSubTest.findFirst({
       where: { id },
@@ -29,7 +27,7 @@ export const saveResult = async (
       data: {
         result: values.result,
         description: values.description,
-        selectedNormal: values.selectedNormal,
+        selectedNormal: values.selectedNormal || "-",
       },
     });
     revalidatePath("/bills/[billId]/result", "page");

@@ -47,6 +47,7 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { DeleteSubTest } from "@/actions/subTests/delete-subTest";
 
 interface SubTestsListProps {
   subTests: (SubTest & {
@@ -203,7 +204,12 @@ const SubTestActionButton: React.FC<SubTestActionButtonProps> = ({
           <Pencil className="w-4 h-4 mr-2" />
           Edit
         </DropdownMenuItem>
-        <DropdownMenuItem className="text-red-500 hover:text-red-600 hover:bg-red-500/30 focus:text-red-600 focus:bg-red-500/30">
+        <DropdownMenuItem
+          onClick={async () => {
+            await DeleteSubTest(subTest.id);
+          }}
+          className="text-red-500 hover:text-red-600 hover:bg-red-500/30 focus:text-red-600 focus:bg-red-500/30"
+        >
           <Trash className="w-4 h-4 mr-2" />
           Delete
         </DropdownMenuItem>

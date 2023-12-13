@@ -1,0 +1,4716 @@
+[
+  {
+    "id": "clpdtf1e9000ou9now1343duw",
+    "name": "24HOUR URINE ",
+    "createdAt": "2023-11-25T08:54:35.216Z",
+    "updatedAt": "2023-11-25T08:54:35.216Z"
+  },
+  {
+    "id": "clpebx48h000zu96o60lgm2bq",
+    "name": "urine general",
+    "createdAt": "2023-11-25T17:32:31.775Z",
+    "updatedAt": "2023-11-25T17:32:31.775Z"
+  },
+  {
+    "id": "clpdtoejp000vu9nog9029p47",
+    "name": "CBC",
+    "createdAt": "2023-11-25T09:01:52.160Z",
+    "updatedAt": "2023-11-26T15:12:40.496Z"
+  },
+  {
+    "id": "clpebn147000lu96o816k3pj9",
+    "name": "HBA1C",
+    "createdAt": "2023-11-25T17:24:41.190Z",
+    "updatedAt": "2023-11-26T16:03:17.716Z"
+  },
+  {
+    "id": "clpfoh7je002mu96of93vnndq",
+    "name": "Iron Study ",
+    "createdAt": "2023-11-26T16:11:50.760Z",
+    "updatedAt": "2023-11-26T16:11:50.760Z"
+  },
+  {
+    "id": "clpfoylph002tu96oetenjcwx",
+    "name": "Lipid Profile ",
+    "createdAt": "2023-11-26T16:25:22.276Z",
+    "updatedAt": "2023-11-26T16:25:22.276Z"
+  },
+  {
+    "id": "clpfpyc5v0036u96o8ijc8rrt",
+    "name": "GLUCOSE "
+  },
+  {
+    "id": "clpfq2g2l003du96oy1vmh5l8",
+    "name": "D-Dimer"
+
+  },
+  {
+    "id": "clpfq4742003gu96o11sl6jsg",
+    "name": "URINE GENERAL "
+  },
+  {
+    "id": "clpnaj7n50000u9ncrna992rk",
+    "name": "Ascitic Fluid"
+  },
+  {
+    "id": "clpnaqgh7000pu9ncg7i4o5nj",
+    "name": "Autoimmune"
+  },
+  {
+    "id": "clpnawtk6000uu9nc3nqm55ro",
+    "name": "BM"
+  },
+  {
+    "id": "clpnaxlv3000xu9ncskqwazyr",
+    "name": "Bone Marrow"
+  },
+  {
+    "id": "clpnb8f6g001su9ncou1rpluc",
+    "name": "Buccal Smear"
+  },
+  {
+    "id": "clpnbal1b001vu9nc0f4fvhog",
+    "name": "Cardiac"
+  },
+  {
+    "id": "clpqpchuq0024u9ncmc395zta",
+    "name": "FERTILITY HORMONES"
+  },
+  {
+    "id": "clpqpez3f0025u9ncatiwak3c",
+    "name": "GTT"
+  },
+  {
+    "id": "clpqpfjac0026u9nc61a4ux2g",
+    "name": "Hormone analysis"
+  },
+  {
+    "id": "clpqpg6c00027u9ncgcfi045q",
+    "name": "Liver Function Test ( LFT )"
+  },
+  {
+    "id": "clpqpgo200028u9ncrf8e4xh9",
+    "name": "OGTT",
+    "createdAt": "2023-12-04T09:24:53.064Z",
+    "updatedAt": "2023-12-04T09:24:53.064Z",
+    "subTests": [
+      {
+        "id": "clpx5lwcg002su910naodbibr",
+        "name": "Blood Glucose",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpgo200028u9ncrf8e4xh9",
+        "order": 1,
+        "unit": "mg/dl",
+        "createdAt": "2023-12-08T21:43:28.000Z",
+        "updatedAt": "2023-12-08T21:43:28.000Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx5m3p8002uu910ma30riq4",
+            "label": "normal",
+            "value": "< 100",
+            "subTestId": "clpx5lwcg002su910naodbibr",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx5mlgc002wu9103v51uj0j",
+        "name": "Urine Glucose",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpgo200028u9ncrf8e4xh9",
+        "order": 2,
+        "unit": "",
+        "createdAt": "2023-12-08T21:44:00.538Z",
+        "updatedAt": "2023-12-08T21:44:00.538Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx5mqvj002yu910kjiukpv4",
+            "label": "normal",
+            "value": "NIL",
+            "subTestId": "clpx5mlgc002wu9103v51uj0j",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx5nbso0030u910pqw62h5j",
+        "name": ".Blood Glucose",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpgo200028u9ncrf8e4xh9",
+        "order": 3,
+        "unit": "mg/dl",
+        "createdAt": "2023-12-08T21:44:34.680Z",
+        "updatedAt": "2023-12-08T21:44:34.680Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx5nj690032u910wl2g0ydt",
+            "label": "normal",
+            "value": "< 180",
+            "subTestId": "clpx5nbso0030u910pqw62h5j",
+            "billSubTestId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clpqph0e90029u9ncvwmsubyk",
+    "name": "OGTT (Pergnant) Oral Glucose Tolerance Test",
+    "createdAt": "2023-12-04T09:25:09.057Z",
+    "updatedAt": "2023-12-04T09:25:09.057Z",
+    "subTests": [
+      {
+        "id": "clpx5qd0h0034u9107hserg6q",
+        "name": "Blood Glucose",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqph0e90029u9ncvwmsubyk",
+        "order": 1,
+        "unit": "mg/dl",
+        "createdAt": "2023-12-08T21:46:56.226Z",
+        "updatedAt": "2023-12-08T21:46:56.226Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx5qjni0036u910v7nq9kvw",
+            "label": "normal",
+            "value": "< 100",
+            "subTestId": "clpx5qd0h0034u9107hserg6q",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx5rm520038u910sjbuq40l",
+        "name": "Urine Glucose",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqph0e90029u9ncvwmsubyk",
+        "order": 2,
+        "unit": "",
+        "createdAt": "2023-12-08T21:47:54.710Z",
+        "updatedAt": "2023-12-08T21:47:54.710Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx5rq56003au91058o894gi",
+            "label": "normal",
+            "value": "NIL",
+            "subTestId": "clpx5rm520038u910sjbuq40l",
+            "billSubTestId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clpqphh8a002au9nc66uh3iz1",
+    "name": "Oral Glucose Tolerance Test (OGGT)",
+    "createdAt": "2023-12-04T09:25:30.875Z",
+    "updatedAt": "2023-12-04T09:25:30.875Z",
+    "subTests": [
+      {
+        "id": "clpxd1x8u0011u9tsjdrmzpc4",
+        "name": "Oral Glucose Tolerance Test (OGGT)",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqphh8a002au9nc66uh3iz1",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-09T01:11:52.974Z",
+        "updatedAt": "2023-12-09T01:11:52.974Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxd2b1e0013u9tss30m7mm8",
+        "name": "Blood Glucose ",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqphh8a002au9nc66uh3iz1",
+        "order": 2,
+        "unit": "mg/dl",
+        "createdAt": "2023-12-09T01:12:10.850Z",
+        "updatedAt": "2023-12-09T01:12:10.850Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxd2sf20015u9ts7xtymxhx",
+        "name": "Urine Glucose",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqphh8a002au9nc66uh3iz1",
+        "order": 3,
+        "unit": "",
+        "createdAt": "2023-12-09T01:12:33.374Z",
+        "updatedAt": "2023-12-09T01:12:33.374Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpxd31k70017u9tsknbayh6e",
+            "label": "normal",
+            "value": "Nil",
+            "subTestId": "clpxd2sf20015u9ts7xtymxhx",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpxd3hxx0019u9tsp5ioqxnb",
+        "name": "Blood Glucose ",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqphh8a002au9nc66uh3iz1",
+        "order": 4,
+        "unit": "mg/dl",
+        "createdAt": "2023-12-09T01:13:06.453Z",
+        "updatedAt": "2023-12-09T01:13:06.453Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpxd3oa4001bu9tshr25ys49",
+            "label": "normal",
+            "value": "< 170",
+            "subTestId": "clpxd3hxx0019u9tsp5ioqxnb",
+            "billSubTestId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clpqphtrc002bu9ncayrredkr",
+    "name": "Prolactin",
+    "createdAt": "2023-12-04T09:25:47.112Z",
+    "updatedAt": "2023-12-04T09:25:47.112Z",
+    "subTests": [
+      {
+        "id": "clpx5seih003cu910452zwdf1",
+        "name": "Result",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqphtrc002bu9ncayrredkr",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-08T21:48:31.481Z",
+        "updatedAt": "2023-12-08T21:48:31.481Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpqpi3ul002cu9nc0niqc55j",
+    "name": "Renal Functions Tests",
+    "createdAt": "2023-12-04T09:26:00.188Z",
+    "updatedAt": "2023-12-04T09:26:00.188Z",
+    "subTests": [
+      {
+        "id": "clpx7h9sz006au910iycow4sv",
+        "name": "B.Urea",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpi3ul002cu9nc0niqc55j",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-08T22:35:51.395Z",
+        "updatedAt": "2023-12-08T22:35:51.395Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx7hhtl006cu910d6nbs7xp",
+            "label": "normal",
+            "value": "16.6-48.5",
+            "subTestId": "clpx7h9sz006au910iycow4sv",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx7i434006eu910embyvafi",
+        "name": "S.Creatinine",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpi3ul002cu9nc0niqc55j",
+        "order": 2,
+        "unit": "mg/dl",
+        "createdAt": "2023-12-08T22:36:30.640Z",
+        "updatedAt": "2023-12-08T22:36:30.640Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx7if3m006gu9101kdnea66",
+            "label": "normal",
+            "value": "0.9-1.3",
+            "subTestId": "clpx7i434006eu910embyvafi",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx7iv93006iu910waa6p2dn",
+        "name": "S.Uric Acid",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpi3ul002cu9nc0niqc55j",
+        "order": 3,
+        "unit": "mg/dl",
+        "createdAt": "2023-12-08T22:37:05.847Z",
+        "updatedAt": "2023-12-08T22:37:05.847Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx7j4tm006ku910w4ski4ud",
+            "label": "normal",
+            "value": "3.4 - 7.0",
+            "subTestId": "clpx7iv93006iu910waa6p2dn",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx7jhh8006mu910kzrr4aby",
+        "name": "S.Sodium (Na)",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpi3ul002cu9nc0niqc55j",
+        "order": 4,
+        "unit": "mEq/L",
+        "createdAt": "2023-12-08T22:37:34.651Z",
+        "updatedAt": "2023-12-08T22:37:34.651Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx7joh5006ou910o2pwbdjw",
+            "label": "normal",
+            "value": "136 - 145",
+            "subTestId": "clpx7jhh8006mu910kzrr4aby",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx7k42l006qu9104yd69en2",
+        "name": "S.Potassium (K)",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpi3ul002cu9nc0niqc55j",
+        "order": 5,
+        "unit": "mEq/L",
+        "createdAt": "2023-12-08T22:38:03.933Z",
+        "updatedAt": "2023-12-08T22:38:03.933Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx7kc18006su910zzulkmdu",
+            "label": "normal",
+            "value": "3.5 - 5.4",
+            "subTestId": "clpx7k42l006qu9104yd69en2",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx7l23l006uu910d0sg7zcj",
+        "name": "S.Calcium (Ca)",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpi3ul002cu9nc0niqc55j",
+        "order": 6,
+        "unit": "mg/dl",
+        "createdAt": "2023-12-08T22:38:48.033Z",
+        "updatedAt": "2023-12-08T22:38:48.033Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx7lawj006wu910jkcz5rjl",
+            "label": "normal",
+            "value": "8.6 - 10.2",
+            "subTestId": "clpx7l23l006uu910d0sg7zcj",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx7lo83006yu910nydnng76",
+        "name": "S.Phosphorouse",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpi3ul002cu9nc0niqc55j",
+        "order": 7,
+        "unit": "mg/dl",
+        "createdAt": "2023-12-08T22:39:16.707Z",
+        "updatedAt": "2023-12-08T22:39:16.707Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx7lu460070u910imyiit76",
+            "label": "normal",
+            "value": "2.5 - 4.5",
+            "subTestId": "clpx7lo83006yu910nydnng76",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpxd7a25001fu9tsr85o5nsx",
+        "name": "Magnesium",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpi3ul002cu9nc0niqc55j",
+        "order": 8,
+        "unit": "mg/dl",
+        "createdAt": "2023-12-09T01:16:02.266Z",
+        "updatedAt": "2023-12-09T01:16:10.638Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpxd7r0m001hu9ts0x56i2bu",
+            "label": "normal",
+            "value": "1.6-2.6",
+            "subTestId": "clpxd7a25001fu9tsr85o5nsx",
+            "billSubTestId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clpqpifr3002du9nca5kbhqrg",
+    "name": "S. Albumin",
+    "createdAt": "2023-12-04T09:26:15.614Z",
+    "updatedAt": "2023-12-04T09:26:15.614Z",
+    "subTests": []
+  },
+  {
+    "id": "clpqpix20002eu9ncfkqrjsy5",
+    "name": "SEROLOGY",
+    "createdAt": "2023-12-04T09:26:38.040Z",
+    "updatedAt": "2023-12-04T09:26:38.040Z",
+    "subTests": [
+      {
+        "id": "clpx5xupv003mu910r8ugvcbs",
+        "name": "Rehmatoid Factor IgM",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpix20002eu9ncfkqrjsy5",
+        "order": 5,
+        "unit": "IU/ml",
+        "createdAt": "2023-12-08T21:52:45.763Z",
+        "updatedAt": "2023-12-08T21:52:45.763Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx5y6hs003ou910xskbjwat",
+            "label": "normal",
+            "value": "< 20",
+            "subTestId": "clpx5xupv003mu910r8ugvcbs",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpy5ve540033u9xsd6ops78t",
+            "label": "normal",
+            "value": "< 20 ",
+            "subTestId": "clpx5xupv003mu910r8ugvcbs",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx5ygss003qu9101aa9xlau",
+        "name": "Serum For Toxoplasmosis Titer:",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpix20002eu9ncfkqrjsy5",
+        "order": 6,
+        "unit": "",
+        "createdAt": "2023-12-08T21:53:13.747Z",
+        "updatedAt": "2023-12-08T21:53:13.747Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx5yt24003su9103p48we39",
+        "name": "Serum For Toxoplasmosis Titer:",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpix20002eu9ncfkqrjsy5",
+        "order": 7,
+        "unit": "",
+        "createdAt": "2023-12-08T21:53:30.267Z",
+        "updatedAt": "2023-12-08T21:53:30.267Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx5wsgy003eu910iwp8ejjo",
+        "name": "S. TYPHAE O TITRE",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpix20002eu9ncfkqrjsy5",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-08T21:51:56.194Z",
+        "updatedAt": "2023-12-08T21:51:56.194Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx5wznp003gu910g5xawzpl",
+        "name": "S. PARATYPHAE B O TITRE",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpix20002eu9ncfkqrjsy5",
+        "order": 2,
+        "unit": "",
+        "createdAt": "2023-12-08T21:52:05.509Z",
+        "updatedAt": "2023-12-08T21:52:05.509Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx5x9kl003iu910f480owsm",
+        "name": "VDRL",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpix20002eu9ncfkqrjsy5",
+        "order": 3,
+        "unit": "",
+        "createdAt": "2023-12-08T21:52:18.357Z",
+        "updatedAt": "2023-12-08T21:52:18.357Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpy5uip1002zu9xsmz6eprt3",
+            "value": "(+ve) Positive",
+            "order": 1,
+            "subTestId": "clpx5x9kl003iu910f480owsm",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpy5ungh0031u9xsc66f4aqq",
+            "value": "(-ve) Negative",
+            "order": 1,
+            "subTestId": "clpx5x9kl003iu910f480owsm",
+            "billSubTestId": null
+          }
+        ],
+        "normals": []
+      },
+      {
+        "id": "clpx5xi74003ku910iv1x71o4",
+        "name": "ICT Typhoid (IgG & IgM)",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpix20002eu9ncfkqrjsy5",
+        "order": 4,
+        "unit": "",
+        "createdAt": "2023-12-08T21:52:29.536Z",
+        "updatedAt": "2023-12-08T21:52:29.536Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpyb86ly006mu9xsgwjkd2bl",
+            "value": "IgG Negative  (-ve )      IgM Negative (-ve )",
+            "order": 1,
+            "subTestId": "clpx5xi74003ku910iv1x71o4",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpyb9njb006ou9xsi76ikzbr",
+            "value": "IgG Positive  (+ve )      IgM Negative (-ve )",
+            "order": 1,
+            "subTestId": "clpx5xi74003ku910iv1x71o4",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpybaxpw006qu9xsmouwoqsk",
+            "value": "IgG Negative  (-ve )      IgM Positive (+ve )",
+            "order": 1,
+            "subTestId": "clpx5xi74003ku910iv1x71o4",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpybbzpl006su9xsqs01e03y",
+            "value": "IgG Weak Positive (+ve )      IgM Weak Positive (+ve )",
+            "order": 1,
+            "subTestId": "clpx5xi74003ku910iv1x71o4",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpybcttf006uu9xsbtcb37ri",
+            "value": "IgG Weak Positive (+ve )      IgM Positive (+ve )",
+            "order": 1,
+            "subTestId": "clpx5xi74003ku910iv1x71o4",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpybdgkr006wu9xshqyv1qfk",
+            "value": "IgG Weak Positive (+ve )      IgM Negative (-ve )",
+            "order": 1,
+            "subTestId": "clpx5xi74003ku910iv1x71o4",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpyav4a80064u9xsox5zxbwm",
+            "value": "IgG Positive (+ve )      IgM Positive (+ve )",
+            "order": 1,
+            "subTestId": "clpx5xi74003ku910iv1x71o4",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpybdsd4006yu9xsn72rbfhb",
+            "value": "IgG Positive (+ve )      IgM Weak Positive (+ve )",
+            "order": 1,
+            "subTestId": "clpx5xi74003ku910iv1x71o4",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpybegf20070u9xsdryzp2gb",
+            "value": "IgG Negative (-ve )      IgM Weak Positive (+ve )",
+            "order": 1,
+            "subTestId": "clpx5xi74003ku910iv1x71o4",
+            "billSubTestId": null
+          }
+        ],
+        "normals": []
+      },
+      {
+        "id": "clpx5z4zo003uu91069j2ezyp",
+        "name": "ASO TITER",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpix20002eu9ncfkqrjsy5",
+        "order": 8,
+        "unit": "IU/ml",
+        "createdAt": "2023-12-08T21:53:45.732Z",
+        "updatedAt": "2023-12-08T21:53:45.732Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx5zdkr003wu910yul8c9f8",
+            "label": "normal",
+            "value": "<100",
+            "subTestId": "clpx5z4zo003uu91069j2ezyp",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx5zndf003yu910vvmx9ucz",
+        "name": "H.Pylori Ab (serum)",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpix20002eu9ncfkqrjsy5",
+        "order": 9,
+        "unit": "",
+        "createdAt": "2023-12-08T21:54:09.552Z",
+        "updatedAt": "2023-12-08T21:54:09.552Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx5zz8d0040u910plle7bul",
+        "name": "H.Pylori Ag (stool)",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpix20002eu9ncfkqrjsy5",
+        "order": 10,
+        "unit": "",
+        "createdAt": "2023-12-08T21:54:24.925Z",
+        "updatedAt": "2023-12-08T21:54:24.925Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpy8u6po003hu9xsanwspdmy",
+            "value": "(-ve) Negative",
+            "order": 1,
+            "subTestId": "clpx5zz8d0040u910plle7bul",
+            "billSubTestId": "clpy9o9xg0054u9xsfrlnrs3u"
+          },
+          {
+            "id": "clpy8uazf003ju9xsqr4te5j6",
+            "value": "(+ve) Positive",
+            "order": 1,
+            "subTestId": "clpx5zz8d0040u910plle7bul",
+            "billSubTestId": "clpy9o9xg0054u9xsfrlnrs3u"
+          },
+          {
+            "id": "clpy8uuwr003lu9xspl7x9d5h",
+            "value": "Week Positive (+ve) ",
+            "order": 1,
+            "subTestId": "clpx5zz8d0040u910plle7bul",
+            "billSubTestId": "clpy9o9xg0054u9xsfrlnrs3u"
+          }
+        ],
+        "normals": []
+      },
+      {
+        "id": "clpx6096u0042u910jh33a214",
+        "name": "ICT For Occult Blood",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpix20002eu9ncfkqrjsy5",
+        "order": 11,
+        "unit": "",
+        "createdAt": "2023-12-08T21:54:37.830Z",
+        "updatedAt": "2023-12-08T21:54:37.830Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx61y9q0044u910hf6y0iam",
+        "name": "ICT FOR TUBERCULOSIS",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpix20002eu9ncfkqrjsy5",
+        "order": 12,
+        "unit": "",
+        "createdAt": "2023-12-08T21:55:56.990Z",
+        "updatedAt": "2023-12-08T21:55:56.990Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx622nb0046u910x0uhd0h7",
+        "name": "TOXOPLAZMA IgG",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpix20002eu9ncfkqrjsy5",
+        "order": 13,
+        "unit": "",
+        "createdAt": "2023-12-08T21:56:02.663Z",
+        "updatedAt": "2023-12-08T21:56:02.663Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx62bp50048u910356dfu83",
+        "name": "HERPES SIMPLEX VIRUS",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpix20002eu9ncfkqrjsy5",
+        "order": 14,
+        "unit": "",
+        "createdAt": "2023-12-08T21:56:14.393Z",
+        "updatedAt": "2023-12-08T21:56:14.393Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx62lc6004au910bubekqdo",
+        "name": "RUBELLA VIRUS",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpix20002eu9ncfkqrjsy5",
+        "order": 15,
+        "unit": "",
+        "createdAt": "2023-12-08T21:56:26.884Z",
+        "updatedAt": "2023-12-08T21:56:26.884Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx62uj4004cu9103ntnqsof",
+        "name": "CYTOMEGALO VIRUS",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpix20002eu9ncfkqrjsy5",
+        "order": 16,
+        "unit": "",
+        "createdAt": "2023-12-08T21:56:38.793Z",
+        "updatedAt": "2023-12-08T21:56:38.793Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpqpjn6c002fu9nc9ib7ioch",
+    "name": "URINE",
+    "createdAt": "2023-12-04T09:27:11.890Z",
+    "updatedAt": "2023-12-04T09:27:11.890Z",
+    "subTests": [
+      {
+        "id": "clpx63gw2004eu910fhwgwko0",
+        "name": "Bence Jones protein",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpjn6c002fu9nc9ib7ioch",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-08T21:57:07.778Z",
+        "updatedAt": "2023-12-08T21:57:07.778Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx63ouj004gu910ijhvkvyc",
+        "name": "RBCs",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpjn6c002fu9nc9ib7ioch",
+        "order": 2,
+        "unit": "",
+        "createdAt": "2023-12-08T21:57:18.088Z",
+        "updatedAt": "2023-12-08T21:57:18.088Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxdb989001tu9tsx4cmi1si",
+        "name": "URINE",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpjn6c002fu9nc9ib7ioch",
+        "order": 3,
+        "unit": "",
+        "createdAt": "2023-12-09T01:19:08.409Z",
+        "updatedAt": "2023-12-09T01:19:08.409Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxdbt53001vu9tsojx13p6d",
+        "name": "Urine for RBCs morphology ",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpjn6c002fu9nc9ib7ioch",
+        "order": 4,
+        "unit": "",
+        "createdAt": "2023-12-09T01:19:34.215Z",
+        "updatedAt": "2023-12-09T01:19:34.215Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxdc2vd001xu9tsrdvo8chb",
+        "name": "urine for protein",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpjn6c002fu9nc9ib7ioch",
+        "order": 5,
+        "unit": "",
+        "createdAt": "2023-12-09T01:19:46.823Z",
+        "updatedAt": "2023-12-09T01:19:46.823Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxdcd24001zu9tseot7er73",
+        "name": "URINE FOR GLUCOSE",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpjn6c002fu9nc9ib7ioch",
+        "order": 6,
+        "unit": "",
+        "createdAt": "2023-12-09T01:20:00.029Z",
+        "updatedAt": "2023-12-09T01:20:00.029Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxdcspr0021u9tshfw1qbn1",
+        "name": "URINE PROTEIN CREATININE RATIO",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpjn6c002fu9nc9ib7ioch",
+        "order": 7,
+        "unit": "mg/mg creatinine ",
+        "createdAt": "2023-12-09T01:20:20.319Z",
+        "updatedAt": "2023-12-09T01:20:20.319Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpxdd0de0023u9tsb0g3fx78",
+            "label": "normal",
+            "value": "< 0.11",
+            "subTestId": "clpxdcspr0021u9tshfw1qbn1",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpxddcju0025u9tsldswtro7",
+        "name": "URINE ABUMINE CREATININE RATIO",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpjn6c002fu9nc9ib7ioch",
+        "order": 8,
+        "unit": "mg/g ceatinine",
+        "createdAt": "2023-12-09T01:20:46.026Z",
+        "updatedAt": "2023-12-09T01:21:02.121Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpxddznc0027u9tszqvvi4go",
+            "label": "normal",
+            "value": "< 30",
+            "subTestId": "clpxddcju0025u9tsldswtro7",
+            "billSubTestId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clpqps44r002gu9ncs4nso9g2",
+    "name": "TWBC COUNT & DIFFERENTIAL ",
+    "createdAt": "2023-12-04T09:33:47.115Z",
+    "updatedAt": "2023-12-04T09:33:47.115Z",
+    "subTests": [
+      {
+        "id": "clpx6d30j0055u910zaxcks9r",
+        "name": "TWBCs COUNT",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqps44r002gu9ncs4nso9g2",
+        "order": 1,
+        "unit": "*10^3/ul",
+        "createdAt": "2023-12-08T22:04:36.355Z",
+        "updatedAt": "2023-12-08T22:04:36.355Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx6dae80057u910zpwljkoh",
+            "label": "normal",
+            "value": "10-26",
+            "subTestId": "clpx6d30j0055u910zaxcks9r",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpy61z280035u9xshltrir9l",
+            "label": "normal",
+            "value": "4  - 11",
+            "subTestId": "clpx6d30j0055u910zaxcks9r",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx96s4500dju910lwrzbici",
+        "name": "NEUTROPHIL",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqps44r002gu9ncs4nso9g2",
+        "order": 2,
+        "unit": "*10^3/ul",
+        "createdAt": "2023-12-08T23:23:41.141Z",
+        "updatedAt": "2023-12-08T23:23:41.141Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx9725m00dlu9109lqvj9xl",
+            "label": "normal",
+            "value": "1.5-8",
+            "subTestId": "clpx96s4500dju910lwrzbici",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx97j9000dnu910t1rudlkj",
+        "name": "LYMPHOCYTES",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqps44r002gu9ncs4nso9g2",
+        "order": 3,
+        "unit": "*10^3/ul",
+        "createdAt": "2023-12-08T23:24:16.308Z",
+        "updatedAt": "2023-12-08T23:24:16.308Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx97qlf00dpu910668ksll7",
+            "label": "normal",
+            "value": "1-3",
+            "subTestId": "clpx97j9000dnu910t1rudlkj",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx988h800dru9104r3bbit0",
+        "name": "MONOCYTES",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqps44r002gu9ncs4nso9g2",
+        "order": 4,
+        "unit": "*10^3/ul",
+        "createdAt": "2023-12-08T23:24:49.004Z",
+        "updatedAt": "2023-12-08T23:24:49.004Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx98cl900dtu910ba4zeu4a",
+            "label": "normal",
+            "value": "0.2-1",
+            "subTestId": "clpx988h800dru9104r3bbit0",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx98tpi00dvu910qs8ya7qv",
+        "name": "EOSINOPHIL",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqps44r002gu9ncs4nso9g2",
+        "order": 5,
+        "unit": "*10^3/ul",
+        "createdAt": "2023-12-08T23:25:16.511Z",
+        "updatedAt": "2023-12-08T23:25:16.511Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx9913x00dxu910kn0a1u4j",
+            "label": "normal",
+            "value": "0.02-0.5",
+            "subTestId": "clpx98tpi00dvu910qs8ya7qv",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx99fc700dzu910ieo3chxf",
+        "name": "BASOPHIL",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqps44r002gu9ncs4nso9g2",
+        "order": 6,
+        "unit": "*10^3/ul",
+        "createdAt": "2023-12-08T23:25:44.551Z",
+        "updatedAt": "2023-12-08T23:25:44.551Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx99l1b00e1u9106165ryzs",
+            "label": "normal",
+            "value": "0.02-0.1",
+            "subTestId": "clpx99fc700dzu910ieo3chxf",
+            "billSubTestId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clpqpsnr6002hu9ncd1zvf3wk",
+    "name": "Specific test",
+    "createdAt": "2023-12-04T09:34:12.546Z",
+    "updatedAt": "2023-12-04T09:34:12.546Z",
+    "subTests": [
+      {
+        "id": "clpx7bjsu005su910qa4dfnxi",
+        "name": "Urine albumin / creatinine ratio",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpsnr6002hu9ncd1zvf3wk",
+        "order": 1,
+        "unit": "mg/mmol",
+        "createdAt": "2023-12-08T22:31:24.414Z",
+        "updatedAt": "2023-12-08T22:31:24.414Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx7bus5005uu910xazmzi72",
+            "label": "normal",
+            "value": "M < 2",
+            "subTestId": "clpx7bjsu005su910qa4dfnxi",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx95qm200dfu910kzsj8tbx",
+        "name": "Urine for dysmorphic RBCs",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpsnr6002hu9ncd1zvf3wk",
+        "order": 2,
+        "unit": "",
+        "createdAt": "2023-12-08T23:22:52.538Z",
+        "updatedAt": "2023-12-08T23:22:52.538Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx95ycg00dhu910v0cf0jlm",
+        "name": "Vitamin D",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpsnr6002hu9ncd1zvf3wk",
+        "order": 3,
+        "unit": "",
+        "createdAt": "2023-12-08T23:23:02.560Z",
+        "updatedAt": "2023-12-08T23:23:02.560Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxd9pdr001nu9ts9w3tur9i",
+        "name": "Urine protein / creatinine ratio",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpsnr6002hu9ncd1zvf3wk",
+        "order": 4,
+        "unit": "mg/mg creatinine",
+        "createdAt": "2023-12-09T01:17:56.031Z",
+        "updatedAt": "2023-12-09T01:17:56.031Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpxd9x0m001pu9tszheu7dfm",
+            "label": "normal",
+            "value": "< 0.11",
+            "subTestId": "clpxd9pdr001nu9ts9w3tur9i",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpxda9d6001ru9tsc3wl9l3y",
+        "name": "STOOL FOR REDUCING SUBSBTACES",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpsnr6002hu9ncd1zvf3wk",
+        "order": 5,
+        "unit": "",
+        "createdAt": "2023-12-09T01:18:21.931Z",
+        "updatedAt": "2023-12-09T01:18:21.931Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpqpsx9b002iu9nc4ja7jnb1",
+    "name": "Serum Electrolyte",
+    "createdAt": "2023-12-04T09:34:24.863Z",
+    "updatedAt": "2023-12-04T09:34:24.863Z",
+    "subTests": [
+      {
+        "id": "clpx93muh00d7u910ngjjlif2",
+        "name": "Sodium ( Na )",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpsx9b002iu9nc4ja7jnb1",
+        "order": 1,
+        "unit": "mEq/L",
+        "createdAt": "2023-12-08T23:21:14.346Z",
+        "updatedAt": "2023-12-08T23:21:14.346Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx93qs900d9u910otgw8lle",
+            "label": "normal",
+            "value": "136-145",
+            "subTestId": "clpx93muh00d7u910ngjjlif2",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx942pp00dbu910pxn0ktil",
+        "name": "Potassium ( K )",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpsx9b002iu9nc4ja7jnb1",
+        "order": 2,
+        "unit": "mEq/L",
+        "createdAt": "2023-12-08T23:21:34.908Z",
+        "updatedAt": "2023-12-08T23:21:34.908Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx948tx00ddu910wlczwwzh",
+            "label": "normal",
+            "value": "3.5-5.4",
+            "subTestId": "clpx942pp00dbu910pxn0ktil",
+            "billSubTestId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clpqpticd002ju9ncp18h9jww",
+    "name": "Semen Analysis",
+    "createdAt": "2023-12-04T09:34:52.189Z",
+    "updatedAt": "2023-12-04T09:34:52.189Z",
+    "subTests": [
+      {
+        "id": "clpx91pp500cxu9104u2y7ltf",
+        "name": "60 Mins Non Motile",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpticd002ju9ncp18h9jww",
+        "order": 1,
+        "unit": "%",
+        "createdAt": "2023-12-08T23:19:44.729Z",
+        "updatedAt": "2023-12-08T23:19:44.729Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx921ob00czu910yxhb1daj",
+        "name": "Odor",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpticd002ju9ncp18h9jww",
+        "order": 2,
+        "unit": "%",
+        "createdAt": "2023-12-08T23:20:00.251Z",
+        "updatedAt": "2023-12-08T23:20:00.251Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx92a2g00d1u910nzbd18vg",
+        "name": "120 Mins Progressive",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpticd002ju9ncp18h9jww",
+        "order": 3,
+        "unit": "%",
+        "createdAt": "2023-12-08T23:20:11.128Z",
+        "updatedAt": "2023-12-08T23:20:11.128Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx92kcf00d3u910vjqpqk73",
+        "name": "120 Mins Sluggish",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpticd002ju9ncp18h9jww",
+        "order": 4,
+        "unit": "%",
+        "createdAt": "2023-12-08T23:20:24.447Z",
+        "updatedAt": "2023-12-08T23:20:24.447Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx92taq00d5u91040umml7g",
+        "name": "120 Mins Non Motile",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpticd002ju9ncp18h9jww",
+        "order": 5,
+        "unit": "%",
+        "createdAt": "2023-12-08T23:20:36.050Z",
+        "updatedAt": "2023-12-08T23:20:36.050Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpqptz9d002ku9ncofehhisn",
+    "name": "STOOL GENERAL",
+    "createdAt": "2023-12-04T09:35:14.102Z",
+    "updatedAt": "2023-12-04T09:35:14.102Z",
+    "subTests": [
+      {
+        "id": "clpx8yg9100c9u910vjsjvlmf",
+        "name": "Color",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqptz9d002ku9ncofehhisn",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-08T23:17:12.516Z",
+        "updatedAt": "2023-12-08T23:17:12.516Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpzlt4g0000fu9ck21n4lqqf",
+            "value": "BROWN",
+            "order": 1,
+            "subTestId": "clpx8yg9100c9u910vjsjvlmf",
+            "billSubTestId": "clpzpy8q1001lu9wkwvxlbk7h"
+          },
+          {
+            "id": "clpzlta9i000hu9ck6cr5lt7v",
+            "value": "YELLOW",
+            "order": 1,
+            "subTestId": "clpx8yg9100c9u910vjsjvlmf",
+            "billSubTestId": "clpzpy8q1001lu9wkwvxlbk7h"
+          },
+          {
+            "id": "clpzltddq000ju9cko7st4rxt",
+            "value": "RED",
+            "order": 1,
+            "subTestId": "clpx8yg9100c9u910vjsjvlmf",
+            "billSubTestId": "clpzpy8q1001lu9wkwvxlbk7h"
+          },
+          {
+            "id": "clpzltmhv000lu9ckmpiwrcwa",
+            "value": "GREEN-RED",
+            "order": 1,
+            "subTestId": "clpx8yg9100c9u910vjsjvlmf",
+            "billSubTestId": "clpzpy8q1001lu9wkwvxlbk7h"
+          },
+          {
+            "id": "clpzlu6n1000nu9ck3kho07lq",
+            "value": "GREEN-BROWN",
+            "order": 1,
+            "subTestId": "clpx8yg9100c9u910vjsjvlmf",
+            "billSubTestId": "clpzpy8q1001lu9wkwvxlbk7h"
+          },
+          {
+            "id": "clpzlug0x000pu9ckt8pmeuf2",
+            "value": "GREEN",
+            "order": 1,
+            "subTestId": "clpx8yg9100c9u910vjsjvlmf",
+            "billSubTestId": "clpzpy8q1001lu9wkwvxlbk7h"
+          },
+          {
+            "id": "clpzlukmt000ru9ck2veo1w0s",
+            "value": "DARK-RED",
+            "order": 1,
+            "subTestId": "clpx8yg9100c9u910vjsjvlmf",
+            "billSubTestId": "clpzpy8q1001lu9wkwvxlbk7h"
+          },
+          {
+            "id": "clpzluwfn000tu9ck71ug0db8",
+            "value": "YELLOW-GREEN",
+            "order": 1,
+            "subTestId": "clpx8yg9100c9u910vjsjvlmf",
+            "billSubTestId": "clpzpy8q1001lu9wkwvxlbk7h"
+          },
+          {
+            "id": "clpzlvhff000vu9ckh7m9ji5w",
+            "value": "PALE-YELLOW",
+            "order": 1,
+            "subTestId": "clpx8yg9100c9u910vjsjvlmf",
+            "billSubTestId": "clpzpy8q1001lu9wkwvxlbk7h"
+          },
+          {
+            "id": "clpzlvttv000xu9ckw0uk5kkr",
+            "value": "PALE-BROWN",
+            "order": 1,
+            "subTestId": "clpx8yg9100c9u910vjsjvlmf",
+            "billSubTestId": "clpzpy8q1001lu9wkwvxlbk7h"
+          },
+          {
+            "id": "clpzlw30o000zu9ckewq9ukz5",
+            "value": "WHITE",
+            "order": 1,
+            "subTestId": "clpx8yg9100c9u910vjsjvlmf",
+            "billSubTestId": "clpzpy8q1001lu9wkwvxlbk7h"
+          },
+          {
+            "id": "clpzlwcv90011u9ck9gponuqj",
+            "value": "BLOODY",
+            "order": 1,
+            "subTestId": "clpx8yg9100c9u910vjsjvlmf",
+            "billSubTestId": "clpzpy8q1001lu9wkwvxlbk7h"
+          }
+        ],
+        "normals": []
+      },
+      {
+        "id": "clpx8ynfx00cbu910to6hoy6j",
+        "name": "CONSISTENCY",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqptz9d002ku9ncofehhisn",
+        "order": 2,
+        "unit": "",
+        "createdAt": "2023-12-08T23:17:21.837Z",
+        "updatedAt": "2023-12-08T23:17:21.837Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpy8w9as003nu9xs1moahdaz",
+            "value": "Solid",
+            "order": 1,
+            "subTestId": "clpx8ynfx00cbu910to6hoy6j",
+            "billSubTestId": "clpzpy9f1001nu9wk42u6b6mr"
+          },
+          {
+            "id": "clpy8wjld003pu9xsxwe9vzp0",
+            "value": "Semi-solid",
+            "order": 1,
+            "subTestId": "clpx8ynfx00cbu910to6hoy6j",
+            "billSubTestId": "clpzpy9f1001nu9wk42u6b6mr"
+          },
+          {
+            "id": "clpy8x0bs003ru9xsd5nn1kg9",
+            "value": "Soft",
+            "order": 1,
+            "subTestId": "clpx8ynfx00cbu910to6hoy6j",
+            "billSubTestId": "clpzpy9f1001nu9wk42u6b6mr"
+          },
+          {
+            "id": "clpzlwtfy0013u9ckpeuse5c7",
+            "value": "LIQUID",
+            "order": 1,
+            "subTestId": "clpx8ynfx00cbu910to6hoy6j",
+            "billSubTestId": "clpzpy9f1001nu9wk42u6b6mr"
+          },
+          {
+            "id": "clpzlx3kk0015u9ckzdv99vxc",
+            "value": "Watery",
+            "order": 1,
+            "subTestId": "clpx8ynfx00cbu910to6hoy6j",
+            "billSubTestId": "clpzpy9f1001nu9wk42u6b6mr"
+          },
+          {
+            "id": "clpzlyau00017u9cklaryq6th",
+            "value": "Watery-diarrohea",
+            "order": 1,
+            "subTestId": "clpx8ynfx00cbu910to6hoy6j",
+            "billSubTestId": "clpzpy9f1001nu9wk42u6b6mr"
+          },
+          {
+            "id": "clpzlyp210019u9ckmpjfk1xa",
+            "value": "Mucoid",
+            "order": 1,
+            "subTestId": "clpx8ynfx00cbu910to6hoy6j",
+            "billSubTestId": "clpzpy9f1001nu9wk42u6b6mr"
+          },
+          {
+            "id": "clpzlyuw6001bu9cka6u8kehe",
+            "value": "fluid",
+            "order": 1,
+            "subTestId": "clpx8ynfx00cbu910to6hoy6j",
+            "billSubTestId": "clpzpy9f1001nu9wk42u6b6mr"
+          }
+        ],
+        "normals": []
+      },
+      {
+        "id": "clpx8yuiy00cdu910mu18mwb2",
+        "name": "REACTION",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqptz9d002ku9ncofehhisn",
+        "order": 3,
+        "unit": "",
+        "createdAt": "2023-12-08T23:17:31.018Z",
+        "updatedAt": "2023-12-08T23:17:31.018Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpy8xdrf003tu9xs2w75j9ou",
+            "value": "Acidic",
+            "order": 1,
+            "subTestId": "clpx8yuiy00cdu910mu18mwb2",
+            "billSubTestId": "clpzpycfn001pu9wkkynehcsa"
+          },
+          {
+            "id": "clpy8xm4e003vu9xs9c3jegsy",
+            "value": "Alkaine",
+            "order": 1,
+            "subTestId": "clpx8yuiy00cdu910mu18mwb2",
+            "billSubTestId": "clpzpycfn001pu9wkkynehcsa"
+          }
+        ],
+        "normals": []
+      },
+      {
+        "id": "clpx8z37r00cfu910axucb2n4",
+        "name": "BLOOD",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqptz9d002ku9ncofehhisn",
+        "order": 4,
+        "unit": "",
+        "createdAt": "2023-12-08T23:17:42.279Z",
+        "updatedAt": "2023-12-08T23:17:42.279Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpzlze4j001du9ck47bmfukb",
+            "value": "Nill",
+            "order": 1,
+            "subTestId": "clpx8z37r00cfu910axucb2n4",
+            "billSubTestId": "clpzpydfa001ru9wkdfopmlvv"
+          },
+          {
+            "id": "clpzlzhga001fu9ck4r0zlrfk",
+            "value": "+",
+            "order": 1,
+            "subTestId": "clpx8z37r00cfu910axucb2n4",
+            "billSubTestId": "clpzpydfa001ru9wkdfopmlvv"
+          },
+          {
+            "id": "clpzlzjsc001hu9cka7cag2et",
+            "value": "++",
+            "order": 1,
+            "subTestId": "clpx8z37r00cfu910axucb2n4",
+            "billSubTestId": "clpzpydfa001ru9wkdfopmlvv"
+          },
+          {
+            "id": "clpzlzxsf001lu9ck7l0z7alr",
+            "value": "TRACE",
+            "order": 1,
+            "subTestId": "clpx8z37r00cfu910axucb2n4",
+            "billSubTestId": "clpzpydfa001ru9wkdfopmlvv"
+          },
+          {
+            "id": "clpzlzmgm001ju9cktou1eids",
+            "value": "+++",
+            "order": 1,
+            "subTestId": "clpx8z37r00cfu910axucb2n4",
+            "billSubTestId": "clpzpydfa001ru9wkdfopmlvv"
+          }
+        ],
+        "normals": []
+      },
+      {
+        "id": "clpx8zbkp00chu910goqz49i4",
+        "name": "MUCOUS",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqptz9d002ku9ncofehhisn",
+        "order": 5,
+        "unit": "",
+        "createdAt": "2023-12-08T23:17:53.113Z",
+        "updatedAt": "2023-12-08T23:17:53.113Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpzm0e7w001pu9ck0uinu5zd",
+            "value": "+",
+            "order": 1,
+            "subTestId": "clpx8zbkp00chu910goqz49i4",
+            "billSubTestId": "clpzpyecg001tu9wk5i5awz21"
+          },
+          {
+            "id": "clpzm0jdh001tu9cketsl72rk",
+            "value": "+++",
+            "order": 1,
+            "subTestId": "clpx8zbkp00chu910goqz49i4",
+            "billSubTestId": "clpzpyecg001tu9wk5i5awz21"
+          },
+          {
+            "id": "clpzm0b74001nu9ck0fzfyn0k",
+            "value": "Nill",
+            "order": 1,
+            "subTestId": "clpx8zbkp00chu910goqz49i4",
+            "billSubTestId": "clpzpyecg001tu9wk5i5awz21"
+          },
+          {
+            "id": "clpzm0gwk001ru9ckuqgvbcl9",
+            "value": "++",
+            "order": 1,
+            "subTestId": "clpx8zbkp00chu910goqz49i4",
+            "billSubTestId": "clpzpyecg001tu9wk5i5awz21"
+          },
+          {
+            "id": "clpzm0o1w001vu9ck75dkuw5e",
+            "value": "TRACE",
+            "order": 1,
+            "subTestId": "clpx8zbkp00chu910goqz49i4",
+            "billSubTestId": "clpzpyecg001tu9wk5i5awz21"
+          }
+        ],
+        "normals": []
+      },
+      {
+        "id": "clpx8zie100cju910kisjthky",
+        "name": "WORMS",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqptz9d002ku9ncofehhisn",
+        "order": 6,
+        "unit": "",
+        "createdAt": "2023-12-08T23:18:01.945Z",
+        "updatedAt": "2023-12-08T23:18:01.945Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpzm11sz001xu9ckvwsb2em8",
+            "value": "SEGMENT",
+            "order": 1,
+            "subTestId": "clpx8zie100cju910kisjthky",
+            "billSubTestId": "clpzpyf7v001vu9wk22eivtmn"
+          },
+          {
+            "id": "clpzm1cwy0021u9ckad0eam6e",
+            "value": "NILL",
+            "order": 1,
+            "subTestId": "clpx8zie100cju910kisjthky",
+            "billSubTestId": "clpzpyf7v001vu9wk22eivtmn"
+          },
+          {
+            "id": "clpzm19re001zu9ck66uexucg",
+            "value": "PIN-WORM",
+            "order": 1,
+            "subTestId": "clpx8zie100cju910kisjthky",
+            "billSubTestId": "clpzpyf7v001vu9wk22eivtmn"
+          },
+          {
+            "id": "clpzm1j800023u9ck8a4j4o55",
+            "value": "NOT SEEN",
+            "order": 1,
+            "subTestId": "clpx8zie100cju910kisjthky",
+            "billSubTestId": "clpzpyf7v001vu9wk22eivtmn"
+          }
+        ],
+        "normals": []
+      },
+      {
+        "id": "clpx903v600cpu910bhwlo9g8",
+        "name": "TROPHOZITTE",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqptz9d002ku9ncofehhisn",
+        "order": 9,
+        "unit": "",
+        "createdAt": "2023-12-08T23:18:29.778Z",
+        "updatedAt": "2023-12-08T23:18:35.671Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpzm4ueq002du9ck6x69gc1k",
+            "value": "Not seen",
+            "order": 1,
+            "subTestId": "clpx903v600cpu910bhwlo9g8",
+            "billSubTestId": "clpzpylv90021u9wkhn9hucgq"
+          },
+          {
+            "id": "clpzm5c1y002fu9ckfsp9u3dy",
+            "value": "G.Lamblia",
+            "order": 1,
+            "subTestId": "clpx903v600cpu910bhwlo9g8",
+            "billSubTestId": "clpzpylv90021u9wkhn9hucgq"
+          },
+          {
+            "id": "clpzm61zw002hu9ckye2jjx0x",
+            "value": "E.Histolytica",
+            "order": 1,
+            "subTestId": "clpx903v600cpu910bhwlo9g8",
+            "billSubTestId": "clpzpylv90021u9wkhn9hucgq"
+          },
+          {
+            "id": "clpzm6f95002ju9ckfkqk021o",
+            "value": "B.Coli",
+            "order": 1,
+            "subTestId": "clpx903v600cpu910bhwlo9g8",
+            "billSubTestId": "clpzpylv90021u9wkhn9hucgq"
+          },
+          {
+            "id": "clpzm75u3002lu9ckvbk5u539",
+            "value": "E.Histolytica , G.Lamblia",
+            "order": 1,
+            "subTestId": "clpx903v600cpu910bhwlo9g8",
+            "billSubTestId": "clpzpylv90021u9wkhn9hucgq"
+          }
+        ],
+        "normals": [
+          {
+            "id": "clpya7i7n0056u9xsnts0s3ut",
+            "label": "normal",
+            "value": "E.histolytica",
+            "subTestId": "clpx903v600cpu910bhwlo9g8",
+            "billSubTestId": "clpzpylv90021u9wkhn9hucgq"
+          },
+          {
+            "id": "clpya878m0058u9xsqk4p3ov5",
+            "label": "normal",
+            "value": "G.lamblia",
+            "subTestId": "clpx903v600cpu910bhwlo9g8",
+            "billSubTestId": "clpzpylv90021u9wkhn9hucgq"
+          }
+        ]
+      },
+      {
+        "id": "clpx90g8j00cru910ra3rm5iy",
+        "name": "FLAGELLATES",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqptz9d002ku9ncofehhisn",
+        "order": 10,
+        "unit": "",
+        "createdAt": "2023-12-08T23:18:45.811Z",
+        "updatedAt": "2023-12-08T23:18:45.811Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpzm7i2v002nu9ckytmr2ixo",
+            "value": "G.Lamblia",
+            "order": 1,
+            "subTestId": "clpx90g8j00cru910ra3rm5iy",
+            "billSubTestId": "clpzpymsx0023u9wklzhxdajs"
+          },
+          {
+            "id": "clpzm7ncd002pu9cki97p42nl",
+            "value": "Not seen",
+            "order": 1,
+            "subTestId": "clpx90g8j00cru910ra3rm5iy",
+            "billSubTestId": "clpzpymsx0023u9wklzhxdajs"
+          }
+        ],
+        "normals": [
+          {
+            "id": "clpya97nc005au9xs5dywveqz",
+            "label": "normal",
+            "value": "G.lamblia",
+            "subTestId": "clpx90g8j00cru910ra3rm5iy",
+            "billSubTestId": "clpzpymsx0023u9wklzhxdajs"
+          }
+        ]
+      },
+      {
+        "id": "clpx90n0v00ctu9103o5lktaf",
+        "name": "CYST",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqptz9d002ku9ncofehhisn",
+        "order": 11,
+        "unit": "",
+        "createdAt": "2023-12-08T23:18:54.607Z",
+        "updatedAt": "2023-12-08T23:18:54.607Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpzm9d0i002ru9ck3qg9b2nl",
+            "value": "G.lamblia",
+            "order": 1,
+            "subTestId": "clpx90n0v00ctu9103o5lktaf",
+            "billSubTestId": "clpzpynsj0025u9wk8743k991"
+          },
+          {
+            "id": "clpzm9j5t002tu9ckl1l4syns",
+            "value": "E.histolytica",
+            "order": 1,
+            "subTestId": "clpx90n0v00ctu9103o5lktaf",
+            "billSubTestId": "clpzpynsj0025u9wk8743k991"
+          },
+          {
+            "id": "clpzm9u0v002vu9ckjr8ymqpl",
+            "value": "E.Histolytica , G.Lamblia ",
+            "order": 1,
+            "subTestId": "clpx90n0v00ctu9103o5lktaf",
+            "billSubTestId": "clpzpynsj0025u9wk8743k991"
+          },
+          {
+            "id": "clpzma3bw002xu9ckfrpa67ot",
+            "value": "Not seen",
+            "order": 1,
+            "subTestId": "clpx90n0v00ctu9103o5lktaf",
+            "billSubTestId": "clpzpynsj0025u9wk8743k991"
+          }
+        ],
+        "normals": [
+          {
+            "id": "clpya9v5k005cu9xshtl0b7tw",
+            "label": "normal",
+            "value": "G.lamblia",
+            "subTestId": "clpx90n0v00ctu9103o5lktaf",
+            "billSubTestId": "clpzpynsj0025u9wk8743k991"
+          },
+          {
+            "id": "clpyaaats005eu9xsz0ptx9wb",
+            "label": "normal",
+            "value": "E.histolytica",
+            "subTestId": "clpx90n0v00ctu9103o5lktaf",
+            "billSubTestId": "clpzpynsj0025u9wk8743k991"
+          }
+        ]
+      },
+      {
+        "id": "clpx90ugh00cvu910be8q6eew",
+        "name": "OVA",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqptz9d002ku9ncofehhisn",
+        "order": 12,
+        "unit": "",
+        "createdAt": "2023-12-08T23:19:04.241Z",
+        "updatedAt": "2023-12-08T23:19:04.241Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpzminw7002zu9ck3l4tangr",
+            "value": "S.Mansoni",
+            "order": 1,
+            "subTestId": "clpx90ugh00cvu910be8q6eew",
+            "billSubTestId": "clpzpyogb0027u9wkiet0he0g"
+          },
+          {
+            "id": "clpzmjgj60031u9ck855woaio",
+            "value": "S.Intercalatum",
+            "order": 1,
+            "subTestId": "clpx90ugh00cvu910be8q6eew",
+            "billSubTestId": "clpzpyogb0027u9wkiet0he0g"
+          },
+          {
+            "id": "clpzmkh3p0033u9ckdm6fmrkg",
+            "value": "S.Japanisum",
+            "order": 1,
+            "subTestId": "clpx90ugh00cvu910be8q6eew",
+            "billSubTestId": "clpzpyogb0027u9wkiet0he0g"
+          },
+          {
+            "id": "clpzmlglx0035u9ckeokplbiv",
+            "value": "E.Vermicularis",
+            "order": 1,
+            "subTestId": "clpx90ugh00cvu910be8q6eew",
+            "billSubTestId": "clpzpyogb0027u9wkiet0he0g"
+          },
+          {
+            "id": "clpzmm2gw0037u9ck2cbqps6e",
+            "value": "H.Nana",
+            "order": 1,
+            "subTestId": "clpx90ugh00cvu910be8q6eew",
+            "billSubTestId": "clpzpyogb0027u9wkiet0he0g"
+          },
+          {
+            "id": "clpzmmeq00039u9ckp3av0zlt",
+            "value": "Not seen",
+            "order": 1,
+            "subTestId": "clpx90ugh00cvu910be8q6eew",
+            "billSubTestId": "clpzpyogb0027u9wkiet0he0g"
+          }
+        ],
+        "normals": []
+      },
+      {
+        "id": "clpx8zpuy00clu910fgrua61y",
+        "name": "PUS CELL",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqptz9d002ku9ncofehhisn",
+        "order": 7,
+        "unit": "HBF",
+        "createdAt": "2023-12-08T23:18:11.625Z",
+        "updatedAt": "2023-12-09T16:05:12.603Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpzm2d7h0025u9ckn9vzmj3v",
+            "value": "0 - 2 ",
+            "order": 1,
+            "subTestId": "clpx8zpuy00clu910fgrua61y",
+            "billSubTestId": "clpzpyfzj001xu9wkhj1x7564"
+          },
+          {
+            "id": "clpzm2ltw0027u9ckp19fftz4",
+            "value": "Uncountable",
+            "order": 1,
+            "subTestId": "clpx8zpuy00clu910fgrua61y",
+            "billSubTestId": "clpzpyfzj001xu9wkhj1x7564"
+          }
+        ],
+        "normals": [
+          {
+            "id": "clpy8y8yq003xu9xsyulmqpjs",
+            "label": "normal",
+            "value": "0 - 2",
+            "subTestId": "clpx8zpuy00clu910fgrua61y",
+            "billSubTestId": "clpzpyfzj001xu9wkhj1x7564"
+          }
+        ]
+      },
+      {
+        "id": "clpx8zwi100cnu9103iqtk13b",
+        "name": "RBCs",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqptz9d002ku9ncofehhisn",
+        "order": 8,
+        "unit": "HBF",
+        "createdAt": "2023-12-08T23:18:20.233Z",
+        "updatedAt": "2023-12-09T16:05:42.332Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpzm3ni90029u9ck16cei3i1",
+            "value": "Uncountable",
+            "order": 1,
+            "subTestId": "clpx8zwi100cnu9103iqtk13b",
+            "billSubTestId": "clpzpygz3001zu9wk3d1xen7f"
+          },
+          {
+            "id": "clpzm3tdp002bu9ckep4uz810",
+            "value": "0 -2 ",
+            "order": 1,
+            "subTestId": "clpx8zwi100cnu9103iqtk13b",
+            "billSubTestId": "clpzpygz3001zu9wk3d1xen7f"
+          }
+        ],
+        "normals": [
+          {
+            "id": "clpy8z5jq003zu9xsuf1dr3ss",
+            "label": "normal",
+            "value": "0 -2",
+            "subTestId": "clpx8zwi100cnu9103iqtk13b",
+            "billSubTestId": "clpzpygz3001zu9wk3d1xen7f"
+          }
+        ]
+      },
+      {
+        "id": "clpxb26re00h1u9105hjj6xdb",
+        "name": "OTHEERS",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqptz9d002ku9ncofehhisn",
+        "order": 13,
+        "unit": "",
+        "createdAt": "2023-12-09T00:16:06.074Z",
+        "updatedAt": "2023-12-09T00:16:06.074Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpzmns3x003bu9ckq5430x9m",
+            "value": "NO Others",
+            "order": 1,
+            "subTestId": "clpxb26re00h1u9105hjj6xdb",
+            "billSubTestId": "clpzpysh50029u9wk1smqnls5"
+          },
+          {
+            "id": "clpzmoa9b003du9ckgzz4i1x5",
+            "value": "Yeast ",
+            "order": 1,
+            "subTestId": "clpxb26re00h1u9105hjj6xdb",
+            "billSubTestId": "clpzpysh50029u9wk1smqnls5"
+          },
+          {
+            "id": "clpzmoltw003fu9ckieqtk25x",
+            "value": "Undigested food",
+            "order": 1,
+            "subTestId": "clpxb26re00h1u9105hjj6xdb",
+            "billSubTestId": "clpzpysh50029u9wk1smqnls5"
+          },
+          {
+            "id": "clpzmoumi003hu9cke4rtz3pe",
+            "value": "Starch",
+            "order": 1,
+            "subTestId": "clpxb26re00h1u9105hjj6xdb",
+            "billSubTestId": "clpzpysh50029u9wk1smqnls5"
+          },
+          {
+            "id": "clpzmps1y003ju9ck2n0lc65s",
+            "value": "Undigested food , Starch , Yeast",
+            "order": 1,
+            "subTestId": "clpxb26re00h1u9105hjj6xdb",
+            "billSubTestId": "clpzpysh50029u9wk1smqnls5"
+          },
+          {
+            "id": "clpzmq4xw003lu9ck8cz8fcxx",
+            "value": "Bacteria ",
+            "order": 1,
+            "subTestId": "clpxb26re00h1u9105hjj6xdb",
+            "billSubTestId": "clpzpysh50029u9wk1smqnls5"
+          },
+          {
+            "id": "clpzmqt7r003nu9ckzifoj3qh",
+            "value": "Fat Droplets",
+            "order": 1,
+            "subTestId": "clpxb26re00h1u9105hjj6xdb",
+            "billSubTestId": "clpzpysh50029u9wk1smqnls5"
+          }
+        ],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpqpulf9002lu9ncv8z8q11e",
+    "name": "S.Calcium",
+    "createdAt": "2023-12-04T09:35:42.836Z",
+    "updatedAt": "2023-12-04T09:35:42.836Z",
+    "subTests": [
+      {
+        "id": "clpxd8kkr001ju9tsdp7y7uj7",
+        "name": "S.Calcium",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpulf9002lu9ncv8z8q11e",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-09T01:17:03.147Z",
+        "updatedAt": "2023-12-09T01:17:03.147Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpxd8oxx001lu9tstfpf4lm2",
+            "label": "normal",
+            "value": "8.6-10.2",
+            "subTestId": "clpxd8kkr001ju9tsdp7y7uj7",
+            "billSubTestId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clpqpuugh002mu9ncfrckzunx",
+    "name": "ROUTINE INVESTIGATIONS",
+    "createdAt": "2023-12-04T09:35:54.546Z",
+    "updatedAt": "2023-12-04T09:35:54.546Z",
+    "subTests": [
+      {
+        "id": "clpx8uz2600c1u910miq9r90p",
+        "name": "ESR",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpuugh002mu9ncfrckzunx",
+        "order": 3,
+        "unit": "mm/hr",
+        "createdAt": "2023-12-08T23:14:30.270Z",
+        "updatedAt": "2023-12-09T14:34:23.276Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx8v52c00c3u91014abcoqu",
+            "label": "normal",
+            "value": "<12",
+            "subTestId": "clpx8uz2600c1u910miq9r90p",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx8ugx200bxu910zifx2596",
+        "name": "HB",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpuugh002mu9ncfrckzunx",
+        "order": 2,
+        "unit": "g/dl",
+        "createdAt": "2023-12-08T23:14:06.757Z",
+        "updatedAt": "2023-12-09T14:34:23.270Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx8uniw00bzu910kszelw2l",
+            "label": "normal",
+            "value": "13-17",
+            "subTestId": "clpx8ugx200bxu910zifx2596",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx8vm4e00c5u910zjdn7j27",
+        "name": "BF for malaria",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpuugh002mu9ncfrckzunx",
+        "order": 4,
+        "unit": "",
+        "createdAt": "2023-12-08T23:15:00.158Z",
+        "updatedAt": "2023-12-09T14:34:23.280Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx8vsgg00c7u910grzu9s8t",
+        "name": "Urine for bile",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpuugh002mu9ncfrckzunx",
+        "order": 5,
+        "unit": "",
+        "createdAt": "2023-12-08T23:15:08.368Z",
+        "updatedAt": "2023-12-09T14:34:23.286Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx8twc500btu910izmf9wje",
+        "name": "TWBCs COUNT",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpuugh002mu9ncfrckzunx",
+        "order": 1,
+        "unit": "*10^3/ul",
+        "createdAt": "2023-12-08T23:13:40.085Z",
+        "updatedAt": "2023-12-09T14:34:23.263Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx8u2rp00bvu910iplk8osu",
+            "label": "normal",
+            "value": "4-11",
+            "subTestId": "clpx8twc500btu910izmf9wje",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpxd6h7o001du9tso0ew360n",
+        "name": "urine for sugar",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpuugh002mu9ncfrckzunx",
+        "order": 6,
+        "unit": "",
+        "createdAt": "2023-12-09T01:15:25.474Z",
+        "updatedAt": "2023-12-09T14:34:23.291Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpqpvuki002nu9ncozeeyi1a",
+    "name": "Malaria",
+    "createdAt": "2023-12-04T09:36:41.346Z",
+    "updatedAt": "2023-12-04T09:36:41.346Z",
+    "subTests": [
+      {
+        "id": "clpx8rdsc00blu910b63weejn",
+        "name": "Malaria",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpvuki002nu9ncozeeyi1a",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-08T23:11:42.731Z",
+        "updatedAt": "2023-12-08T23:11:42.731Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx8rl3i00bnu9107bw2dmyf",
+        "name": "BFFM",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpvuki002nu9ncozeeyi1a",
+        "order": 2,
+        "unit": "",
+        "createdAt": "2023-12-08T23:11:52.206Z",
+        "updatedAt": "2023-12-08T23:11:52.206Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpzlec9a0001u9ck3eq0cnrx",
+            "value": " Ring stage of p.Falciprum seen .",
+            "order": 1,
+            "subTestId": "clpx8rl3i00bnu9107bw2dmyf",
+            "billSubTestId": "clpzqdr2d002ru9wk7pnc7af2"
+          },
+          {
+            "id": "clpzleocp0003u9ckzag6xvv2",
+            "value": "No malaria parasite seen",
+            "order": 1,
+            "subTestId": "clpx8rl3i00bnu9107bw2dmyf",
+            "billSubTestId": "clpzqdr2d002ru9wk7pnc7af2"
+          },
+          {
+            "id": "clpzlexvk0005u9ck00px8zyn",
+            "value": " Ring stage of P.Vivax seen .",
+            "order": 1,
+            "subTestId": "clpx8rl3i00bnu9107bw2dmyf",
+            "billSubTestId": "clpzqdr2d002ru9wk7pnc7af2"
+          },
+          {
+            "id": "clpzlf8qb0007u9ckj2upro73",
+            "value": "Malaria parasite seen",
+            "order": 1,
+            "subTestId": "clpx8rl3i00bnu9107bw2dmyf",
+            "billSubTestId": "clpzqdr2d002ru9wk7pnc7af2"
+          },
+          {
+            "id": "clpzlfi6e0009u9ck875w5iey",
+            "value": "Gametocyte of P.Falciprum seen",
+            "order": 1,
+            "subTestId": "clpx8rl3i00bnu9107bw2dmyf",
+            "billSubTestId": "clpzqdr2d002ru9wk7pnc7af2"
+          },
+          {
+            "id": "clpzlfolt000bu9ck2nrlddow",
+            "value": "Gametocyte of P.Vivax seen",
+            "order": 1,
+            "subTestId": "clpx8rl3i00bnu9107bw2dmyf",
+            "billSubTestId": "clpzqdr2d002ru9wk7pnc7af2"
+          },
+          {
+            "id": "clpzlfvhz000du9cklxauwbdo",
+            "value": "schizonts of P.Falciprum seen",
+            "order": 1,
+            "subTestId": "clpx8rl3i00bnu9107bw2dmyf",
+            "billSubTestId": "clpzqdr2d002ru9wk7pnc7af2"
+          }
+        ],
+        "normals": [
+          {
+            "id": "clpyade54005gu9xsguuhxlvv",
+            "label": "normal",
+            "value": "Ring stage of p.Falciprum seen .",
+            "subTestId": "clpx8rl3i00bnu9107bw2dmyf",
+            "billSubTestId": "clpzqdr2d002ru9wk7pnc7af2"
+          },
+          {
+            "id": "clpyaebpu005iu9xsa72qnqgj",
+            "label": "normal",
+            "value": "No malaria parasite seen",
+            "subTestId": "clpx8rl3i00bnu9107bw2dmyf",
+            "billSubTestId": "clpzqdr2d002ru9wk7pnc7af2"
+          },
+          {
+            "id": "clpyaf866005ku9xs9q0uojb1",
+            "label": "normal",
+            "value": "Ring stage of P.Vivax seen .",
+            "subTestId": "clpx8rl3i00bnu9107bw2dmyf",
+            "billSubTestId": "clpzqdr2d002ru9wk7pnc7af2"
+          },
+          {
+            "id": "clpyag9hl005mu9xs2la594v7",
+            "label": "normal",
+            "value": "Malaria parasite seen",
+            "subTestId": "clpx8rl3i00bnu9107bw2dmyf",
+            "billSubTestId": "clpzqdr2d002ru9wk7pnc7af2"
+          },
+          {
+            "id": "clpyahlze005ou9xsc6ejf84t",
+            "label": "normal",
+            "value": "Gametocyte of P.Falciprum seen",
+            "subTestId": "clpx8rl3i00bnu9107bw2dmyf",
+            "billSubTestId": "clpzqdr2d002ru9wk7pnc7af2"
+          },
+          {
+            "id": "clpyaifwc005qu9xsdcn2rwpx",
+            "label": "normal",
+            "value": "Gametocyte of P.Vivax seen",
+            "subTestId": "clpx8rl3i00bnu9107bw2dmyf",
+            "billSubTestId": "clpzqdr2d002ru9wk7pnc7af2"
+          },
+          {
+            "id": "clpyajuyi005su9xsoll152fu",
+            "label": "normal",
+            "value": "schizonts of P.Falciprum seen",
+            "subTestId": "clpx8rl3i00bnu9107bw2dmyf",
+            "billSubTestId": "clpzqdr2d002ru9wk7pnc7af2"
+          }
+        ]
+      },
+      {
+        "id": "clpx8rwr500bpu91037rbktv4",
+        "name": "ICT for malaria Ag",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpvuki002nu9ncozeeyi1a",
+        "order": 3,
+        "unit": "",
+        "createdAt": "2023-12-08T23:12:07.313Z",
+        "updatedAt": "2023-12-08T23:12:07.313Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpyam7ut005uu9xscu6tsf4q",
+            "value": "(-ve) Negative",
+            "order": 1,
+            "subTestId": "clpx8rwr500bpu91037rbktv4",
+            "billSubTestId": "clpzqds8x002tu9wkscjwdq2g"
+          },
+          {
+            "id": "clpyanjhl005wu9xsp5f3v045",
+            "value": "Positive for P.Falciprum (+ve)",
+            "order": 1,
+            "subTestId": "clpx8rwr500bpu91037rbktv4",
+            "billSubTestId": "clpzqds8x002tu9wkscjwdq2g"
+          },
+          {
+            "id": "clpyao52i005yu9xsr72wa5hj",
+            "value": "Positive for Vivax (+ve)",
+            "order": 1,
+            "subTestId": "clpx8rwr500bpu91037rbktv4",
+            "billSubTestId": "clpzqds8x002tu9wkscjwdq2g"
+          },
+          {
+            "id": "clpyaoxl80060u9xsojpemg7k",
+            "value": "Positive for P.Falciprum and P.Vivax (+ve)",
+            "order": 1,
+            "subTestId": "clpx8rwr500bpu91037rbktv4",
+            "billSubTestId": "clpzqds8x002tu9wkscjwdq2g"
+          }
+        ],
+        "normals": []
+      },
+      {
+        "id": "clpx8s3nd00bru910iqjrtjcm",
+        "name": "ICT for malaria Ab",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpvuki002nu9ncozeeyi1a",
+        "order": 4,
+        "unit": "",
+        "createdAt": "2023-12-08T23:12:16.249Z",
+        "updatedAt": "2023-12-08T23:12:16.249Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpyapegu0062u9xsnxmv7u9g",
+            "value": "(-ve) Negative",
+            "order": 1,
+            "subTestId": "clpx8s3nd00bru910iqjrtjcm",
+            "billSubTestId": "clpzqdtex002vu9wkfur8v6s8"
+          }
+        ],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpqpwsml002ou9ncjapyz25p",
+    "name": "Immunoglobulins & others",
+    "createdAt": "2023-12-04T09:37:25.484Z",
+    "updatedAt": "2023-12-04T09:37:25.484Z",
+    "subTests": []
+  },
+  {
+    "id": "clpqpxh1k002pu9nc4lj8uo7x",
+    "name": "HEMATOLOGY",
+    "createdAt": "2023-12-04T09:37:57.127Z",
+    "updatedAt": "2023-12-04T09:37:57.127Z",
+    "subTests": [
+      {
+        "id": "clpx8jvnz00b0u910frnpg26w",
+        "name": "Retics count",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpxh1k002pu9nc4lj8uo7x",
+        "order": 1,
+        "unit": "%",
+        "createdAt": "2023-12-08T23:05:52.655Z",
+        "updatedAt": "2023-12-09T14:13:56.296Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx8ki6e00b2u9108csrb5ah",
+            "label": "normal",
+            "value": "0.5-2.5",
+            "subTestId": "clpx8jvnz00b0u910frnpg26w",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpy4zj92001lu9xs2zg0y86m",
+            "label": "normal",
+            "value": "0.5-2.5",
+            "subTestId": "clpx8jvnz00b0u910frnpg26w",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpxcsorh0003u9tsd3z6pyxl",
+        "name": "Platelet count",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpxh1k002pu9nc4lj8uo7x",
+        "order": 2,
+        "unit": "*10^3/Ul",
+        "createdAt": "2023-12-09T01:04:42.078Z",
+        "updatedAt": "2023-12-09T01:04:42.078Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpxct5520005u9ts6qff94sy",
+            "label": "normal",
+            "value": "150-450",
+            "subTestId": "clpxcsorh0003u9tsd3z6pyxl",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpxctl530007u9tsamnzeaju",
+        "name": "Platelet function",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpxh1k002pu9nc4lj8uo7x",
+        "order": 3,
+        "unit": "",
+        "createdAt": "2023-12-09T01:05:24.039Z",
+        "updatedAt": "2023-12-09T01:05:24.039Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxctvpb0009u9tsbxmyrn9t",
+        "name": "BM",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpxh1k002pu9nc4lj8uo7x",
+        "order": 4,
+        "unit": "",
+        "createdAt": "2023-12-09T01:05:37.727Z",
+        "updatedAt": "2023-12-09T01:05:37.727Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxcu7fx000bu9tsz856g58j",
+        "name": "Bone marrow",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpxh1k002pu9nc4lj8uo7x",
+        "order": 5,
+        "unit": "",
+        "createdAt": "2023-12-09T01:05:52.936Z",
+        "updatedAt": "2023-12-09T01:05:52.936Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpqpy155002qu9ncafagefla",
+    "name": "Enzymes",
+    "createdAt": "2023-12-04T09:38:23.177Z",
+    "updatedAt": "2023-12-04T09:38:23.177Z",
+    "subTests": [
+      {
+        "id": "clpx8blus009wu9102s1zqmg6",
+        "name": "ALP",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpy155002qu9ncafagefla",
+        "order": 1,
+        "unit": "U/L",
+        "createdAt": "2023-12-08T22:59:26.692Z",
+        "updatedAt": "2023-12-08T22:59:26.692Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx8bt76009yu910k0nnt22q",
+            "label": "normal",
+            "value": "30-150",
+            "subTestId": "clpx8blus009wu9102s1zqmg6",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx8c6ym00a0u910syc5ol5g",
+        "name": "ALT(SGPT)",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpy155002qu9ncafagefla",
+        "order": 2,
+        "unit": "U/L",
+        "createdAt": "2023-12-08T22:59:54.046Z",
+        "updatedAt": "2023-12-08T22:59:54.046Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx8cd4x00a2u910qf5ikqrd",
+            "label": "normal",
+            "value": "M: < 45",
+            "subTestId": "clpx8c6ym00a0u910syc5ol5g",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx8cr2b00a4u910hdok75sw",
+        "name": "AST(SGOT)",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpy155002qu9ncafagefla",
+        "order": 3,
+        "unit": "U/L",
+        "createdAt": "2023-12-08T23:00:20.099Z",
+        "updatedAt": "2023-12-08T23:00:20.099Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx8cyv600a6u9103l11br1b",
+            "label": "normal",
+            "value": "M: <35 ",
+            "subTestId": "clpx8cr2b00a4u910hdok75sw",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx8df0w00a8u91034ne49yk",
+        "name": "GGT",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpy155002qu9ncafagefla",
+        "order": 4,
+        "unit": "U/L",
+        "createdAt": "2023-12-08T23:00:51.152Z",
+        "updatedAt": "2023-12-08T23:01:03.008Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx8dswo00aau910ps19b61r",
+            "label": "normal",
+            "value": "M:<55",
+            "subTestId": "clpx8df0w00a8u91034ne49yk",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx8e6rk00acu910cbcgcdd5",
+        "name": "LDH",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpy155002qu9ncafagefla",
+        "order": 5,
+        "unit": "U/L",
+        "createdAt": "2023-12-08T23:01:27.103Z",
+        "updatedAt": "2023-12-08T23:01:27.103Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx8edj200aeu910my7c0w4n",
+            "label": "normal",
+            "value": "125-220",
+            "subTestId": "clpx8e6rk00acu910cbcgcdd5",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx8eqd400agu9104ryv3blu",
+        "name": "CK",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpy155002qu9ncafagefla",
+        "order": 6,
+        "unit": "U/L",
+        "createdAt": "2023-12-08T23:01:52.504Z",
+        "updatedAt": "2023-12-08T23:01:52.504Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx8ewrn00aiu910v34mrhhl",
+            "label": "normal",
+            "value": "M:46-171",
+            "subTestId": "clpx8eqd400agu9104ryv3blu",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx8fc9e00aku910h8y1njoz",
+        "name": "CK-MB",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpy155002qu9ncafagefla",
+        "order": 7,
+        "unit": "U/L",
+        "createdAt": "2023-12-08T23:02:20.882Z",
+        "updatedAt": "2023-12-08T23:02:20.882Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx8fk2o00amu910bxwlcw7e",
+            "label": "normal",
+            "value": "<25",
+            "subTestId": "clpx8fc9e00aku910h8y1njoz",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx8gdqu00aou910kcsu3ghg",
+        "name": "AMYLAZE",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpy155002qu9ncafagefla",
+        "order": 8,
+        "unit": "U/L",
+        "createdAt": "2023-12-08T23:03:09.462Z",
+        "updatedAt": "2023-12-08T23:03:09.462Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx8gkhb00aqu910ifxy44ux",
+            "label": "normal",
+            "value": "28 - 100",
+            "subTestId": "clpx8gdqu00aou910kcsu3ghg",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx8hh9v00asu910kqcq3p6v",
+        "name": "ACID PHOSPATASE",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpy155002qu9ncafagefla",
+        "order": 9,
+        "unit": "U/L",
+        "createdAt": "2023-12-08T23:04:00.685Z",
+        "updatedAt": "2023-12-08T23:04:00.685Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx8ho6s00auu910qcyf341a",
+            "label": "normal",
+            "value": "1.5-4.5",
+            "subTestId": "clpx8hh9v00asu910kqcq3p6v",
+            "billSubTestId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clpqpz0y0002ru9ncgu1h10fv",
+    "name": "CREATININE CLEARANCE",
+    "createdAt": "2023-12-04T09:39:09.576Z",
+    "updatedAt": "2023-12-04T09:39:09.576Z",
+    "subTests": [
+      {
+        "id": "clpx8822a009ou910vebbi89z",
+        "name": "URINE 24H VOLUME",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpz0y0002ru9ncgu1h10fv",
+        "order": 2,
+        "unit": "",
+        "createdAt": "2023-12-08T22:56:41.074Z",
+        "updatedAt": "2023-12-08T22:56:41.074Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx88agf009qu910c79uo64r",
+        "name": "URINE CREATININE",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpz0y0002ru9ncgu1h10fv",
+        "order": 3,
+        "unit": "",
+        "createdAt": "2023-12-08T22:56:51.951Z",
+        "updatedAt": "2023-12-08T22:56:51.951Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx88uc6009su910zh0a8bs6",
+        "name": "SERUM CREATININE",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpz0y0002ru9ncgu1h10fv",
+        "order": 4,
+        "unit": "",
+        "createdAt": "2023-12-08T22:57:17.718Z",
+        "updatedAt": "2023-12-08T22:57:17.718Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx87h9u009ku9106s49iojt",
+        "name": "CREATININE CLEARANCE",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqpz0y0002ru9ncgu1h10fv",
+        "order": 1,
+        "unit": "ml/dl",
+        "createdAt": "2023-12-08T22:56:14.130Z",
+        "updatedAt": "2023-12-09T14:05:42.608Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx87pf8009mu9102g6y4ucx",
+            "label": "normal",
+            "value": "97-137",
+            "subTestId": "clpx87h9u009ku9106s49iojt",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpy4o3kz0015u9xsvy9h7tc3",
+            "label": "normal",
+            "value": "97  - 187",
+            "subTestId": "clpx87h9u009ku9106s49iojt",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpy4olc50017u9xs6ppfo8a8",
+            "label": "normal",
+            "value": "97 -137",
+            "subTestId": "clpx87h9u009ku9106s49iojt",
+            "billSubTestId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clpqpzp6u002su9nc2be21qr5",
+    "name": "CHEMISTERY",
+    "createdAt": "2023-12-04T09:39:40.997Z",
+    "updatedAt": "2023-12-04T09:39:40.997Z",
+    "subTests": []
+  },
+  {
+    "id": "clpqq0r1c002tu9ncaua8ljte",
+    "name": "BM",
+    "createdAt": "2023-12-04T09:40:30.048Z",
+    "updatedAt": "2023-12-04T09:40:30.048Z",
+    "subTests": []
+  },
+  {
+    "id": "clpqq1jtl002uu9ncfwefclz5",
+    "name": "CEREBRO SPINAL FLUID",
+    "createdAt": "2023-12-04T09:41:07.352Z",
+    "updatedAt": "2023-12-04T09:41:07.352Z",
+    "subTests": [
+      {
+        "id": "clpx83bx00098u910itv04krq",
+        "name": "Clinical remarks",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1jtl002uu9ncfwefclz5",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-08T22:53:00.563Z",
+        "updatedAt": "2023-12-08T22:53:00.563Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx83nro009au9107155ul7e",
+        "name": "Chloride",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1jtl002uu9ncfwefclz5",
+        "order": 2,
+        "unit": "mg/dl",
+        "createdAt": "2023-12-08T22:53:15.924Z",
+        "updatedAt": "2023-12-08T22:53:15.924Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx83wc0009cu910rnwj4qgq",
+            "label": "normal",
+            "value": "700-760 ",
+            "subTestId": "clpx83nro009au9107155ul7e",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx9vjg500e5u910ec1pr00v",
+        "name": "CEREBRO SPINAL FLUID (CSF)",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1jtl002uu9ncfwefclz5",
+        "order": 3,
+        "unit": "",
+        "createdAt": "2023-12-08T23:42:56.309Z",
+        "updatedAt": "2023-12-08T23:42:56.309Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx9vsru00e7u9102igpq41q",
+        "name": "Aspect",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1jtl002uu9ncfwefclz5",
+        "order": 4,
+        "unit": "",
+        "createdAt": "2023-12-08T23:43:08.393Z",
+        "updatedAt": "2023-12-08T23:43:08.393Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx9w49m00e9u910qxpcc6n8",
+        "name": "Colour",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1jtl002uu9ncfwefclz5",
+        "order": 5,
+        "unit": "",
+        "createdAt": "2023-12-08T23:43:23.290Z",
+        "updatedAt": "2023-12-08T23:43:23.290Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx9wc2900ebu9105pxxpicw",
+        "name": "Coagulum",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1jtl002uu9ncfwefclz5",
+        "order": 6,
+        "unit": "",
+        "createdAt": "2023-12-08T23:43:33.393Z",
+        "updatedAt": "2023-12-08T23:43:33.393Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx9wo6k00edu910ii6rl2ps",
+        "name": "CELL COUNT",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1jtl002uu9ncfwefclz5",
+        "order": 7,
+        "unit": "",
+        "createdAt": "2023-12-08T23:43:49.100Z",
+        "updatedAt": "2023-12-08T23:43:49.100Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx9x0sp00efu910z0opmjqz",
+        "name": "PROTEIN",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1jtl002uu9ncfwefclz5",
+        "order": 8,
+        "unit": "mg/dl",
+        "createdAt": "2023-12-08T23:44:05.449Z",
+        "updatedAt": "2023-12-08T23:44:05.449Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx9xfvc00ehu910fu64zv5t",
+            "label": "normal",
+            "value": "15-45",
+            "subTestId": "clpx9x0sp00efu910z0opmjqz",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx9xt7q00eju910arkq9mij",
+        "name": "Glucose",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1jtl002uu9ncfwefclz5",
+        "order": 9,
+        "unit": "mg/dl",
+        "createdAt": "2023-12-08T23:44:42.277Z",
+        "updatedAt": "2023-12-08T23:44:42.277Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx9y1g300elu910hnencytz",
+            "label": "normal",
+            "value": "50-80 ",
+            "subTestId": "clpx9xt7q00eju910arkq9mij",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx9ydzl00enu910rw7l0tjq",
+        "name": "GRAM STAIN",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1jtl002uu9ncfwefclz5",
+        "order": 10,
+        "unit": "",
+        "createdAt": "2023-12-08T23:45:09.201Z",
+        "updatedAt": "2023-12-08T23:45:09.201Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx9yxn100epu910dbgr2ij2",
+        "name": "COMMENT",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1jtl002uu9ncfwefclz5",
+        "order": 11,
+        "unit": "",
+        "createdAt": "2023-12-08T23:45:34.669Z",
+        "updatedAt": "2023-12-08T23:45:34.669Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpqq1zb0002vu9nciv7ms0x8",
+    "name": "CONFERMATORY",
+    "createdAt": "2023-12-04T09:41:27.420Z",
+    "updatedAt": "2023-12-04T09:41:27.420Z",
+    "subTests": [
+      {
+        "id": "clpx810lq008su910gle08ghc",
+        "name": "ANTI DOUBLE STRAND DNA",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1zb0002vu9nciv7ms0x8",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-08T22:51:12.590Z",
+        "updatedAt": "2023-12-08T22:51:12.590Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx81ch1008uu910dhka3wyy",
+        "name": "LUPUS ANTI BODY",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1zb0002vu9nciv7ms0x8",
+        "order": 2,
+        "unit": "",
+        "createdAt": "2023-12-08T22:51:27.973Z",
+        "updatedAt": "2023-12-08T22:51:27.973Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx81kwp008wu910e8kb8ebl",
+        "name": "LUPUS ANTI COAGULANT",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1zb0002vu9nciv7ms0x8",
+        "order": 3,
+        "unit": "",
+        "createdAt": "2023-12-08T22:51:38.905Z",
+        "updatedAt": "2023-12-08T22:51:38.905Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx81uwb008yu910q9z8ymce",
+        "name": "HCV",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1zb0002vu9nciv7ms0x8",
+        "order": 4,
+        "unit": "",
+        "createdAt": "2023-12-08T22:51:51.851Z",
+        "updatedAt": "2023-12-08T22:51:51.851Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx822dj0090u910qwu2l2tz",
+        "name": "HBSAg",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1zb0002vu9nciv7ms0x8",
+        "order": 5,
+        "unit": "",
+        "createdAt": "2023-12-08T22:52:01.543Z",
+        "updatedAt": "2023-12-08T22:52:01.543Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx82at00092u910th7l7ykq",
+        "name": "HIV",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1zb0002vu9nciv7ms0x8",
+        "order": 6,
+        "unit": "",
+        "createdAt": "2023-12-08T22:52:12.468Z",
+        "updatedAt": "2023-12-08T22:52:12.468Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx82lyh0094u910c39gylot",
+        "name": "ANTI TISSUE TRNS GLUTAMINASE",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1zb0002vu9nciv7ms0x8",
+        "order": 7,
+        "unit": "",
+        "createdAt": "2023-12-08T22:52:26.921Z",
+        "updatedAt": "2023-12-08T22:52:26.921Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx82ujw0096u910pm6s7hui",
+        "name": "ANTI GLUBULIN",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1zb0002vu9nciv7ms0x8",
+        "order": 8,
+        "unit": "",
+        "createdAt": "2023-12-08T22:52:38.060Z",
+        "updatedAt": "2023-12-08T22:52:38.060Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxa0dah00eru91036137dh9",
+        "name": "ANTI PHOSPHOLIPID",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1zb0002vu9nciv7ms0x8",
+        "order": 9,
+        "unit": "",
+        "createdAt": "2023-12-08T23:46:41.609Z",
+        "updatedAt": "2023-12-08T23:46:41.609Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxa0rjy00etu910gsf57wou",
+        "name": "ANTI CARDIOLIPIN",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1zb0002vu9nciv7ms0x8",
+        "order": 10,
+        "unit": "",
+        "createdAt": "2023-12-08T23:47:00.094Z",
+        "updatedAt": "2023-12-08T23:47:00.094Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxa0ys900evu910et4iaf6x",
+        "name": "ANTI NUCLEAR ANTI BODY",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq1zb0002vu9nciv7ms0x8",
+        "order": 11,
+        "unit": "",
+        "createdAt": "2023-12-08T23:47:09.465Z",
+        "updatedAt": "2023-12-08T23:47:09.465Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpqq2d1i002wu9ncjyobsdby",
+    "name": "CYTOLOGY",
+    "createdAt": "2023-12-04T09:41:45.221Z",
+    "updatedAt": "2023-12-04T09:41:45.221Z",
+    "subTests": [
+      {
+        "id": "clpxa1nvf00exu910avh7aar5",
+        "name": "CLINICAL REMARKS",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq2d1i002wu9ncjyobsdby",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-08T23:47:41.416Z",
+        "updatedAt": "2023-12-08T23:47:41.416Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxa1urn00ezu9100cy6dgr6",
+        "name": "FNAC REPORT",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq2d1i002wu9ncjyobsdby",
+        "order": 2,
+        "unit": "",
+        "createdAt": "2023-12-08T23:47:50.915Z",
+        "updatedAt": "2023-12-08T23:47:50.915Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxa22qp00f1u910wje091of",
+        "name": "O\\E",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq2d1i002wu9ncjyobsdby",
+        "order": 3,
+        "unit": "",
+        "createdAt": "2023-12-08T23:48:01.249Z",
+        "updatedAt": "2023-12-08T23:48:01.249Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxa2a0900f3u910m0ttq8ag",
+        "name": "DIAGNOSIS",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq2d1i002wu9ncjyobsdby",
+        "order": 4,
+        "unit": "",
+        "createdAt": "2023-12-08T23:48:10.665Z",
+        "updatedAt": "2023-12-08T23:48:10.665Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpqq36ks002xu9nc28swi6gy",
+    "name": "Culture",
+    "createdAt": "2023-12-04T09:42:23.499Z",
+    "updatedAt": "2023-12-04T09:42:23.499Z",
+    "subTests": [
+      {
+        "id": "clpx7yuww008lu910ekp13cac",
+        "name": "Tetracycline",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq36ks002xu9nc28swi6gy",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-08T22:49:31.904Z",
+        "updatedAt": "2023-12-08T22:49:31.904Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpqq42q0002yu9ncod6lty55",
+    "name": "PROTEIN ELECTROPHORESIS",
+    "createdAt": "2023-12-04T09:43:05.160Z",
+    "updatedAt": "2023-12-04T09:43:05.160Z",
+    "subTests": [
+      {
+        "id": "clpxazk8k00gju910w2scqcsf",
+        "name": "PROTEIN ELECTROPHORESIS",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq42q0002yu9ncod6lty55",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-09T00:14:03.572Z",
+        "updatedAt": "2023-12-09T00:14:03.572Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxazq4z00glu9101sldfis6",
+        "name": "ALBUMIN TOTAL PROTEIN RATIO",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq42q0002yu9ncod6lty55",
+        "order": 2,
+        "unit": "",
+        "createdAt": "2023-12-09T00:14:11.219Z",
+        "updatedAt": "2023-12-09T00:14:11.219Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxazx3k00gnu910aj8ximub",
+        "name": "ALBUMIN  GLOBULINs   RATIO",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq42q0002yu9ncod6lty55",
+        "order": 3,
+        "unit": "",
+        "createdAt": "2023-12-09T00:14:20.241Z",
+        "updatedAt": "2023-12-09T00:14:20.241Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxb04y900gpu910rweleu3w",
+        "name": "SERUM ALBUMIN",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq42q0002yu9ncod6lty55",
+        "order": 4,
+        "unit": "",
+        "createdAt": "2023-12-09T00:14:30.417Z",
+        "updatedAt": "2023-12-09T00:14:30.417Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxb0dot00gru910r9ouvpv2",
+        "name": "TOTAL SERUM PROTEIN",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq42q0002yu9ncod6lty55",
+        "order": 5,
+        "unit": "",
+        "createdAt": "2023-12-09T00:14:41.741Z",
+        "updatedAt": "2023-12-09T00:14:41.741Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxb0ms300gtu9102qfaome9",
+        "name": "BETA",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq42q0002yu9ncod6lty55",
+        "order": 6,
+        "unit": "",
+        "createdAt": "2023-12-09T00:14:53.523Z",
+        "updatedAt": "2023-12-09T00:14:53.523Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxb0z1t00gvu910cppnsyi4",
+        "name": "GAMMA",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq42q0002yu9ncod6lty55",
+        "order": 7,
+        "unit": "",
+        "createdAt": "2023-12-09T00:15:09.425Z",
+        "updatedAt": "2023-12-09T00:15:09.425Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxb18mv00gxu9105sueq1oq",
+        "name": "ALPHA",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq42q0002yu9ncod6lty55",
+        "order": 8,
+        "unit": "",
+        "createdAt": "2023-12-09T00:15:21.847Z",
+        "updatedAt": "2023-12-09T00:15:21.847Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpxb1gap00gzu9102gtjpdh0",
+        "name": "CONCLUSION",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq42q0002yu9ncod6lty55",
+        "order": 9,
+        "unit": "",
+        "createdAt": "2023-12-09T00:15:31.777Z",
+        "updatedAt": "2023-12-09T00:15:31.777Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpqq69jg002zu9ncivcbnao6",
+    "name": "Microalbuminuria",
+    "createdAt": "2023-12-04T09:44:47.307Z",
+    "updatedAt": "2023-12-04T09:44:47.307Z",
+    "subTests": [
+      {
+        "id": "clpxd0g47000vu9tspwq80xp8",
+        "name": "Microalbuminuria",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpqq69jg002zu9ncivcbnao6",
+        "order": 1,
+        "unit": "mg/l",
+        "createdAt": "2023-12-09T01:10:44.119Z",
+        "updatedAt": "2023-12-09T14:28:02.891Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpy5i0dh0025u9xsje71r5tg",
+            "label": "normal",
+            "value": "< 18",
+            "subTestId": "clpxd0g47000vu9tspwq80xp8",
+            "billSubTestId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clpqq7xgv0030u9nc7x2u6cjr",
+    "name": "Urine for protein",
+    "createdAt": "2023-12-04T09:46:04.974Z",
+    "updatedAt": "2023-12-04T09:46:04.974Z",
+    "subTests": []
+  },
+  {
+    "id": "clpx4wz620000u910xy4agk85",
+    "name": "Coagulation",
+    "createdAt": "2023-12-08T21:24:05.243Z",
+    "updatedAt": "2023-12-08T21:24:05.243Z",
+    "subTests": [
+      {
+        "id": "clpx4zuet000cu9104k3wlb7a",
+        "name": "PT",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx4wz620000u910xy4agk85",
+        "order": 5,
+        "unit": "Sec",
+        "createdAt": "2023-12-08T21:26:19.061Z",
+        "updatedAt": "2023-12-09T14:02:03.580Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpy4k5p1000zu9xs475aof6t",
+            "label": "normal",
+            "value": "11 - 16",
+            "subTestId": "clpx4zuet000cu9104k3wlb7a",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx4zc9t000au910mw884cq0",
+        "name": "INR",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx4wz620000u910xy4agk85",
+        "order": 6,
+        "unit": "",
+        "createdAt": "2023-12-08T21:25:55.553Z",
+        "updatedAt": "2023-12-09T14:01:12.767Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpy4kxs40011u9xsrevgg8b0",
+            "label": "normal",
+            "value": "0.9 - 1.21",
+            "subTestId": "clpx4zc9t000au910mw884cq0",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx4xekb0002u910whhvo4b3",
+        "name": "Comment",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx4wz620000u910xy4agk85",
+        "order": 2,
+        "unit": "",
+        "createdAt": "2023-12-08T21:24:25.132Z",
+        "updatedAt": "2023-12-09T14:01:12.747Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx4z2ix0008u9102y249dwi",
+        "name": "CLOTTING TIME",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx4wz620000u910xy4agk85",
+        "order": 4,
+        "unit": "min",
+        "createdAt": "2023-12-08T21:25:42.921Z",
+        "updatedAt": "2023-12-09T14:01:36.565Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpy4jopf000xu9xslskrcp2b",
+            "label": "normal",
+            "value": "4 - 9",
+            "subTestId": "clpx4z2ix0008u9102y249dwi",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx50e8c000eu910j2n4zze8",
+        "name": "PTT",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx4wz620000u910xy4agk85",
+        "order": 7,
+        "unit": "Sec",
+        "createdAt": "2023-12-08T21:26:44.748Z",
+        "updatedAt": "2023-12-09T14:02:53.844Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpy4lbyg0013u9xsle3s1h7j",
+            "label": "normal",
+            "value": "25 - 45",
+            "subTestId": "clpx50e8c000eu910j2n4zze8",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx4xoys0004u910d4wq675s",
+        "name": "BLEEDING TIME",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx4wz620000u910xy4agk85",
+        "order": 3,
+        "unit": "min",
+        "createdAt": "2023-12-08T21:24:38.692Z",
+        "updatedAt": "2023-12-09T14:01:12.752Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpy4inie000vu9xstti9b64d",
+            "label": "normal",
+            "value": "2 - 5",
+            "subTestId": "clpx4xoys0004u910d4wq675s",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx7ztdt008nu910lt5ezvz0",
+        "name": "Platelet aggregation",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx4wz620000u910xy4agk85",
+        "order": 8,
+        "unit": "",
+        "createdAt": "2023-12-08T22:50:16.577Z",
+        "updatedAt": "2023-12-09T14:01:12.777Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpx50qra000fu910bojqficn",
+    "name": "Coombs test",
+    "createdAt": "2023-12-08T21:27:00.967Z",
+    "updatedAt": "2023-12-08T21:27:00.967Z",
+    "subTests": [
+      {
+        "id": "clpx51212000hu9105a8nvig0",
+        "name": "Coombs test",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx50qra000fu910bojqficn",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-08T21:27:15.591Z",
+        "updatedAt": "2023-12-08T21:27:15.591Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx51k1f000ju910kfuzkxlm",
+        "name": "Direct coombs test ",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx50qra000fu910bojqficn",
+        "order": 2,
+        "unit": "",
+        "createdAt": "2023-12-08T21:27:38.931Z",
+        "updatedAt": "2023-12-08T21:27:38.931Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpx51x8j000ku9104i5skbar",
+    "name": "Creatine phosphokinase ( CPK )",
+    "createdAt": "2023-12-08T21:27:56.034Z",
+    "updatedAt": "2023-12-08T21:27:56.034Z",
+    "subTests": [
+      {
+        "id": "clpx52e8z000mu9101b21qnax",
+        "name": "Creatine phosphokinase ( CPK )",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx51x8j000ku9104i5skbar",
+        "order": 1,
+        "unit": "U/L",
+        "createdAt": "2023-12-08T21:28:18.077Z",
+        "updatedAt": "2023-12-08T21:28:18.077Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx53pnm000ou910sybv1jbh",
+        "name": "CPK",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx51x8j000ku9104i5skbar",
+        "order": 2,
+        "unit": "U/L",
+        "createdAt": "2023-12-08T21:29:19.521Z",
+        "updatedAt": "2023-12-08T21:29:19.521Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx53yn1000qu9106vset8l7",
+            "label": "normal",
+            "value": "41-171",
+            "subTestId": "clpx53pnm000ou910sybv1jbh",
+            "billSubTestId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clpx676fp004hu910sqre535b",
+    "name": "Thyroid Function Tests",
+    "createdAt": "2023-12-08T22:00:00.843Z",
+    "updatedAt": "2023-12-08T22:00:00.843Z",
+    "subTests": [
+      {
+        "id": "clpx67j8c004ju910e7tut1jn",
+        "name": "T3",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx676fp004hu910sqre535b",
+        "order": 1,
+        "unit": "nmol/l",
+        "createdAt": "2023-12-08T22:00:17.434Z",
+        "updatedAt": "2023-12-08T22:00:17.434Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx67s4z004lu9102n6ad69d",
+            "label": "normal",
+            "value": "1.23-3.08",
+            "subTestId": "clpx67j8c004ju910e7tut1jn",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx689rg004nu910uzw9qghx",
+        "name": "T4",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx676fp004hu910sqre535b",
+        "order": 2,
+        "unit": "nmol/l",
+        "createdAt": "2023-12-08T22:00:51.820Z",
+        "updatedAt": "2023-12-08T22:00:51.820Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx68db5004pu910sjilvp2j",
+            "label": "normal",
+            "value": "57.9-150.6",
+            "subTestId": "clpx689rg004nu910uzw9qghx",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx68swo004ru9104dimgu2f",
+        "name": "fT3",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx676fp004hu910sqre535b",
+        "order": 3,
+        "unit": "pmol/l",
+        "createdAt": "2023-12-08T22:01:16.632Z",
+        "updatedAt": "2023-12-08T22:01:16.632Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx690c0004tu910iz7d8r9e",
+            "label": "normal",
+            "value": "3.1 -6.8",
+            "subTestId": "clpx68swo004ru9104dimgu2f",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx69c8p004vu9105gjl7osn",
+        "name": "fT4",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx676fp004hu910sqre535b",
+        "order": 4,
+        "unit": "pmol/l",
+        "createdAt": "2023-12-08T22:01:41.689Z",
+        "updatedAt": "2023-12-08T22:01:41.689Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx69ioh004xu910iz3q2hep",
+            "label": "normal",
+            "value": "12 -22",
+            "subTestId": "clpx69c8p004vu9105gjl7osn",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx6a47a004zu910a77gwppz",
+        "name": "TSH",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx676fp004hu910sqre535b",
+        "order": 5,
+        "unit": "mIU/L",
+        "createdAt": "2023-12-08T22:02:17.926Z",
+        "updatedAt": "2023-12-08T22:02:17.926Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx6abfn0051u9108zv3vxhl",
+            "label": "normal",
+            "value": "0.4 - 4.2",
+            "subTestId": "clpx6a47a004zu910a77gwppz",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx6annx0053u910sbsjn7d9",
+        "name": "Comment",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx676fp004hu910sqre535b",
+        "order": 6,
+        "unit": "",
+        "createdAt": "2023-12-08T22:02:43.149Z",
+        "updatedAt": "2023-12-08T22:02:43.149Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpx6dnyp0058u910h5mncivz",
+    "name": "TUMOUR MARKERS",
+    "createdAt": "2023-12-08T22:05:03.506Z",
+    "updatedAt": "2023-12-08T22:05:03.506Z",
+    "subTests": [
+      {
+        "id": "clpx6e1xx005au910v4qrwppi",
+        "name": "S.PSA",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx6dnyp0058u910h5mncivz",
+        "order": 1,
+        "unit": "ng/ml",
+        "createdAt": "2023-12-08T22:05:21.620Z",
+        "updatedAt": "2023-12-08T22:05:21.620Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx6e9zl005cu910nscuoytm",
+            "label": "normal",
+            "value": "0-2.5",
+            "subTestId": "clpx6e1xx005au910v4qrwppi",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx6fae6005eu910rcph3g9k",
+        "name": "ALFA-FETOPROTEIN (AFP)",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx6dnyp0058u910h5mncivz",
+        "order": 2,
+        "unit": "ng/ml",
+        "createdAt": "2023-12-08T22:06:19.230Z",
+        "updatedAt": "2023-12-08T22:06:19.230Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx6fi9h005gu910xcnl5582",
+            "label": "normal",
+            "value": "<10.9",
+            "subTestId": "clpx6fae6005eu910rcph3g9k",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx797qz005iu910kqfrm7p1",
+        "name": "HCG",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx6dnyp0058u910h5mncivz",
+        "order": 3,
+        "unit": "",
+        "createdAt": "2023-12-08T22:29:35.482Z",
+        "updatedAt": "2023-12-08T22:29:35.482Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx79r03005ku9105dwobcdt",
+        "name": "CARCINOEMBRYONIC ANTIGEN (CEA)",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx6dnyp0058u910h5mncivz",
+        "order": 4,
+        "unit": "ng/ml",
+        "createdAt": "2023-12-08T22:30:00.435Z",
+        "updatedAt": "2023-12-08T22:30:00.435Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx79v8s005mu910ofjc3zn6",
+            "label": "normal",
+            "value": "0-4",
+            "subTestId": "clpx79r03005ku9105dwobcdt",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx7ae92005ou910186vetrh",
+        "name": "CA 125",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx6dnyp0058u910h5mncivz",
+        "order": 5,
+        "unit": "",
+        "createdAt": "2023-12-08T22:30:30.565Z",
+        "updatedAt": "2023-12-08T22:30:30.565Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx7amfs005qu9100xttmn6k",
+        "name": "CA 199",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx6dnyp0058u910h5mncivz",
+        "order": 6,
+        "unit": "",
+        "createdAt": "2023-12-08T22:30:41.176Z",
+        "updatedAt": "2023-12-08T22:30:41.176Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpx7d5cv005vu910h9seoq0e",
+    "name": "Screening",
+    "createdAt": "2023-12-08T22:32:39.006Z",
+    "updatedAt": "2023-12-08T22:32:39.006Z",
+    "subTests": [
+      {
+        "id": "clpx7dnf2005xu910s9p90hk2",
+        "name": "HCV",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7d5cv005vu910h9seoq0e",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-08T22:33:02.414Z",
+        "updatedAt": "2023-12-08T22:33:02.414Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpy5rkbp002ju9xslsyc84yi",
+            "value": "(+ve) Positive",
+            "order": 1,
+            "subTestId": "clpx7dnf2005xu910s9p90hk2",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpy5rpgm002lu9xsuhg3p7vt",
+            "value": "(-ve) Negative",
+            "order": 1,
+            "subTestId": "clpx7dnf2005xu910s9p90hk2",
+            "billSubTestId": null
+          }
+        ],
+        "normals": []
+      },
+      {
+        "id": "clpx7dv3w005zu9103sbzofxi",
+        "name": "HIV",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7d5cv005vu910h9seoq0e",
+        "order": 2,
+        "unit": "",
+        "createdAt": "2023-12-08T22:33:12.380Z",
+        "updatedAt": "2023-12-08T22:33:12.380Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpy5rz17002nu9xsx3q5ksl6",
+            "value": "(+ve) Positive ",
+            "order": 1,
+            "subTestId": "clpx7dv3w005zu9103sbzofxi",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpy5s3yk002pu9xsmidraw85",
+            "value": "(-ve) Negative",
+            "order": 1,
+            "subTestId": "clpx7dv3w005zu9103sbzofxi",
+            "billSubTestId": null
+          }
+        ],
+        "normals": []
+      },
+      {
+        "id": "clpx7e5z90061u9100q07ad2t",
+        "name": "HBsAg",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7d5cv005vu910h9seoq0e",
+        "order": 3,
+        "unit": "",
+        "createdAt": "2023-12-08T22:33:26.469Z",
+        "updatedAt": "2023-12-08T22:33:26.469Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpy5sbxb002ru9xsq4u5vzpc",
+            "value": "(+ve) Positive",
+            "order": 1,
+            "subTestId": "clpx7e5z90061u9100q07ad2t",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpy5sgi2002tu9xszkbph1wu",
+            "value": "(-ve) Negative",
+            "order": 1,
+            "subTestId": "clpx7e5z90061u9100q07ad2t",
+            "billSubTestId": null
+          }
+        ],
+        "normals": []
+      },
+      {
+        "id": "clpx7eio20063u9103cwcxlyq",
+        "name": "HAV",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7d5cv005vu910h9seoq0e",
+        "order": 4,
+        "unit": "",
+        "createdAt": "2023-12-08T22:33:42.914Z",
+        "updatedAt": "2023-12-08T22:34:04.392Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpy5t14g002vu9xsmg2g7kpp",
+            "value": "(+ve) Positive ",
+            "order": 1,
+            "subTestId": "clpx7eio20063u9103cwcxlyq",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpy5t5t5002xu9xso4yn4ksm",
+            "value": "(-ve) Negative",
+            "order": 1,
+            "subTestId": "clpx7eio20063u9103cwcxlyq",
+            "billSubTestId": null
+          }
+        ],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpx7fksq0064u910tdxb77gi",
+    "name": "S. uric acid",
+    "createdAt": "2023-12-08T22:34:32.311Z",
+    "updatedAt": "2023-12-08T22:34:32.311Z",
+    "subTests": [
+      {
+        "id": "clpx7g86s0066u9105zwpdh0b",
+        "name": "S. uric acid",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7fksq0064u910tdxb77gi",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-08T22:35:02.644Z",
+        "updatedAt": "2023-12-08T22:35:02.644Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx7gca10068u910aiter7e7",
+            "label": "normal",
+            "value": "3.4 - 7.0",
+            "subTestId": "clpx7g86s0066u9105zwpdh0b",
+            "billSubTestId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clpx7mbbp0071u910lzljgb02",
+    "name": "Pregnancy test",
+    "createdAt": "2023-12-08T22:39:46.645Z",
+    "updatedAt": "2023-12-08T22:39:46.645Z",
+    "subTests": [
+      {
+        "id": "clpx7mlmy0073u910mtj3fl3e",
+        "name": "Pregnancy test",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7mbbp0071u910lzljgb02",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-08T22:40:00.010Z",
+        "updatedAt": "2023-12-08T22:40:00.010Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx7n0i60075u9105msqm71d",
+        "name": "Serum HCG",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7mbbp0071u910lzljgb02",
+        "order": 2,
+        "unit": "",
+        "createdAt": "2023-12-08T22:40:19.278Z",
+        "updatedAt": "2023-12-08T22:40:19.278Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpy5l18u0027u9xsbosxnwvz",
+            "value": "+",
+            "order": 1,
+            "subTestId": "clpx7n0i60075u9105msqm71d",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpy5lvy30029u9xs4gmca4ts",
+            "value": "+ Positive ",
+            "order": 1,
+            "subTestId": "clpx7n0i60075u9105msqm71d",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpy5mba9002bu9xs9wlza194",
+            "value": "(+ve) Positive ",
+            "order": 1,
+            "subTestId": "clpx7n0i60075u9105msqm71d",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpy5mwgt002du9xszzk3ulv1",
+            "value": "(-ve) Negative",
+            "order": 1,
+            "subTestId": "clpx7n0i60075u9105msqm71d",
+            "billSubTestId": null
+          }
+        ],
+        "normals": []
+      },
+      {
+        "id": "clpx7n9l60077u9101khes7qx",
+        "name": "Urine HCG",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7mbbp0071u910lzljgb02",
+        "order": 3,
+        "unit": "",
+        "createdAt": "2023-12-08T22:40:31.050Z",
+        "updatedAt": "2023-12-08T22:40:31.050Z",
+        "billTestId": null,
+        "options": [
+          {
+            "id": "clpy5ng8o002fu9xszl6f7nzo",
+            "value": "(+ve) Positive",
+            "order": 1,
+            "subTestId": "clpx7n9l60077u9101khes7qx",
+            "billSubTestId": null
+          },
+          {
+            "id": "clpy5npqm002hu9xswutt92tw",
+            "value": "(-ve) Negative",
+            "order": 1,
+            "subTestId": "clpx7n9l60077u9101khes7qx",
+            "billSubTestId": null
+          }
+        ],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpx7nluz0078u910fjrwkdxj",
+    "name": "Pleural Fluids",
+    "createdAt": "2023-12-08T22:40:46.955Z",
+    "updatedAt": "2023-12-08T22:40:46.955Z",
+    "subTests": [
+      {
+        "id": "clpx7oby8007au910qvwa0jzx",
+        "name": "Colour",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7nluz0078u910fjrwkdxj",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-08T22:41:20.769Z",
+        "updatedAt": "2023-12-08T22:41:20.769Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx7ol07007cu910nizml2f7",
+        "name": "ph",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7nluz0078u910fjrwkdxj",
+        "order": 2,
+        "unit": "",
+        "createdAt": "2023-12-08T22:41:32.503Z",
+        "updatedAt": "2023-12-08T22:41:32.503Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx7os6j007eu910fk6vtz89",
+        "name": "Spescific gravity",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7nluz0078u910fjrwkdxj",
+        "order": 3,
+        "unit": "",
+        "createdAt": "2023-12-08T22:41:41.803Z",
+        "updatedAt": "2023-12-08T22:41:41.803Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx7ozuf007gu910c1x9te2g",
+        "name": "Protein",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7nluz0078u910fjrwkdxj",
+        "order": 4,
+        "unit": "",
+        "createdAt": "2023-12-08T22:41:51.735Z",
+        "updatedAt": "2023-12-08T22:41:51.735Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx7p7yf007iu910dzjylkme",
+        "name": "Glucose",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7nluz0078u910fjrwkdxj",
+        "order": 5,
+        "unit": "",
+        "createdAt": "2023-12-08T22:42:02.247Z",
+        "updatedAt": "2023-12-08T22:42:02.247Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx7ph0m007ku910enrlskyx",
+        "name": "LDH",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7nluz0078u910fjrwkdxj",
+        "order": 6,
+        "unit": "",
+        "createdAt": "2023-12-08T22:42:13.990Z",
+        "updatedAt": "2023-12-08T22:42:13.990Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx7pp21007mu910fguqri9p",
+        "name": "Lymphocytes",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7nluz0078u910fjrwkdxj",
+        "order": 7,
+        "unit": "",
+        "createdAt": "2023-12-08T22:42:24.409Z",
+        "updatedAt": "2023-12-08T22:42:24.409Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx7q048007ou91007sn1nzc",
+        "name": "Neutrophils",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7nluz0078u910fjrwkdxj",
+        "order": 8,
+        "unit": "",
+        "createdAt": "2023-12-08T22:42:38.744Z",
+        "updatedAt": "2023-12-08T22:42:38.744Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpx7qfje007pu910un2o74nv",
+    "name": "PERIPHERAL BLOOD PICTURE",
+    "createdAt": "2023-12-08T22:42:58.730Z",
+    "updatedAt": "2023-12-08T22:42:58.730Z",
+    "subTests": [
+      {
+        "id": "clpx7qu9i007ru910ql7vmkga",
+        "name": "RBCs",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7qfje007pu910un2o74nv",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-08T22:43:17.814Z",
+        "updatedAt": "2023-12-08T22:43:17.814Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx7ra1w007tu910hlr6umo4",
+        "name": "Hb",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7qfje007pu910un2o74nv",
+        "order": 2,
+        "unit": "*10^6/ul",
+        "createdAt": "2023-12-08T22:43:38.277Z",
+        "updatedAt": "2023-12-08T22:43:38.277Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx7rf02007vu910xiah0gko",
+            "label": "normal",
+            "value": "13-17",
+            "subTestId": "clpx7ra1w007tu910hlr6umo4",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx7rpjf007xu910990e1o5i",
+        "name": "WBCs",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7qfje007pu910un2o74nv",
+        "order": 3,
+        "unit": "",
+        "createdAt": "2023-12-08T22:43:58.347Z",
+        "updatedAt": "2023-12-08T22:43:58.347Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx7rz5q007zu910zo24c6ma",
+        "name": "COMMENT",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7qfje007pu910un2o74nv",
+        "order": 4,
+        "unit": "",
+        "createdAt": "2023-12-08T22:44:10.814Z",
+        "updatedAt": "2023-12-08T22:44:10.814Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      },
+      {
+        "id": "clpx7sp2j0081u9107gwd6yk7",
+        "name": "WBCs count",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7qfje007pu910un2o74nv",
+        "order": 5,
+        "unit": "*10^3/ul",
+        "createdAt": "2023-12-08T22:44:44.395Z",
+        "updatedAt": "2023-12-08T22:44:44.395Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx7svar0083u910pmjz4jze",
+            "label": "normal",
+            "value": "4-11",
+            "subTestId": "clpx7sp2j0081u9107gwd6yk7",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx7tfi70085u910nr24crpe",
+        "name": "Platelets count",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7qfje007pu910un2o74nv",
+        "order": 6,
+        "unit": "*10^3/ul",
+        "createdAt": "2023-12-08T22:45:18.655Z",
+        "updatedAt": "2023-12-08T22:45:18.655Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx7tntb0087u910xpowt8ej",
+            "label": "normal",
+            "value": "150-450",
+            "subTestId": "clpx7tfi70085u910nr24crpe",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx7u2x00089u910gqpxepkg",
+        "name": "Platelets",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7qfje007pu910un2o74nv",
+        "order": 7,
+        "unit": "",
+        "createdAt": "2023-12-08T22:45:48.996Z",
+        "updatedAt": "2023-12-08T22:45:48.996Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpx7un1c008au910q7np97de",
+    "name": "OESTROGEN ",
+    "createdAt": "2023-12-08T22:46:15.046Z",
+    "updatedAt": "2023-12-08T22:46:15.046Z",
+    "subTests": [
+      {
+        "id": "clpx7v0xf008cu910j7g5fkop",
+        "name": "OESTROGEN ",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx7un1c008au910q7np97de",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-08T22:46:33.075Z",
+        "updatedAt": "2023-12-08T22:46:33.075Z",
+        "billTestId": null,
+        "options": [],
+        "normals": []
+      }
+    ]
+  },
+  {
+    "id": "clpx7vpac008du910d77ppunh",
+    "name": "HbA1c",
+    "createdAt": "2023-12-08T22:47:04.637Z",
+    "updatedAt": "2023-12-08T22:47:04.637Z",
+    "subTests": []
+  },
+  {
+    "id": "clpx805tc008ou910n3i19890",
+    "name": "CRP",
+    "createdAt": "2023-12-08T22:50:32.687Z",
+    "updatedAt": "2023-12-08T22:50:32.687Z",
+    "subTests": [
+      {
+        "id": "clpx80fmu008qu910o21npg6v",
+        "name": "CRP",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx805tc008ou910n3i19890",
+        "order": 1,
+        "unit": "mg/l",
+        "createdAt": "2023-12-08T22:50:45.414Z",
+        "updatedAt": "2023-12-09T14:06:40.763Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpy4pwh30019u9xsl0rajsvg",
+            "label": "normal",
+            "value": "< 5",
+            "subTestId": "clpx80fmu008qu910o21npg6v",
+            "billSubTestId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clpx8o86000bbu910ah642714",
+    "name": "Immunoglobulins & others",
+    "createdAt": "2023-12-08T23:09:15.472Z",
+    "updatedAt": "2023-12-08T23:09:15.472Z",
+    "subTests": [
+      {
+        "id": "clpx8p6nv00bdu910loe8jf2p",
+        "name": "C3",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx8o86000bbu910ah642714",
+        "order": 1,
+        "unit": "",
+        "createdAt": "2023-12-08T23:10:00.187Z",
+        "updatedAt": "2023-12-08T23:10:00.187Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx8pan900bfu910z02ywjm3",
+            "label": "normal",
+            "value": "90-180",
+            "subTestId": "clpx8p6nv00bdu910loe8jf2p",
+            "billSubTestId": null
+          }
+        ]
+      },
+      {
+        "id": "clpx8piyl00bhu9109scycinj",
+        "name": "C4",
+        "price": 0,
+        "result": null,
+        "description": null,
+        "testId": "clpx8o86000bbu910ah642714",
+        "order": 2,
+        "unit": "",
+        "createdAt": "2023-12-08T23:10:16.125Z",
+        "updatedAt": "2023-12-08T23:10:16.125Z",
+        "billTestId": null,
+        "options": [],
+        "normals": [
+          {
+            "id": "clpx8po8h00bju910kuzv9uzq",
+            "label": "normal",
+            "value": "10-40",
+            "subTestId": "clpx8piyl00bhu9109scycinj",
+            "billSubTestId": null
+          }
+        ]
+      }
+    ]
+  }
+]

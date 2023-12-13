@@ -142,12 +142,14 @@
   .page-break {
     margin-top: 1rem;
     display: block;
-  break-before: auto;
+    break-before: auto;
+    height: 1px;
   }
-}
 
-@page {
-  size: auto;
-  margin-top: 10mm;
-  margin-bottom: 10mm;
+  @page {
+    size: 50%;
+    margin-top: 10mm;
+    margin-bottom: 10mm;  
+    
+  }
 }

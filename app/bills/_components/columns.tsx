@@ -41,25 +41,25 @@ export type BillType = Bill & {
 } & { patient: Patient };
 
 export const columns: ColumnDef<BillType>[] = [
-  {
-    id: "select",
-    header: ({ table }) => (
-      <Checkbox
-        checked={table.getIsAllPageRowsSelected()}
-        onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-        aria-label="Select all"
-      />
-    ),
-    cell: ({ row }) => (
-      <Checkbox
-        checked={row.getIsSelected()}
-        onCheckedChange={(value) => row.toggleSelected(!!value)}
-        aria-label="Select row"
-      />
-    ),
-    enableSorting: false,
-    enableHiding: false,
-  },
+  // {
+  //   id: "select",
+  //   header: ({ table }) => (
+  //     <Checkbox
+  //       checked={table.getIsAllPageRowsSelected()}
+  //       onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
+  //       aria-label="Select all"
+  //     />
+  //   ),
+  //   cell: ({ row }) => (
+  //     <Checkbox
+  //       checked={row.getIsSelected()}
+  //       onCheckedChange={(value) => row.toggleSelected(!!value)}
+  //       aria-label="Select row"
+  //     />
+  //   ),
+  //   enableSorting: false,
+  //   enableHiding: false,
+  // },
   {
     header: "Patient Name",
     id: "PatientName",
@@ -133,11 +133,44 @@ export const columns: ColumnDef<BillType>[] = [
       return <p>{format(bill.createdAt, "dd/MM/yyyy")}</p>;
     },
   },
+  // {
+  //   header: "Status",
+  //   accessorKey: "status",
+  //   accessorFn: (row) => row.patient.phoneNumber,
+  //   cell: ({ row }) => {
+  //     const bill: BillType = row.original;
+  //     return <>{bill.status}</>;
+  //     // if (bill.status === "CANCELLED")
+  //     //   <Badge variant="destructive">CANCELLED</Badge>;
+  //     // if (bill.status === "PENDING")
+  //     //   <Badge className="bg-yellow-500/50">PENDING</Badge>;
+  //     // if (bill.status === "READY")
+  //     //   <Badge className="bg-green-500/50">READY</Badge>;
+  //   },
+  // },
   {
     id: "actions",
     cell: ({ row }) => {
       const bill = row.original;
-      return <B bill={bill} />;
+      return (
+        <div className="flex items-center  gap-4">
+          <>
+            {bill.status == "PENDING" ? (
+              // <Badge className="bg-yellow-500/70 text-yellow-700">
+              //   PENDING
+              // </Badge>
+              <div className="w-4 h-4 rounded-full bg-yellow-500" />
+            ) : bill.status == "READY" ? (
+              // <Badge className="bg-green-500/70 text-green-700">READY</Badge>
+              <div className="w-4 h-4 rounded-full bg-green-500" />
+            ) : (
+              // <Badge className="bg-red-500/70 text-red-700">CANCELLED</Badge>
+              <div className="w-4 h-4 rounded-full bg-red-500" />
+            )}
+          </>
+          <B bill={bill} />
+        </div>
+      );
     },
   },
 ];

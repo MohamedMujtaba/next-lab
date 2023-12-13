@@ -9,7 +9,7 @@ import { z } from "zod";
 
 interface CreatePatientProps {
   name: string;
-  phoneNumber: string;
+  phoneNumber?: string;
   gender: Gender;
   age: string;
 }
@@ -22,21 +22,22 @@ export const createPatient = async ({
   // FIXME(validation):
   // validateSchema(patientFormSchema, { gender, name, phoneNumber });
   try {
-    const allReadyExist = await prismadb.patient.findFirst({
-      where: {
-        phoneNumber,
-      },
-    });
-    if (allReadyExist) {
-      return { susses: false };
-    }
+    // Check patient allReadyExist
+    // const allReadyExist = await prismadb.patient.findFirst({
+    //   where: {
+    //     phoneNumber,
+    //   },
+    // });
+    // if (allReadyExist) {
+    //   return { susses: false };
+    // }
 
     const patient = await prismadb.patient.create({
       data: {
         gender,
         name,
         age,
-        phoneNumber,
+        phoneNumber: phoneNumber || "0000000000",
       },
     });
     revalidatePath("/patients");

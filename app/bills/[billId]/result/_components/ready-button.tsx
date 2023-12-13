@@ -18,7 +18,9 @@ const ReadyButton: React.FC<ReadyButtonProps> = ({ bill }) => {
         toast.success(res.message);
       }
       if (res?.success === false) {
-        toast.error(res.message);
+        res.data?.map((m) => {
+          toast.error(`Test ${m.name} is not ready`);
+        });
       }
     } catch (error) {
       console.log(error);

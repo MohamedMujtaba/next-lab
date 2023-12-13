@@ -81,7 +81,6 @@ export const LabelTab: React.FC<LabelTabProps> = () => {
     gt();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  console.log(subTest);
 
   return (
     <div className="w-full flex gap-4">
@@ -144,7 +143,7 @@ export const LabelTab: React.FC<LabelTabProps> = () => {
             )}
           >
             <p className="text-xs">
-              {normal.label} : {normal.label}
+              {normal.label} : {normal.value}
             </p>
             <Trash
               onClick={async () => {

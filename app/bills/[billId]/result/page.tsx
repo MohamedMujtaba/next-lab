@@ -7,6 +7,7 @@ import {
   BillSubTest,
   BillTest,
   Patient,
+  SubTestNormal,
   SubTestOption,
 } from "@prisma/client";
 import ReadyButton from "./_components/ready-button";
@@ -14,8 +15,12 @@ import Test from "./_components/test";
 
 export const dynamic = "force-dynamic";
 export const fetchCache = "force-no-store";
+export const revalidate = 0;
 
-type SubTest = BillSubTest & { options: SubTestOption[] };
+type SubTest = BillSubTest & {
+  options: SubTestOption[];
+  normals: SubTestNormal[];
+};
 type TTest = BillTest & { subTests: SubTest[] };
 
 const ResultPage = async ({ params }: { params: { billId: string } }) => {
@@ -30,10 +35,10 @@ const ResultPage = async ({ params }: { params: { billId: string } }) => {
         <div className="pb-4 w-full flex items-center justify-between">
           <div className="space-y-2">
             <h1 className="text-3xl font-bold tracking-tight">
-              {bill.patient.name}
+              {bill.patient?.name}
             </h1>
             <p className="text-sm font-bold text-muted-foreground">
-              {bill.patient.phoneNumber} - {bill.patient.gender}
+              {bill.patient?.phoneNumber} - {bill.patient?.gender}
             </p>
           </div>
           <div className="flex items-center gap-4">

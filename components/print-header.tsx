@@ -17,10 +17,10 @@ interface PrintHeaderProps {
 
 export const PrintHeader: React.FC<PrintHeaderProps> = ({ bill }) => {
   return (
-    <div className="w-full px-[10mm] mb-4 text-black border-black">
+    <div className="w-full px-[10mm]  text-black border-black">
       <div
         className={cn(
-          "w-full h-44 flex items-center justify-between  ",
+          "w-full h-44 flex items-center justify-between border border-black rounded-md px-4",
           myFont.className
         )}
       >
@@ -50,19 +50,21 @@ export const PrintHeader: React.FC<PrintHeaderProps> = ({ bill }) => {
           />
         </div>
       </div>
-      <Card className="flex w-full items-center justify-between p-2 ">
-        <p>
-          <b>Name:</b> {bill.patient.name}
+      <Card className="flex flex-col w-full  p-2 border-black ">
+        <p className="not-prose flex ">
+          <b className="not-prose">Name:</b> {bill.patient.name}
         </p>
-        <p>
-          <b>Number:</b> {bill.patient.phoneNumber}
-        </p>
-        <p>
-          <b>Gender:</b> {bill.patient.gender}
-        </p>
-        <p>
-          <b>age</b>: {bill.patient.age}
-        </p>
+        <div className="flex justify-between w-full">
+          <p className="not-prose">
+            <b className="not-prose">Number:</b> {bill.patient.phoneNumber}
+          </p>
+          <p className="not-prose">
+            <b className="not-prose">Gender:</b> {bill.patient.gender}
+          </p>
+          <p className="not-prose">
+            <b className="not-prose">age</b>: {bill.patient.age}
+          </p>
+        </div>
       </Card>
     </div>
   );

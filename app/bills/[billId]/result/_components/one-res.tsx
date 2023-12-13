@@ -43,7 +43,7 @@ import { TipTapEditor } from "@/components/tipTap-editor/editor";
 const formSchema = z.object({
   result: z.string().optional(),
   description: z.string().optional(),
-  selectedNormal: z.string().min(1),
+  selectedNormal: z.string().optional(),
 });
 
 interface OneResPops {
@@ -57,15 +57,16 @@ export const OneResult: React.FC<OneResPops> = ({ subTest }) => {
     defaultValues: {
       result: subTest.result?.trim() || undefined,
       description: subTest.description?.trim() || undefined,
-      selectedNormal: subTest.selectedNormal?.trim() || undefined,
+      selectedNormal:
+        subTest.selectedNormal?.trim() || subTest.normals[0]?.value || "",
     },
   });
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       const res = await saveResult(subTest.id, values);
-      if (res.success) {
-        toast.success(res.msg);
-      }
+      // if (res.success) {
+      //   toast.success(res.msg);
+      // }
       if (!res.success) {
         toast.error(res.msg);
       }
@@ -92,7 +93,10 @@ export const OneResult: React.FC<OneResPops> = ({ subTest }) => {
                 render={({ field }) => (
                   <FormItem className="flex-1">
                     <Select
-                      onValueChange={field.onChange}
+                      onValueChange={(value) => {
+                        form.setValue("selectedNormal", value);
+                        form.handleSubmit(onSubmit);
+                      }}
                       defaultValue={field.value}
                     >
                       <FormControl>
@@ -127,6 +131,7 @@ export const OneResult: React.FC<OneResPops> = ({ subTest }) => {
                             content={field.value || ""}
                             placeholder="Result"
                             onChange={field.onChange}
+                            save={form.handleSubmit(onSubmit)}
                           />
                         </div>
                         {subTest.options.length !== 0 ? (
@@ -154,6 +159,7 @@ export const OneResult: React.FC<OneResPops> = ({ subTest }) => {
                                         onSelect={() => {
                                           // setValue(currentValue === value ? "" : currentValue);
                                           form.setValue("result", option.value);
+                                          form.handleSubmit(onSubmit);
                                         }}
                                       >
                                         {option.value}
@@ -173,29 +179,32 @@ export const OneResult: React.FC<OneResPops> = ({ subTest }) => {
               />
             </div>
           </div>
-          <div className="w-full mb-2">
-            <FormField
-              control={form.control}
-              name="description"
-              render={({ field }) => (
-                <FormItem className="w-full">
-                  <FormControl>
-                    <TipTapEditor
-                      content={subTest.description || ""}
-                      placeholder="Result"
-                      onChange={field.onChange}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-          <div className="flex items-center justify-end">
+          {subTest.description && (
+            <div className="w-full mb-2">
+              <FormField
+                control={form.control}
+                name="description"
+                render={({ field }) => (
+                  <FormItem className="w-full">
+                    <FormControl>
+                      <TipTapEditor
+                        content={subTest.description || ""}
+                        placeholder="Result"
+                        onChange={field.onChange}
+                        save={form.handleSubmit(onSubmit)}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+          )}
+          {/* <div className="flex items-center justify-end">
             <Button size="icon" className="m-0 mt-0 shrink-0 " type="submit">
               <Check className="w-4 h-4" />
             </Button>
-          </div>
+          </div> */}
         </form>
       </Form>
     </>

@@ -33,7 +33,7 @@ export const PrintResult: React.FC<PrintResultProps> = ({ bill }) => {
         <Printer className="w-4 h-4 mr-2" />
         Print
       </Button>
-      <div className="hidden">
+      <div className="not-prose hidden">
         <ComponentToPrint ref={ref} bill={bill} />
       </div>
     </>
@@ -50,29 +50,31 @@ export const ComponentToPrint = forwardRef<
 >(({ bill }, ref: Ref<HTMLDivElement>) => {
   return (
     <>
-      <div ref={ref} className="w-full text-black border-black ">
+      <div ref={ref} className="w-full text-black border-black prose-sm">
         <PrintHeader bill={bill} />
         <div className="mx-[10mm]">
-          <div className="w-full flex items-center justify-between px-12 my-2">
-            <p className="flex-1">Test Name</p>
-            <p className="flex-1 text-center flex items-center justify-center">
+          <div className="w-full flex items-center justify-between not-prose ">
+            <p className="flex-1 font-bold">Test Name</p>
+            <p className="flex-1 text-center flex items-center justify-center not-prose font-bold">
               Test result
             </p>
-            <p className="flex-1 flex items-center text-center  justify-center">
+            <p className="flex-1 flex items-center text-center  justify-center not-prose font-bold">
               Test Normal
             </p>
-            <p className="flex-1 justify-end text-end">Test Unit</p>
+            <p className="flex-1 justify-end text-end not-prose font-bold">
+              Test Unit
+            </p>
           </div>
           {bill.tests.map((test) => (
-            <div key={test.id} className=" break-inside-auto">
-              <div className="page-break" />
-              <div className="w-full bg-gray-100/50 text-2xl font-semibold px-4">
+            <div key={test.id} className=" break-inside-avoid">
+              <div className="print:mt-4 block w-full" />
+              <div className="w-full bg-black/70 text-2xl font-semibold px-4 not-prose">
                 {test.name}
               </div>
               {test.subTests.map((subTest) => (
-                <div className="w-full px-12 mb-5" key={subTest.id}>
-                  <div className="page-break" />
-                  <div key={subTest.id}>
+                <div className="w-full text-sm" key={subTest.id}>
+                  {/* <div className="page-break" /> */}
+                  <div key={subTest.id} className="not-prose">
                     {renderSubTest(subTest, bill.patient.gender)}
                   </div>
                 </div>
@@ -90,23 +92,27 @@ ComponentToPrint.displayName = "ComponentToPrint";
 const renderSubTest = (subTest: BillSubTest, gender: Gender) => {
   return (
     <>
-      <div className="page-break" />
-      <div className="w-full flex items-center justify-between mb-2 ">
-        <p className="text-lg font-semibold flex-1">{subTest.name}</p>
+      {/* <div className="page-break" /> */}
+      <div className="w-full flex items-center justify-between not-prose">
+        <p className="text-base font-semibold flex-1">{subTest.name}</p>
         <div className="flex-1 flex items-center justify-center">
-          {parse(subTest.result || "")}
+          <p className="text-base font-semibold not-prose">
+            {parse(subTest.result || "")}
+          </p>
         </div>
-        <div className="flex-1  flex items-center justify-center">
+        <div className="flex-1 text-base font-semibold  flex items-center justify-center not-prose">
           {parse(subTest.selectedNormal || "")}
         </div>
-        <p className="flex-1 flex justify-end ">{subTest.unit || ""}</p>
+        <p className="flex-1 flex justify-end not-prose">
+          {subTest.unit || ""}
+        </p>
       </div>
       {subTest.description && (
-        <div className="w-full flex items-center justify-between prose-sm">
+        <div className="w-full flex items-center justify-between not-prose">
           <TipTapMainPreview content={subTest.description || ""} />
         </div>
       )}
-      <Separator />
+      <Separator className="bg-black" />
     </>
   );
 };

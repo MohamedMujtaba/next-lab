@@ -26,8 +26,16 @@ export async function POST(req: Request, params: POSTProps) {
         order: count,
       },
     });
+    // await prismadb.billSubTest.updateMany({
+    //   where: { subTestId },
+    //   data: {
+    //     options:
+    //   },
+    // });
     revalidatePath("/tests");
     revalidatePath("/tests/[testId]", "page");
+    revalidatePath("/bills/[billId]/result", "page");
+
     return NextResponse.json({ option });
   } catch (error) {
     console.log(error);

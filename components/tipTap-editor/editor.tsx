@@ -29,6 +29,7 @@ interface TiptapProps {
   onChange: (richText: string) => void;
   disabled?: boolean;
   placeholder?: string;
+  save?: () => void;
 }
 
 export const TipTapEditor: React.FC<TiptapProps> = ({
@@ -36,6 +37,7 @@ export const TipTapEditor: React.FC<TiptapProps> = ({
   onChange,
   disabled = false,
   placeholder = "",
+  save,
 }) => {
   const editor = useEditor({
     extensions: [
@@ -92,6 +94,9 @@ export const TipTapEditor: React.FC<TiptapProps> = ({
     content: content,
     onUpdate({ editor }) {
       onChange(editor.getHTML());
+      if (save) {
+        save();
+      }
     },
   });
 

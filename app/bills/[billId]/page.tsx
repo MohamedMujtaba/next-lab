@@ -27,6 +27,7 @@ type TTest = BillTest & { subTests: SubTest[] };
 const BillPage = async ({ params }: { params: { billId: string } }) => {
   const { billId } = params;
   const tests = await prismadb.test.findMany({
+    orderBy: { name: "asc" },
     include: {
       subTests: {
         orderBy: { order: "asc" },

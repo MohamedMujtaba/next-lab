@@ -44,7 +44,8 @@ export const patientFormSchema = z.object({
     })
     .max(10, {
       message: "Phone number must be 10 number",
-    }),
+    })
+    .optional(),
   gender: z.enum(["MALE", "FEMALE"]),
 });
 
@@ -61,7 +62,7 @@ const PatientForm: React.FC<PatientFormProps> = ({ onClose }) => {
     defaultValues: {
       name: patient ? patient.name : "",
       age: patient ? patient?.age : "",
-      phoneNumber: patient ? patient.phoneNumber : "",
+      phoneNumber: patient ? patient.phoneNumber : "0000000000",
       gender: patient ? patient.gender : "MALE",
     },
   });

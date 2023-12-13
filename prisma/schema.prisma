@@ -66,24 +66,21 @@ model SubTest {
 }
 
 model SubTestNormal {
-  id            String       @id @default(cuid())
-  label         String
-  value         String
-  subTest       SubTest?     @relation(fields: [subTestId], references: [id], onDelete: Cascade)
-  subTestId     String?
-  BillSubTest   BillSubTest? @relation(fields: [billSubTestId], references: [id])
-  billSubTestId String?
+  id           String        @id @default(cuid())
+  label        String
+  value        String
+  subTest      SubTest?      @relation(fields: [subTestId], references: [id], onDelete: Cascade)
+  subTestId    String?
+  billSubTests BillSubTest[]
 }
 
 model SubTestOption {
-  id        String  @id @default(cuid())
-  value     String
-  order     Int
-  subTestId String?
-
-  subTest       SubTest?     @relation(fields: [subTestId], references: [id])
-  BillSubTest   BillSubTest? @relation(fields: [billSubTestId], references: [id], onDelete: Cascade)
-  billSubTestId String?
+  id           String        @id @default(cuid())
+  value        String
+  order        Int
+  subTestId    String?
+  billSubTests BillSubTest[]
+  subTest      SubTest?      @relation(fields: [subTestId], references: [id])
 
   @@index([subTestId])
 }

@@ -1,6 +1,11 @@
 "use client";
 
-import { BillSubTest, BillTest, SubTestOption } from "@prisma/client";
+import {
+  BillSubTest,
+  BillTest,
+  SubTestNormal,
+  SubTestOption,
+} from "@prisma/client";
 import { OneResult } from "./one-res";
 import { Separator } from "@/components/ui/separator";
 import { ChevronDown, Grip, GripHorizontal } from "lucide-react";
@@ -14,7 +19,10 @@ import {
 import { useState } from "react";
 import { InputWithOptions } from "@/components/input-with-options";
 
-type SubTest = BillSubTest & { options: SubTestOption[] };
+type SubTest = BillSubTest & {
+  options: SubTestOption[];
+  normals: SubTestNormal[];
+};
 type Test = BillTest & { subTests: SubTest[] };
 
 interface TestProps {

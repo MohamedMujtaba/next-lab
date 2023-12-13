@@ -13,6 +13,7 @@ interface TiptapProps {
   onChange: (richText: string) => void;
   disabled?: boolean;
   placeholder?: string;
+  save: () => void;
 }
 
 const Tiptap: React.FC<TiptapProps> = ({
@@ -20,6 +21,7 @@ const Tiptap: React.FC<TiptapProps> = ({
   onChange,
   disabled = false,
   placeholder = "",
+  save,
 }) => {
   const editor = useEditor({
     extensions: [
@@ -40,7 +42,12 @@ const Tiptap: React.FC<TiptapProps> = ({
   });
   useEffect(() => {
     editor?.commands.setContent(content);
+    if (content) {
+      save();
+    }
   }, [content, editor]);
+  console.log(content);
+
   return (
     <ContextMenuComponent editor={editor} disabled={disabled}>
       <EditorContent
