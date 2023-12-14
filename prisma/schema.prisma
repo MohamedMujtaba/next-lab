@@ -55,9 +55,10 @@ model SubTest {
   billSubTest BillSubTest[]
   normals     SubTestNormal[]
   unit        String?
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  function    String?
+  group       String?
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
 
   test       Test?   @relation(fields: [testId], references: [id], onDelete: Cascade)
   billTestId String?
@@ -128,16 +129,19 @@ model BillTest {
 }
 
 model BillSubTest {
-  id             String          @id @default(cuid())
-  name           String
-  price          Int
-  result         String?
-  description    String?
-  options        SubTestOption[]
-  order          Int
-  billTestId     String?
-  normals        SubTestNormal[]
-  unit           String?
+  id          String          @id @default(cuid())
+  name        String
+  price       Int
+  result      String?
+  description String?
+  options     SubTestOption[]
+  order       Int
+  billTestId  String?
+  normals     SubTestNormal[]
+  unit        String?
+  function    String?
+  group       String?
+
   selectedNormal String?
 
   BillTest BillTest? @relation(fields: [billTestId], references: [id])

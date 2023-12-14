@@ -46,7 +46,6 @@ const Tiptap: React.FC<TiptapProps> = ({
       save();
     }
   }, [content, editor]);
-  console.log(content);
 
   return (
     <ContextMenuComponent editor={editor} disabled={disabled}>

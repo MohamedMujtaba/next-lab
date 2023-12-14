@@ -39,6 +39,8 @@ import {
 } from "@/components/ui/form";
 import { Separator } from "@/components/ui/separator";
 import { TipTapEditor } from "@/components/tipTap-editor/editor";
+import { Input } from "@/components/ui/input";
+import { QuestionMarkCircledIcon } from "@radix-ui/react-icons";
 
 const formSchema = z.object({
   result: z.string().optional(),
@@ -134,6 +136,41 @@ export const OneResult: React.FC<OneResPops> = ({ subTest }) => {
                             save={form.handleSubmit(onSubmit)}
                           />
                         </div>
+                        {subTest.function && (
+                          <div className="absolute right-0">
+                            <Popover>
+                              <PopoverTrigger asChild>
+                                <Button
+                                  variant="ghost"
+                                  size="icon"
+                                  // role="combobox"
+                                  // aria-expanded={open}
+                                >
+                                  <QuestionMarkCircledIcon className="h-4 w-4 shrink-0 opacity-50" />
+                                </Button>
+                              </PopoverTrigger>
+                              <PopoverContent className="p-0" align="end">
+                                <Input
+                                  type="number"
+                                  onChange={(e) => {
+                                    let f = eval(
+                                      `${+e.target.value} ${
+                                        subTest.function
+                                      }` || ""
+                                    );
+
+                                    form.setValue(
+                                      "result",
+                                      `${e.target.value} ` +
+                                        `(${f.toFixed(2).toString()})` +
+                                        "%"
+                                    );
+                                  }}
+                                />
+                              </PopoverContent>
+                            </Popover>
+                          </div>
+                        )}
                         {subTest.options.length !== 0 ? (
                           <div className="absolute right-0">
                             <Popover>

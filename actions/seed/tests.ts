@@ -39,6 +39,8 @@ export const seedTests = async (data: string) => {
               result: subTest.result,
               price: subTest.price,
               unit: subTest.unit,
+              function: subTest.function,
+              group: subTest.group,
               normals: {
                 createMany: {
                   data: subTest.normals.map((n) => ({

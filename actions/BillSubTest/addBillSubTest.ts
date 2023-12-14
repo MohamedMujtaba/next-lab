@@ -52,6 +52,8 @@ export const addBillSubTest = async (props: AddBillSubTestProps) => {
       price: subTest.price,
       description: subTest.description,
       unit: subTest.unit,
+      function: subTest.function,
+      group: subTest.group,
       options: {
         connect:
           subTest.options.map((o) => ({
