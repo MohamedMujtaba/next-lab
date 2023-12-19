@@ -29,6 +29,7 @@ import { NameNormalPrice } from "./name-normal-price";
 import Description from "./description";
 import { LabelTab } from "./normals";
 import { FunctionTab } from "./function";
+import { GroupTab } from "./group";
 
 export const SubTestSheet = () => {
   const { subTest, isOpen, onClose, onOpen } = useSubTest((state) => state);
@@ -63,6 +64,9 @@ export const SubTestSheet = () => {
               <TabsTrigger value="Function" disabled={!subTest}>
                 Function
               </TabsTrigger>
+              <TabsTrigger value="Group" disabled={!subTest}>
+                Group
+              </TabsTrigger>
             </TabsList>
             <TabsContent value="Details" className="">
               <NameNormalPrice />
@@ -78,6 +82,9 @@ export const SubTestSheet = () => {
             </TabsContent>
             <TabsContent value="Function">
               <FunctionTab />
+            </TabsContent>
+            <TabsContent value="Group">
+              <GroupTab />
             </TabsContent>
           </Tabs>
         </div>

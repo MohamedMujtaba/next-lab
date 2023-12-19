@@ -34,13 +34,22 @@ model Doctor {
 }
 
 model Test {
-  id       String     @id @default(cuid())
+  id       String      @id @default(cuid())
   name     String
   subTests SubTest[]
   billTest BillTest[]
+  groups   TestGroup[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model TestGroup {
+  id        String     @id @default(cuid())
+  name      String
+  Test      Test?      @relation(fields: [testId], references: [id])
+  testId    String?
+  billTests BillTest[]
 }
 
 model SubTest {
@@ -117,6 +126,7 @@ model BillTest {
   id       String        @id @default(cuid())
   name     String
   subTests BillSubTest[]
+  groups   TestGroup[]
 
   testId String?
 

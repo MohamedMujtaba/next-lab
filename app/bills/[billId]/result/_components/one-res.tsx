@@ -77,7 +77,6 @@ export const OneResult: React.FC<OneResPops> = ({ subTest }) => {
       console.log(error);
     }
   }
-
   return (
     <>
       <div className="page-break" />

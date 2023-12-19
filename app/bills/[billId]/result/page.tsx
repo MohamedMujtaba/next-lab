@@ -9,6 +9,7 @@ import {
   Patient,
   SubTestNormal,
   SubTestOption,
+  TestGroup,
 } from "@prisma/client";
 import ReadyButton from "./_components/ready-button";
 import Test from "./_components/test";
@@ -21,13 +22,15 @@ type SubTest = BillSubTest & {
   options: SubTestOption[];
   normals: SubTestNormal[];
 };
-type TTest = BillTest & { subTests: SubTest[] };
+export type TTest = BillTest & { subTests: SubTest[]; groups: TestGroup[] };
+
+export type ResultBill = Bill & {
+  tests: TTest[];
+} & { patient: Patient };
 
 const ResultPage = async ({ params }: { params: { billId: string } }) => {
   const billId = params.billId;
-  const bill = (await getBill(billId)) as Bill & {
-    tests: TTest[];
-  } & { patient: Patient };
+  const bill = (await getBill(billId)) as ResultBill;
 
   return (
     <Container>

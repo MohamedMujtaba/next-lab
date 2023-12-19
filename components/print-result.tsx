@@ -3,11 +3,12 @@
 import parse from "html-react-parser";
 import { Printer } from "lucide-react";
 import { useReactToPrint } from "react-to-print";
+import { groupBy } from "lodash";
 
 import { BillType } from "@/app/bills/_components/columns";
 import { Button } from "@/components/ui/button";
-import { BillSubTest, Gender } from "@prisma/client";
-import { Ref, forwardRef, useRef } from "react";
+import { BillSubTest, BillTest, Gender } from "@prisma/client";
+import { Ref, forwardRef, useEffect, useRef, useState } from "react";
 import { Table, TableRow, TableCell } from "./ui/table";
 import { Preview } from "./editor/preview";
 import { Separator } from "./ui/separator";
@@ -16,10 +17,12 @@ import "react-quill/dist/quill.bubble.css";
 import { PrintHeader } from "./print-header";
 import { TipTapMainPreview } from "./tipTap-editor/preview";
 import { TiptapPreview } from "./TipTap-preview";
+import Test from "@/app/bills/[billId]/result/_components/test";
+import { ResultBill, TTest } from "@/app/bills/[billId]/result/page";
 
 interface PrintResultProps {
   // ref: React.Ref<HTMLDivElement> | null;
-  bill: BillType;
+  bill: ResultBill;
 }
 
 export const PrintResult: React.FC<PrintResultProps> = ({ bill }) => {
@@ -33,7 +36,7 @@ export const PrintResult: React.FC<PrintResultProps> = ({ bill }) => {
         <Printer className="w-4 h-4 mr-2" />
         Print
       </Button>
-      <div className="not-prose hidden">
+      <div className="not-prose">
         <ComponentToPrint ref={ref} bill={bill} />
       </div>
     </>
@@ -41,7 +44,7 @@ export const PrintResult: React.FC<PrintResultProps> = ({ bill }) => {
 };
 
 interface ComponentToPrintProps {
-  bill: BillType;
+  bill: ResultBill;
 }
 
 export const ComponentToPrint = forwardRef<
@@ -54,14 +57,10 @@ export const ComponentToPrint = forwardRef<
         <PrintHeader bill={bill} />
         <div className="mx-[10mm]">
           <div className="w-full flex items-center justify-between not-prose ">
-            <p className="flex-1 font-bold">Test Name</p>
-            <p className="flex-1 text-center flex items-center justify-center not-prose font-bold">
-              Test result
-            </p>
-            <p className="flex-1 flex items-center text-center  justify-center not-prose font-bold">
-              Test Normal
-            </p>
-            <p className="flex-1 justify-end text-end not-prose font-bold">
+            <p className=" font-bold  w-[30%] ">Test Name</p>
+            <p className=" w-[40%] flex  not-prose font-bold  ">Test result</p>
+            <p className=" w-[15%] flex   not-prose font-bold ">Test Normal</p>
+            <p className=" w-[15%] justify-end text-end not-prose font-bold">
               Test Unit
             </p>
           </div>
@@ -71,14 +70,7 @@ export const ComponentToPrint = forwardRef<
               <div className="w-full bg-black/70 text-2xl font-semibold px-4 not-prose">
                 {test.name}
               </div>
-              {test.subTests.map((subTest) => (
-                <div className="w-full text-sm" key={subTest.id}>
-                  {/* <div className="page-break" /> */}
-                  <div key={subTest.id} className="not-prose">
-                    {renderSubTest(subTest, bill.patient.gender)}
-                  </div>
-                </div>
-              ))}
+              <SubTestComponent test={test} />
             </div>
           ))}
         </div>
@@ -89,21 +81,98 @@ export const ComponentToPrint = forwardRef<
 
 ComponentToPrint.displayName = "ComponentToPrint";
 
-const renderSubTest = (subTest: BillSubTest, gender: Gender) => {
+const SubTestComponent = ({ test }: { test: TTest }) => {
+  // const [groupsTitles, setGroupsTitles] = useState<string[]>([]);
+  // useEffect(() => {
+  //   let i = groupBy(test.subTests, "group");
+  //   // let a =
+  //   console.log(i);
+  // }, []);
+  console.log(test);
+  if (test.groups.length === 0) {
+    return (
+      <>
+        {test.subTests.map((subTest) => {
+          return (
+            <div className="w-full text-sm" key={subTest.id}>
+              {/* <div className="page-break" /> */}
+              <div key={subTest.id} className="not-prose">
+                {renderSubTest(subTest)}
+              </div>
+            </div>
+          );
+        })}
+      </>
+    );
+  }
+  if (test.groups.length > 0) {
+    return (
+      <>
+        {test.groups.map((group) => {
+          return (
+            <div key={group.id} className="w-full">
+              <p className="not-prose underline font-bold ">{group.name}</p>
+              {test.subTests.map((subTest) => {
+                if (subTest.group === group.name) {
+                  return (
+                    <div className="w-full text-sm" key={subTest.id}>
+                      {/* <div className="page-break" /> */}
+                      <div key={subTest.id} className="not-prose">
+                        {renderSubTest(subTest)}
+                      </div>
+                    </div>
+                  );
+                }
+              })}
+            </div>
+          );
+        })}
+        {test.subTests.map((subTest) => subTest.group === null).length > 0 && (
+          <p className="not-prose underline font-bold ">Others</p>
+        )}
+        {test.subTests.map((subTest) => {
+          if (subTest.group === null) {
+            return (
+              <div className="w-full text-sm" key={subTest.id}>
+                {/* <div className="page-break" /> */}
+                <div key={subTest.id} className="not-prose">
+                  {renderSubTest(subTest)}
+                </div>
+              </div>
+            );
+          }
+        })}
+      </>
+    );
+  }
+};
+
+//<>
+//{test.subTests.map((subTest) => (
+//<div className="w-full text-sm" key={subTest.id}>
+//{/* <div className="page-break" /> */}
+//<div key={subTest.id} className="not-prose">
+//{renderSubTest(subTest)}
+// </div>
+// </div>
+// ))}
+//</>;
+
+const renderSubTest = (subTest: BillSubTest) => {
   return (
     <>
       {/* <div className="page-break" /> */}
-      <div className="w-full flex items-center justify-between not-prose">
-        <p className="text-base font-semibold flex-1">{subTest.name}</p>
-        <div className="flex-1 flex items-center justify-center">
+      <div className="w-full flex items-center  not-prose">
+        <p className="text-base font-semibold w-[30%] ">{subTest.name}</p>
+        <div className="w-[40%] flex ">
           <p className="text-base font-semibold not-prose">
             {parse(subTest.result || "")}
           </p>
         </div>
-        <div className="flex-1 text-base font-semibold  flex items-center justify-center not-prose">
+        <div className=" text-base font-semibold  flex  justify-center not-prose w-[15%]">
           {parse(subTest.selectedNormal || "")}
         </div>
-        <p className="flex-1 flex justify-end not-prose">
+        <p className="w-[15%] flex justify-end not-prose ">
           {subTest.unit || ""}
         </p>
       </div>

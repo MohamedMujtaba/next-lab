@@ -5,9 +5,10 @@ import { BillType } from "@/app/bills/_components/columns";
 import { Button } from "@/components/ui/button";
 import React from "react";
 import toast from "react-hot-toast";
+import { ResultBill } from "../page";
 
 interface ReadyButtonProps {
-  bill: BillType;
+  bill: ResultBill;
 }
 
 const ReadyButton: React.FC<ReadyButtonProps> = ({ bill }) => {

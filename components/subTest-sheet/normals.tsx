@@ -30,6 +30,7 @@ import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { cn } from "@/lib/utils";
 import { deleteOption } from "@/actions/subTests/options/delete-option";
 import { createNormal } from "@/actions/subTests/normals/create-normal";
+import { deleteNormal } from "@/actions/subTests/normals/delete-normal";
 
 interface LabelTabProps {}
 
@@ -147,7 +148,7 @@ export const LabelTab: React.FC<LabelTabProps> = () => {
             </p>
             <Trash
               onClick={async () => {
-                deleteOption(normal.id);
+                deleteNormal(normal.id);
                 gt();
               }}
               className="mr-1 w-4 h-4 shrink-0 text-destructive cursor-pointer"

@@ -26,11 +26,20 @@ export const addAllSubTests = async (props: AddBillSubTestProps) => {
     } else {
       const mt = await prismadb.test.findFirst({
         where: { id: testId },
+        include: {
+          groups: true,
+        },
       });
 
       const bt = await prismadb.billTest.create({
         data: {
           name: mt?.name || "",
+          groups: {
+            connect:
+              mt?.groups.map((o) => ({
+                id: o.id,
+              })) || [],
+          },
           billId,
           testId,
         },
@@ -52,6 +61,8 @@ export const addAllSubTests = async (props: AddBillSubTestProps) => {
             price: subTest.price,
             description: subTest.description,
             unit: subTest.unit,
+            function: subTest.function,
+            group: subTest.group,
             options: {
               connect:
                 subTest.options.map((o) => ({

@@ -23,11 +23,20 @@ export const addBillSubTest = async (props: AddBillSubTestProps) => {
   } else {
     const mt = await prismadb.test.findFirst({
       where: { id: testId },
+      include: {
+        groups: true,
+      },
     });
 
     const bt = await prismadb.billTest.create({
       data: {
         name: mt?.name || "",
+        groups: {
+          connect:
+            mt?.groups.map((o) => ({
+              id: o.id,
+            })) || [],
+        },
         billId,
         testId,
       },
